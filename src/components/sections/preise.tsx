@@ -1,4 +1,5 @@
 import { preise } from '@/inhalte/salon'
+import { ZeilenReveal } from '@/components/reveal'
 
 // Solange keine Preise hinterlegt sind, bleibt die Spalte ganz weg.
 // Achtmal „im Gespräch“ auf der Seite ist genau das „Preise auf Anfrage“,
@@ -11,11 +12,13 @@ export function Preise() {
       <div className="inhalt grid gap-12 lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] lg:gap-20">
         <div>
           <p className="t-label">Preise</p>
-          <h2 className="t-titel mt-4 max-w-[16ch]">Was dein Termin kostet, hängt von deinem Haar ab.</h2>
+          <ZeilenReveal as="h2" className="t-titel mt-4 max-w-[16ch]">
+            Was dein Termin kostet, hängt von deinem Haar ab.
+          </ZeilenReveal>
           <p className="t-lead mt-5 text-tinte/80">
             Eine Aufhellung auf schulterlangem Naturhaar ist eine andere Arbeit als eine
-            Farbkorrektur auf langem, vorbehandeltem Blond. Deshalb nenne ich dir den Preis,
-            bevor wir anfangen – nicht danach.
+            Farbkorrektur auf langem, vorbehandeltem Blond. Deshalb nenne ich dir den Preis, bevor
+            wir anfangen – nicht danach.
           </p>
         </div>
 

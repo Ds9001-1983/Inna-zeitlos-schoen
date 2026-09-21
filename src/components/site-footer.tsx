@@ -20,7 +20,10 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-2 text-sm">
             {navigation.map((punkt) => (
               <li key={punkt.ziel}>
-                <a href={punkt.ziel} className="text-leinen/80 underline-offset-4 hover:underline">
+                <a
+                  href={punkt.ziel}
+                  className="text-leinen/80 underline-offset-4 hover:underline"
+                >
                   {punkt.name}
                 </a>
               </li>
@@ -46,7 +49,10 @@ export function SiteFooter() {
           </address>
           <ul className="mt-6 space-y-2 text-sm">
             <li>
-              <Link href="/impressum" className="text-leinen/80 underline-offset-4 hover:underline">
+              <Link
+                href="/impressum"
+                className="text-leinen/80 underline-offset-4 hover:underline"
+              >
                 Impressum
               </Link>
             </li>

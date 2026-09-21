@@ -40,7 +40,8 @@ export default function Impressum() {
       <div>
         <h2>Umsatzsteuer</h2>
         <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: <Offen was="USt-IdNr. oder Hinweis auf Kleinunternehmerregelung" />
+          Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:{' '}
+          <Offen was="USt-IdNr. oder Hinweis auf Kleinunternehmerregelung" />
         </p>
       </div>
 

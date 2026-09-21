@@ -13,9 +13,9 @@ export default function Datenschutz() {
       <div>
         <h2>Kurz gesagt</h2>
         <p>
-          Diese Website setzt keine Cookies, bindet keine Analyse- oder Werbedienste ein und
-          lädt keine Schriften von fremden Servern. Es gibt kein Kontaktformular. Wer die Seite
-          nur liest, hinterlässt außer den technisch notwendigen Server-Protokollen keine Daten.
+          Diese Website setzt keine Cookies, bindet keine Analyse- oder Werbedienste ein und lädt
+          keine Schriften von fremden Servern. Es gibt kein Kontaktformular. Wer die Seite nur
+          liest, hinterlässt außer den technisch notwendigen Server-Protokollen keine Daten.
         </p>
       </div>
 
@@ -61,9 +61,9 @@ export default function Datenschutz() {
       <div>
         <h2>Kontaktaufnahme</h2>
         <p>
-          Wenn du über Instagram oder telefonisch Kontakt aufnimmst, werden die dabei
-          mitgeteilten Angaben zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b
-          DSGVO) und gelöscht, sobald sie nicht mehr benötigt werden und keine gesetzlichen
+          Wenn du über Instagram oder telefonisch Kontakt aufnimmst, werden die dabei mitgeteilten
+          Angaben zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO) und
+          gelöscht, sobald sie nicht mehr benötigt werden und keine gesetzlichen
           Aufbewahrungspflichten entgegenstehen.
         </p>
       </div>

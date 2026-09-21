@@ -52,3 +52,6 @@ playwright-report/
 
 # lokale Hilfsskripte fuer Screenshots
 .*.mjs
+
+# 4K-Zwischendateien der Hochskalierung (nur lokal)
+public/arbeiten-4k/

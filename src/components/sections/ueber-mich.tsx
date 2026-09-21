@@ -1,27 +1,31 @@
 import Image from 'next/image'
+import { BildReveal, ZeilenReveal } from '@/components/reveal'
 
 /** Texte wörtlich aus Innas Entwurf und Brand-Board. */
 export function UeberMich() {
   return (
-    <section id="ueber-mich" className="scroll-mt-24 bg-leinen py-[var(--spacing-sektion)]">
-      <div className="inhalt grid items-center gap-12 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:gap-20">
-        <div className="relative aspect-7/10 w-full overflow-hidden">
-          <Image
-            src="/arbeiten/handwerk-straehne.jpg"
-            alt="Innas Hand hält eine Strähne hoch, um den Übergang vom Ansatz in die Längen zu prüfen."
-            fill
-            sizes="(max-width: 1024px) 100vw, 26rem"
-            className="object-cover"
-          />
-        </div>
+    <section id="ueber-mich" className="scroll-mt-24 bg-sand py-[var(--spacing-sektion)]">
+      <div className="inhalt raster items-center gap-y-12">
+        <BildReveal className="col-span-6 lg:col-span-5">
+          <div className="relative aspect-7/10 w-full">
+            <Image
+              src="/arbeiten/handwerk-straehne.jpg"
+              alt="Innas Hand hält eine Strähne hoch, um den Übergang vom Ansatz in die Längen zu prüfen."
+              fill
+              sizes="(max-width: 1024px) 100vw, 34rem"
+              className="object-cover"
+              data-bild
+            />
+          </div>
+        </BildReveal>
 
-        <div>
+        <div className="col-span-6 lg:col-start-7 lg:col-end-13">
           <p className="t-label">Über mich</p>
-          <h2 className="t-titel mt-4 max-w-[20ch]">
+          <ZeilenReveal as="h2" className="t-titel mt-4">
             Schönheit beginnt dort, wo du dich selbst wiedererkennst.
-          </h2>
+          </ZeilenReveal>
 
-          <div className="mt-6 space-y-5 text-tinte/80">
+          <div className="mt-8 space-y-6 text-tinte/80">
             <p className="t-lead">
               Ich glaube daran, dass echte Schönheit Zeit braucht. Deshalb arbeite ich bewusst
               ohne Fließband. Jeder Termin bekommt den Raum, den er verdient. Damit Haarfarbe
@@ -34,7 +38,7 @@ export function UeberMich() {
             </p>
           </div>
 
-          <p className="t-signatur mt-8 text-[2.5rem] text-tinte">
+          <p className="t-signatur mt-10 text-[clamp(2.75rem,5vw,3.75rem)] text-tinte">
             Inna <span className="text-kupfer-tief">♡</span>
           </p>
         </div>

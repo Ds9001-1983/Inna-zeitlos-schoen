@@ -13,7 +13,5 @@ export function Rechtstext({ titel, children }: { titel: string; children: React
 
 /** Sichtbar markierte Lücke – steht nur im Entwurf und muss vor dem Live-Gang gefüllt sein. */
 export function Offen({ was }: { was: string }) {
-  return (
-    <span className="bg-sand px-2 py-0.5 text-sm text-tinte/80">[{was} – wird ergänzt]</span>
-  )
+  return <span className="bg-sand px-2 py-0.5 text-sm text-tinte/80">[{was} – wird ergänzt]</span>
 }

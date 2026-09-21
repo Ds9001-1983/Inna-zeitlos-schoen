@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
 
 /*
   Tokens aus docs/design-plan.md. Keine Farbe und keine Schriftgröße im Code,
@@ -16,7 +16,7 @@
   --color-kupfer-tief: #8f5a38;
   /* Labels in 12px brauchen auf Sand mehr Kontrast als Kupfer tief liefert (3,5:1) */
   --color-kupfer-dunkel: #6e4429;
-  /* Kupfer auf der dunklen Flaeche: das Original kommt dort nur auf 3,1:1 */
+  /* Kupfer auf der dunklen Fläche: das Original kommt dort nur auf 3,1:1 */
   --color-kupfer-hell: #c98a5e;
   --color-tinte: #2f2f2f;
 
@@ -29,7 +29,7 @@
   /* Rhythmus */
   --spacing-sektion: clamp(5rem, 10vw, 9rem);
   --breite-text: 34rem;
-  --breite-inhalt: 82rem;
+  --breite-inhalt: 88rem;
 
   /* shadcn-Tokens auf die Marke gemappt – keine Standardoptik */
   --color-background: var(--color-leinen);
@@ -70,10 +70,13 @@
   body {
     background-color: var(--color-leinen);
     color: var(--color-tinte);
-    font-size: 1.125rem;
-    line-height: 1.7;
+    /* 16px statt 18px: Die Referenzmarken der Branche liegen zwischen 13 und 16px.
+       Der Grad entsteht durch den Sprung zur Serif, nicht durch großen Fließtext. */
+    font-size: 1rem;
+    line-height: 1.65;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   /* Tastaturfokus immer sichtbar – Quality Floor */
@@ -92,26 +95,54 @@
   h3 {
     font-family: var(--font-display);
     font-weight: 300;
-    line-height: 1.08;
-    letter-spacing: -0.01em;
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    /* Umbruch nach Gewicht statt nach Zufall */
+    text-wrap: balance;
+    font-feature-settings:
+      'liga' 1,
+      'dlig' 1,
+      'kern' 1;
+  }
+
+  /* Lange deutsche Komposita dürfen brechen, aber nur an gesetzten Stellen */
+  p,
+  dd,
+  dt,
+  li {
+    hyphens: manual;
   }
 }
 
 @layer components {
-  /* Typo-Skala aus dem Design-Plan */
+  /*
+    Typo-Skala mit echtem Sprung. Vorher lag zwischen 18px Fließtext und
+    52px Titel nichts – die Seite hatte keinen Mittelgrad und der größte
+    Grad kam genau einmal vor.
+  */
   .t-display {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(3.25rem, 9vw, 7.5rem);
-    line-height: 0.98;
-    letter-spacing: -0.015em;
+    font-size: clamp(3.5rem, 11vw, 9.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
   }
 
   .t-titel {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(2rem, 4vw, 3.25rem);
-    line-height: 1.12;
+    font-size: clamp(2.25rem, 5.6vw, 4.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+  }
+
+  /* Der fehlende Mittelgrad: trägt Aussagen, die keine Überschrift sind */
+  .t-aussage {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.5rem, 2.6vw, 2.25rem);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
   }
 
   .t-signatur {
@@ -122,24 +153,60 @@
 
   .t-label {
     font-family: var(--font-sans);
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--color-kupfer-dunkel);
   }
 
   .t-lead {
     max-width: var(--breite-text);
-    font-size: 1.125rem;
-    line-height: 1.75;
+    font-size: 1.0625rem;
+    line-height: 1.7;
   }
 
   .inhalt {
     width: 100%;
     max-width: var(--breite-inhalt);
     margin-inline: auto;
-    padding-inline: clamp(1.25rem, 5vw, 4rem);
+    padding-inline: clamp(1.25rem, 5vw, 4.5rem);
+  }
+
+  /*
+    Ein Raster für die ganze Seite. Vorher erfand jede Sektion ihre
+    Aufteilung neu – dadurch lag nichts auf einer gemeinsamen Kante.
+  */
+  .raster {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: clamp(1rem, 2vw, 1.75rem);
+  }
+
+  @media (min-width: 64rem) {
+    .raster {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+
+  /* Bricht aus dem Inhaltsmaß aus, ohne waagerechtes Scrollen zu erzeugen */
+  .randlos {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  /* Eine Hover-Grammatik für die ganze Seite: Linie wächst von links */
+  .link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link:hover,
+  .link:focus-visible {
+    background-size: 100% 1px;
   }
 }
 

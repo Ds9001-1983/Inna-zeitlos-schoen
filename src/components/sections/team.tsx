@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { BildReveal, ZeilenReveal } from '@/components/reveal'
 
 /**
  * Aufbau wie in Innas Seitenentwurf: Bild links, Text rechts, heller Grund.
@@ -9,24 +10,25 @@ import Image from 'next/image'
 export function Team() {
   return (
     <section className="bg-leinen py-[var(--spacing-sektion)]">
-      <div className="inhalt grid items-center gap-12 lg:grid-cols-[minmax(0,26rem)_minmax(0,1fr)] lg:gap-20">
-        <div className="relative aspect-7/10 w-full overflow-hidden">
-          <Image
-            src="/arbeiten/salonlicht.jpg"
-            alt="Warm ausgeleuchtete Längen mit weichem Verlauf, fotografiert im Salon in Wiehl."
-            fill
-            sizes="(max-width: 1024px) 100vw, 26rem"
-            className="object-cover"
-          />
-        </div>
+      <div className="inhalt raster items-center gap-y-12">
+        <BildReveal className="col-span-6 lg:col-span-5">
+          <div className="relative aspect-7/10 w-full">
+            <Image
+              src="/arbeiten/salonlicht.jpg"
+              alt="Warm ausgeleuchtete Längen mit weichem Verlauf, fotografiert im Salon in Wiehl."
+              fill
+              sizes="(max-width: 1024px) 100vw, 26rem"
+              className="object-cover"
+              data-bild
+            />
+          </div>
+        </BildReveal>
 
-        <div>
+        <div className="col-span-6 lg:col-start-7 lg:col-end-13">
           <p className="t-label">Wir sind</p>
-          <h2 className="font-display mt-4 text-[clamp(2.75rem,6vw,4.5rem)] leading-[0.95] font-light">
-            Inna
-            <span className="text-kupfer-tief"> &amp; </span>
-            Nursah
-          </h2>
+          <ZeilenReveal as="h2" className="t-titel mt-4">
+            Inna &amp; Nursah
+          </ZeilenReveal>
 
           <div className="mt-6 space-y-5 text-tinte/80">
             <p className="text-xl leading-relaxed">

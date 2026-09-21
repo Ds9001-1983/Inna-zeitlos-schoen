@@ -183,6 +183,35 @@ auf die auch die Navigation springt.
 
 ## Revidiert
 
+**21.09.2026 - nach der Recherche zu Spitzen-Seiten der Branche:**
+
+Der Kunde hat den Stand als "weiterhin nur Standard" zurueckgewiesen. Eine Recherche ueber
+fuenf Bloecke (praemierte Salon-Seiten, High-End-Coloristen, Beauty-Marken, Animationstechnik,
+Luecken-Abgleich) hat die Ursachen benannt. Umgesetzt:
+
+- *Alle neun Fotos auf 4K hochskaliert* (Higgsfield, 2 Credits je Bild) und auf 1687x2400 fuer
+  das Web gerechnet. Vorher 760 px - zu wenig fuer grossflaechige Nutzung. Einzelne Straehnen
+  sind jetzt scharf; erst dadurch traegt das randlose Bildkapitel.
+- *Typo-Skala mit echtem Sprung.* Vorher lagen zwischen 18 px Fliesstext und 52 px Titel keine
+  Zwischenstufe, und der groesste Grad kam genau einmal vor. Jetzt: Fliesstext 16 px, neuer
+  Mittelgrad `.t-aussage`, Titel bis 76 px, Display bis 152 px.
+- *Ein Raster fuer die ganze Seite* (`.raster`, 6 bzw. 12 Spalten). Vorher erfand jede Sektion
+  ihre Aufteilung neu, dadurch lag nichts auf einer gemeinsamen Kante.
+- *Scroll-Reveals.* ScrollTrigger war registriert, wurde aber nach dem Hero nie benutzt - die
+  Seite bewegte sich sieben Abschnitte lang nicht mehr. Jetzt faehrt jede Abschnitts-Ueberschrift
+  zeilenweise aus einer Maske (GSAP SplitText, `mask: lines`, `aria: auto`), Bilder werden aus
+  einer Maske aufgedeckt. Beides nur bei `prefers-reduced-motion: no-preference`.
+- *Neue Sektion "Die Arbeiten".* Eine Coloristen-Seite ohne durchblaetterbares Werk ist wie ein
+  Architekturbuero ohne Projekte. Waagerechtes Schnapp-Scrollen ohne Bibliothek, acht Arbeiten
+  mit eigenem Titel, Technik, Datum und einer Notiz zum Ergebnis.
+- *Randloses Bildkapitel* mit Innas Satz "Ein Ort zum Ankommen" aus dem Brand-Board.
+- *Leistungs-Text aus dem Bild heraus.* Kein Verlauf mehr, der das Haar zudeckt - Titel und
+  Beschreibung stehen unter dem Foto.
+- *Ablauf-Strecke im Kontakt* (01-03), damit der Weg zum Termin beschrieben ist und nicht nur
+  ein Instagram-Knopf dasteht. Die drei Schritte sind ein Vorschlag und brauchen Innas Bestaetigung.
+- *Greige als Textfarbe gestrichen* - erreichte auf Leinen nur 2,04:1. axe meldet auf allen
+  Seiten und Breiten null Verstoesse.
+
 **21.09.2026 - nach der Rueckmeldung des Kunden zum Prototyp:**
 
 Der Kunde hat den Prototyp als unfertig zurueckgewiesen - zu Recht. Drei Abschnitte ohne
