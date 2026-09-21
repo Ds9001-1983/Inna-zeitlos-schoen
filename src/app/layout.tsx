@@ -4,6 +4,7 @@ import { SmoothScroll } from '@/components/smooth-scroll'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { SeoSchema } from '@/components/seo-schema'
+import { TerminLeiste } from '@/components/termin-leiste'
 import { seitenUrl } from '@/inhalte/seite'
 import './globals.css'
 
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
+          <TerminLeiste />
         </SmoothScroll>
       </body>
     </html>

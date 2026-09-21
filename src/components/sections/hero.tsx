@@ -45,7 +45,7 @@ export function Hero() {
     <section ref={container} className="relative z-10 bg-leinen lg:min-h-[calc(100svh-5.5rem)]">
       <div
         data-hero-bild
-        className="relative h-[52vh] min-h-[340px] w-full overflow-hidden lg:absolute lg:top-0 lg:right-0 lg:bottom-[-7rem] lg:h-auto lg:w-[46%] lg:min-h-0"
+        className="relative h-[44vh] min-h-[300px] w-full overflow-hidden lg:absolute lg:top-0 lg:right-0 lg:bottom-[-7rem] lg:h-auto lg:w-[46%] lg:min-h-0"
       >
         <Image
           data-hero-foto
