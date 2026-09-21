@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#2f2f2f"/>
+  <!-- Serifen-I in Kupfer, angelehnt an die Wortmarke -->
+  <rect x="9" y="8" width="14" height="1.6" fill="#c98a5e"/>
+  <rect x="14.7" y="8" width="2.6" height="16" fill="#c98a5e"/>
+  <rect x="9" y="22.4" width="14" height="1.6" fill="#c98a5e"/>
+</svg>

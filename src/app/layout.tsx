@@ -3,6 +3,8 @@ import { Cormorant_Garamond, Montserrat, Parisienne } from 'next/font/google'
 import { SmoothScroll } from '@/components/smooth-scroll'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { SeoSchema } from '@/components/seo-schema'
+import { seitenUrl } from '@/inhalte/seite'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -27,15 +29,28 @@ const parisienne = Parisienne({
 })
 
 export const metadata: Metadata = {
-  title: 'INNA – Zeitlos schön | Friseur & Blond-Expertin',
+  metadataBase: new URL(seitenUrl),
+  title: 'INNA – Zeitlos schön | Friseur & Blond-Expertin in Wiehl',
   description:
-    'Airtouch, Balayage und typgerechte Farbe von zwei Friseurmeisterinnen. Farben, die herauswachsen dürfen.',
+    'Airtouch, Balayage und Farbkorrektur in Wiehl. Farben, die herauswachsen dürfen – von zwei Friseurmeisterinnen.',
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'INNA – Zeitlos schön',
     description: 'Typgerechte Schönheit. Gesundes Haar. Ergebnisse, die zu dir passen.',
+    url: '/',
+    siteName: 'INNA – Zeitlos schön',
     locale: 'de_DE',
     type: 'website',
+    images: [
+      {
+        url: '/og-bild.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Langes Haar mit weichem Verlauf vom dunklen Ansatz in helle Spitzen.',
+      },
+    ],
   },
+  twitter: { card: 'summary_large_image' },
 }
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
@@ -45,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       className={`${cormorant.variable} ${montserrat.variable} ${parisienne.variable} h-full`}
     >
       <body className="flex min-h-full flex-col">
+        <SeoSchema seitenUrl={seitenUrl} />
         <SmoothScroll>
           <SiteHeader />
           <main className="flex-1">{children}</main>
