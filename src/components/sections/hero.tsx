@@ -64,7 +64,7 @@ export function Hero() {
 
         <div className="absolute inset-x-0 bottom-0">
           <div className="inhalt pb-[clamp(3rem,7vh,5.5rem)]">
-            <h1 data-hero-titel className="t-display text-leinen">
+            <h1 data-hero-titel data-auf-bild className="t-display text-leinen">
               Zeitlos
               <br />
               schön.
@@ -72,12 +72,13 @@ export function Hero() {
 
             <p
               data-hero-zeile
+              data-auf-bild
               className="t-signatur mt-3 text-[clamp(1.875rem,4vw,3rem)] text-kupfer-hell"
             >
               So natürlich wie du.
             </p>
 
-            <p data-hero-zeile className="t-lead mt-6 text-leinen/90">
+            <p data-hero-zeile data-auf-bild className="t-lead mt-6 text-leinen/90">
               Ich nehme mir Zeit für dein Haar, deine Wünsche und deine Persönlichkeit – damit du
               den Salon nicht nur schöner, sondern auch mit einem guten Gefühl verlässt.
             </p>

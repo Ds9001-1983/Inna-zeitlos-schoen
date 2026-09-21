@@ -28,7 +28,7 @@ export function SeoSchema({ seitenUrl }: { seitenUrl: string }) {
       '@type': 'AdministrativeArea',
       name: salon.region,
     },
-    sameAs: [salon.instagram],
+    ...(salon.instagram ? { sameAs: [salon.instagram] } : {}),
     knowsAbout: [
       'Airtouch',
       'Balayage',

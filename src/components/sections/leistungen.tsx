@@ -24,13 +24,15 @@ export function Leistungen() {
               <article>
                 {/* Text steht unter dem Bild, nicht darin: kein Verlauf, der das Haar zudeckt */}
                 <BildReveal>
-                  <div className="relative aspect-7/10 w-full bg-sand">
+                  <div className="relative aspect-7/10 w-full overflow-hidden bg-sand">
+                    {/* Enger Textur-Ausschnitt wie in Innas Entwurf – das ganze Foto zeigt die Galerie */}
                     <Image
                       src={leistung.bild}
                       alt={leistung.alt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover"
+                      className="scale-[1.7] object-cover"
+                      style={{ objectPosition: leistung.ausschnitt }}
                       data-bild
                     />
                   </div>

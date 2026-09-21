@@ -1,6 +1,14 @@
 import { salon } from '@/inhalte/salon'
 import { ZeilenReveal } from '@/components/reveal'
 
+/** Satz unter den Kontakt-Knöpfen – je nachdem, welche Wege schon feststehen. */
+function kontaktSatz() {
+  if (salon.telefon) return 'Am schnellsten erreichst du mich telefonisch – oder du kommst im Salon vorbei.'
+  if (salon.email) return 'Schreib mir eine E-Mail – oder komm im Salon vorbei.'
+  if (salon.instagram) return 'Schreib mir auf Instagram – oder komm im Salon vorbei.'
+  return `Am einfachsten kommst du direkt im Salon vorbei – ${salon.strasse} in ${salon.ort}.`
+}
+
 /**
  * Bewusst ohne Online-Kalender: Inna will vor einem Farbtermin kurz sprechen.
  * Telefon und Öffnungszeiten stehen in src/inhalte/salon.ts – solange sie dort
@@ -13,7 +21,7 @@ import { ZeilenReveal } from '@/components/reveal'
 const ablauf = [
   {
     nummer: '01',
-    titel: 'Schreib mir, was du dir wünschst',
+    titel: 'Sag mir, was du dir wünschst',
     text: 'Am liebsten mit zwei Fotos: eins, das dir gefällt – und eins von deinem Haar heute, bei Tageslicht und ungestylt. Damit sehe ich sofort, was möglich ist.',
   },
   {
@@ -55,24 +63,41 @@ export function Kontakt() {
                   {salon.telefon} anrufen
                 </a>
               ) : null}
-              <a
-                href={salon.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className={`px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] uppercase transition-colors ${
-                  salon.telefon
-                    ? 'border border-kupfer-tief text-kupfer-tief hover:bg-kupfer-tief hover:text-leinen'
-                    : 'bg-kupfer-tief text-leinen hover:bg-tinte'
-                }`}
-              >
-                Auf Instagram schreiben
-              </a>
+              {salon.email ? (
+                <a
+                  href={`mailto:${salon.email}`}
+                  className={`px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] uppercase transition-colors ${
+                    salon.telefon
+                      ? 'border border-kupfer-tief text-kupfer-tief hover:bg-kupfer-tief hover:text-leinen'
+                      : 'bg-kupfer-tief text-leinen hover:bg-tinte'
+                  }`}
+                >
+                  E-Mail schreiben
+                </a>
+              ) : null}
+              {salon.instagram ? (
+                <a
+                  href={salon.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="border border-kupfer-tief px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-kupfer-tief uppercase transition-colors hover:bg-kupfer-tief hover:text-leinen"
+                >
+                  Auf Instagram schreiben
+                </a>
+              ) : null}
+              {!salon.telefon && !salon.email && !salon.instagram ? (
+                <a
+                  href={salon.maps}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-kupfer-tief px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte"
+                >
+                  Weg zum Salon
+                </a>
+              ) : null}
             </div>
 
-            <p className="mt-6 text-sm text-tinte/80">
-              Am schnellsten erreichst du mich über {salon.instagramName} – oder du kommst im
-              Salon vorbei.
-            </p>
+            <p className="mt-6 text-sm text-tinte/80">{kontaktSatz()}</p>
           </div>
 
           <div>
@@ -106,7 +131,7 @@ export function Kontakt() {
                 </dl>
               ) : (
                 <p className="mt-3 text-sm leading-relaxed text-tinte/80">
-                  Termine nach Vereinbarung. Schreib mir, wann es dir passt – wir finden einen
+                  Termine nach Vereinbarung. Sag mir, wann es dir passt – wir finden einen
                   Platz, der zu deinem Haar und zu deinem Tag passt.
                 </p>
               )}

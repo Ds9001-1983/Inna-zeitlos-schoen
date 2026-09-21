@@ -55,3 +55,7 @@ playwright-report/
 
 # 4K-Zwischendateien der Hochskalierung (nur lokal)
 public/arbeiten-4k/
+
+# Projektordner: Rohvideo bleibt lokal
+projekt/video/*
+!projekt/video/.gitkeep

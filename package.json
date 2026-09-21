@@ -15,7 +15,8 @@
     "qa:standard": "npm run qa:lighthouse && npm run qa:a11y",
     "qa:lighthouse": "node scripts/lighthouse-check.mjs",
     "qa:a11y": "playwright test --grep @a11y",
-    "qa:playwright": "playwright test"
+    "qa:playwright": "playwright test",
+    "qa:kontrast": "node scripts/kontrast-auf-bild.mjs --selektoren \"[data-auf-bild]\""
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

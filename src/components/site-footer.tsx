@@ -37,15 +37,19 @@ export function SiteFooter() {
             {salon.strasse}
             <br />
             {salon.plz} {salon.ort}
-            <br />
-            <a
-              href={salon.instagram}
-              className="mt-2 inline-block underline-offset-4 hover:underline"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {salon.instagramName}
-            </a>
+            {salon.instagram && salon.instagramName ? (
+              <>
+                <br />
+                <a
+                  href={salon.instagram}
+                  className="mt-2 inline-block underline-offset-4 hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {salon.instagramName}
+                </a>
+              </>
+            ) : null}
           </address>
           <ul className="mt-6 space-y-2 text-sm">
             <li>

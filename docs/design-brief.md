@@ -61,9 +61,11 @@ Vertrauen in das Handwerk, nicht über den günstigsten Preis.
 
 ### Instagram als Quelle
 
-Profil: [@wiehlerschoenheitsfleck](https://www.instagram.com/wiehlerschoenheitsfleck/),
-Standort Wiehl / Oberbergischer Kreis. Selbstbeschreibung über Hashtags: Blondexpertin,
-Haargesundheit, Haartransformation, Airtouch, Farbkorrektur, Blondkorrektur, Balayage.
+Die Vorher/Nachher-Bilder stammen aus Instagram-Screenshots, die Dennis am 21.09.2026 übergeben
+hat (`projekt/fotos/`). Innas eigenes Profil ist noch nicht übergeben. Das Profil „Wiehler
+Schönheitsfleck" gehört nicht zu diesem Projekt (Dennis, 21.09.2026) und wurde am selben Tag von
+der Seite entfernt. Selbstbeschreibung aus den Beiträgen: Blondexpertin, Haargesundheit,
+Haartransformation, Airtouch, Farbkorrektur, Blondkorrektur, Balayage.
 
 Von dort kommen die Arbeiten und die Texte, die jetzt auf der Seite stehen:
 
@@ -136,9 +138,8 @@ diese Trennung steht so schon in den Vorlagen und wird konsequent durchgehalten.
    echte Fotos – geplant ist ein Termin mit Fotografin im Salon.
 5. **Einwilligung:** Die Kundin auf dem Vorher/Nachher und die Verfasserin des Zitats müssen der
    Nutzung auf der Website schriftlich zustimmen. Instagram-Veröffentlichung deckt das nicht ab.
-6. **Name des Betriebs:** Das Instagram-Profil heißt „Wiehler Schönheitsfleck", die Marke auf der
-   Seite „INNA – Zeitlos schön". Für Impressum, LocalBusiness-Schema und Google-Profil muss
-   klar sein, welcher Name der Betrieb ist und welcher die Marke.
+6. **Name des Betriebs:** Der Rechtsname für Impressum, LocalBusiness-Schema und Google-Profil
+   fehlt. Bis er da ist, steht die Marke „INNA – Zeitlos schön" an seiner Stelle.
 4. Die Palette der Vorlage wird übernommen. Das Kupfer #A56A43 bekommt für Text und Buttons eine
    dunklere Schwester (#8F5A38), weil das Original auf Creme den Kontrastwert für Fließtext
    knapp verfehlt. Optisch bleibt es dasselbe Kupfer.

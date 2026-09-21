@@ -29,11 +29,15 @@ export default function Impressum() {
           Telefon: <Offen was="Telefonnummer" />
           <br />
           E-Mail: <Offen was="E-Mail-Adresse" />
-          <br />
-          Instagram:{' '}
-          <a href={salon.instagram} className="text-kupfer-tief underline underline-offset-4">
-            {salon.instagramName}
-          </a>
+          {salon.instagram && salon.instagramName ? (
+            <>
+              <br />
+              Instagram:{' '}
+              <a href={salon.instagram} className="text-kupfer-tief underline underline-offset-4">
+                {salon.instagramName}
+              </a>
+            </>
+          ) : null}
         </p>
       </div>
 

@@ -5,8 +5,8 @@
  * die Seite zeigt sie dann automatisch an und blendet bis dahin einen sinnvollen
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
- * OFFEN: telefon, email, oeffnungszeiten, Preise, Betriebsname fürs Impressum,
- * Nursahs Nachname, Portraits von Inna und Nursah.
+ * OFFEN: telefon, email, oeffnungszeiten, Innas Instagram-Profil, Preise, Betriebsname
+ * fürs Impressum, Nursahs Nachname, Portraits von Inna und Nursah.
  */
 
 export const salon = {
@@ -18,8 +18,9 @@ export const salon = {
   region: 'Oberbergischer Kreis',
   telefon: null as string | null,
   email: null as string | null,
-  instagram: 'https://www.instagram.com/wiehlerschoenheitsfleck/',
-  instagramName: '@wiehlerschoenheitsfleck',
+  /** OFFEN – Innas eigenes Profil. Erscheint erst, wenn beides gefüllt ist. */
+  instagram: null as string | null,
+  instagramName: null as string | null,
   maps: 'https://www.google.com/maps/search/?api=1&query=Schulstra%C3%9Fe+1%2C+51674+Wiehl',
   /** OFFEN – z. B. [{ tag: 'Dienstag bis Freitag', zeit: '9 – 18 Uhr' }] */
   oeffnungszeiten: null as { tag: string; zeit: string }[] | null,
@@ -43,6 +44,11 @@ export type Leistung = {
   dauer?: string | null
   /** OFFEN – z. B. 'hält 3 bis 6 Monate'. Erscheint nur, wenn gefüllt. */
   haltbarkeit?: string | null
+  /**
+   * Fokuspunkt des Textur-Ausschnitts (object-position). Die Kacheln zeigen wie in Innas
+   * Entwurf Haar-Nahaufnahmen – enge Ausschnitte derselben Fotos, die in der Galerie ganz zu sehen sind.
+   */
+  ausschnitt: string
 }
 
 /** Texte wörtlich aus Innas Entwurf. */
@@ -52,24 +58,28 @@ export const leistungen: Leistung[] = [
     beschreibung:
       'Airtouch, Balayage, Babylights, Faceframe und Glossing – weiche Aufhellung in Stufen, damit die Struktur mitkommt.',
     bild: '/arbeiten/blond-expertin.jpg',
+    ausschnitt: '50% 62%',
     alt: 'Langes Haar von hinten mit vielschichtigem Blond vom dunkleren Ansatz in helle Spitzen.',
   },
   {
     titel: 'Farb­transformation',
     beschreibung: 'Individuelle Farbkonzepte für deinen perfekten Farbton – abgestimmt auf dich.',
     bild: '/arbeiten/farb-transformation.jpg',
+    ausschnitt: '58% 48%',
     alt: 'Seitenansicht einer Farbarbeit mit weichen Übergängen von Dunkel nach Hell.',
   },
   {
     titel: 'Tressen & Verdichtung',
     beschreibung: 'Hochwertige Tressen für mehr Länge, Volumen und ein natürliches Haargefühl.',
     bild: '/arbeiten/tressen-verdichtung.jpg',
+    ausschnitt: '50% 70%',
     alt: 'Volles, langes Haar mit sichtbarer Dichte bis in die Spitzen.',
   },
   {
     titel: 'Schnitt & Styling',
     beschreibung: 'Maßgeschneiderte Schnitte, die deine Persönlichkeit unterstreichen.',
     bild: '/arbeiten/schnitt-styling.jpg',
+    ausschnitt: '42% 44%',
     alt: 'Gewellte Längen nach Schnitt und Styling, seitlich fotografiert.',
   },
 ]
