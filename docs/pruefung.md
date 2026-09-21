@@ -49,7 +49,7 @@ Kontrast auf dem Video (`qa:kontrast`, vier Zeitpunkte, Zeilenboxen, hellstes 2 
 Überbreite bei 360 px: 0, bei 640 px (entspricht Zoom 200 % auf 1280): 0 · Bilder beim zweiten Aufruf: 18/18 geladen ·
 Video läuft (`hero.webm`), bei reduzierter Bewegung 0 Videoanfragen · Tastatur: 23 fokussierbare Elemente, alle mit sichtbarem Fokus, keins außerhalb des Viewports.
 
-Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast` sowie ein Messskript für Überbreite, Bilder, Video und Tastatur. Zahlen vom 21.09.2026.
+Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `npm run qa:messungen` (Überbreite, Bilder, Video, Platzhalter, doppelte Motive, Tastatur, Aufnahmen). Zahlen vom 21.09.2026.
 
 ## Offene Punkte für Dennis
 
