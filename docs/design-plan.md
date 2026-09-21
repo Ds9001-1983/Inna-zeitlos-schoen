@@ -1,187 +1,164 @@
 # Design-Plan: INNA – Zeitlos schön
 
-Stand: 21.09.2026 · Grundlage: `docs/design-brief.md` · Site-Typ: Standard Business Site
+Stand: 21.09.2026, in die v4-Form gebracht · Grundlage: `projekt/auftrag.md`, `projekt/vorlagen/`,
+`projekt/referenzen/notizen.md`, `docs/material-inventar.md` · Projektart: Business-Seite
 
 Keine Farbe, keine Schrift und keine Bewegung im Code, die nicht hier steht.
 Änderungen zuerst hier eintragen (Abschnitt „Revidiert" am Ende).
 
 ---
 
+## Maßstab
+
+Vollbild-Hero mit Text unten links auf Bewegtbild wie Muster 3 und 5 (Display-Text auf dem Foto).
+Flächenwechsel Sand/Leinen je Abschnitt wie Muster 1. Werkgalerie als Reihe mit Titel, Technik und
+Datum darunter wie Muster 1 und 2. Diptychon für die Verwandlung wie das FEMALE/MALE-Paar in Muster 1.
+Preisliste als Linien-Tabelle wie Muster 3, Vollbild-Bildkapitel wie Muster 6, Adresse und Termin-Knopf
+im Header wie Muster 8. Mobil eigene Reihenfolge und ein Knopf je Abschnitt wie Muster 2.
+**Eigen:** die Rückansicht als Leitmotiv – bei einer Farbspezialistin ist die Länge das Portfolio;
+kein Muster zeigt das. Nicht übernommen: Muster 4 und 7 (Karten-Kit, SaaS-Grammatik).
+
+---
+
+## Vorlage
+
+Der Seitenentwurf der Kundin ist die Spezifikation: Hero → Über mich → Leistungen (vier Kacheln) →
+Team „Inna & Nursah" → Philosophie (vier Werte) → Abschluss „Bereit für dein neues Haargefühl?".
+Das Brand-Board füllt Farben, Schriften, Vokabular. Ergänzt aus dem Fragenkatalog (B1): Verwandlung,
+Arbeiten, Preise, Kontakt, dazu Impressum und Datenschutz.
+
+Abweichungen von der Vorlage, jede mit Grund:
+
+| Vorlage | Seite | Grund |
+|---|---|---|
+| Hero mit Portrait von Inna | Bewegtbild aus der Rückansicht einer Kundin | kein Portrait vorhanden (Material) – Portrait bleibt offener Punkt |
+| Teamfoto Inna & Nursah | Stellvertreterbild (Salonlicht) neben dem Text | kein Teamfoto (Material) |
+| Knopf „Termin buchen" | „Termin anfragen" | kein Buchungssystem – der Knopf verspricht nur, was passiert |
+| Kacheln mit Haar-Nahaufnahmen | Textur-Ausschnitte derselben Fotos, die die Galerie ganz zeigt | neun Fotos für sechzehn Plätze |
+
+---
+
 ## Farben
 
-Die Palette kommt vollständig aus Innas Brand-Board. Jede Farbe hat genau eine Rolle.
+Quelle: Brand-Board. Die dunkleren Schwestern sind Kontrastvarianten, keine neuen Markenfarben.
 
-| Name | Hex | Rolle |
-|---|---|---|
-| Leinen | `#F6F3EE` | Grundfläche der ganzen Seite |
-| Sand | `#D8C8B5` | zweite Fläche – hebt Abschnitte ab, ohne sie einzurahmen |
-| Greige | `#B4ABA1` | Haarlinien, Rahmen, ruhige Flächen, deaktivierte Zustände |
-| Kupfer | `#A56A43` | Marke. Große Flächen, Icons, dekorative Linien |
-| Kupfer tief | `#8F5A38` | dieselbe Farbe für Text, Links und Buttons – 5,2:1 auf Leinen |
-| Tinte | `#2F2F2F` | Fließtext, Überschriften, Footer-Fläche |
+| Token | Hex | Rolle | Kontrast |
+|---|---|---|---|
+| Leinen | `#F6F3EE` | Grundfläche | – |
+| Sand | `#D8C8B5` | zweite Fläche, Wechsel je Abschnitt | – |
+| Greige | `#B4ABA1` | nur Haarlinien und Rahmen, nie Text | 2,04:1 auf Leinen – als Text gestrichen |
+| Kupfer | `#A56A43` | Marke: Flächen, Symbole, Linien | 3,98:1 auf Leinen – nicht für Fließtext |
+| Kupfer tief | `#8F5A38` | Text, Links, Knöpfe auf Leinen | 5,2:1 |
+| Kupfer dunkel | `#6E4429` | Labels (11 px) auf Sand | AA – Kupfer tief kam auf Sand nur auf 3,5:1 |
+| Kupfer hell | `#C98A5E` | Kupfer auf Tinte und auf dem Video (Signaturzeile) | 4,34:1 auf dem Video, gemessen |
+| Tinte | `#2F2F2F` | Fließtext, Überschriften, Fußzeile | 12,6:1 auf Leinen |
 
-Kupfer tief ist keine neue Marken-Farbe, sondern die barrierefreie Variante des Kupfers.
-Das Original erreicht auf Leinen nur 3,98:1 und verfehlt damit AA für Fließtext.
+Textabstufungen: Tinte/80 für Nebentext, Leinen/70 in der Fußzeile – nichts darunter.
 
 ---
 
 ## Typografie
 
-Beide Familien kommen aus dem Brand-Board, die Schreibschrift ist dort als Signatur gesetzt.
+- **Display, Titel, Aussage – Cormorant Garamond** 300/400 mit Kursiv (`style: ['normal', 'italic']`).
+  Ihre Strichstärke ist selbst ein Verlauf, wie ein Farbübergang im Haar.
+- **Fließtext, Labels – Montserrat** 300/400/500.
+- **Signatur – Parisienne**, genau zwei Einsätze: die zweite Hero-Zeile und Innas Unterschrift.
 
-- **Display – Cormorant Garamond**, Schnitt 300 und 400.
-  Passt zum Gegenstand, weil ihre Strichstärke selbst ein Verlauf ist: dünn nach dick und
-  zurück, wie ein Farbübergang im Haar. Bei 300 in großen Graden wirkt sie leicht statt feierlich.
-- **Text – Montserrat**, Schnitt 300/400/500. Geometrisch, ruhig, hält den Ton sachlich,
-  wo die Serif sonst ins Pathos kippt.
-- **Signatur – Parisienne**, genau zwei Einsätze auf der ganzen Seite:
-  die zweite Hero-Zeile und Innas Unterschrift im Abschnitt „Über mich". Sonst nie.
-
-**Skala:** Basis 18 px / Zeilenhöhe 1,7 / Zeilenlänge max. 66 Zeichen.
-Display `clamp(3.25rem, 9vw, 7.5rem)`, Abschnittstitel `clamp(2rem, 4vw, 3.25rem)`.
-Labels: Montserrat 12 px, Versalien, Laufweite 0,18em – nur als Abschnittsname, nie als Schmuck.
-
-**Typo als Gestaltung:** Die Hero-Zeile bricht nach „Zeitlos" um. Dadurch steht „schön."
-allein auf der zweiten Zeile und die Schreibschrift darunter setzt direkt an.
-Der Umbruch ist gesetzt, nicht dem Zufall überlassen.
+Fünf Grade mit echtem Sprung: Fließtext 16 px (`.t-lead` 17 px) · Aussage `clamp(1.5rem, 2.6vw, 2.25rem)` ·
+Titel `clamp(2.25rem, 5.6vw, 4.75rem)` · Display `clamp(3.5rem, 11vw, 9.5rem)` · Label 11 px Versalien,
+Laufweite 0,18em. Zeilenlänge höchstens 66 Zeichen, `text-wrap: balance` auf Überschriften, weiche
+Trennstellen in langen Komposita. Der Hero-Umbruch ist gesetzt: „Zeitlos / schön."
 
 ---
 
-## Layout
+## Raster
 
-**Konzept in einem Satz:** Die Seite zeigt erst die Arbeit und dann die Person – Rückansicht vor
-Gesicht, Verwandlung vor Versprechen.
-
-**Ausrichtung:** durchgehend linksbündig. Zentriert wird nichts, auch keine Abschnittstitel.
-Begründung: Eine Preisliste, eine Leistungsliste und ein Öffnungszeiten-Block werden gelesen,
-nicht betrachtet – und linksbündiger Text liest sich schneller. Der einzige Bruch ist das
-Hero-Bild, das nach rechts und oben aus dem Raster läuft.
-
-### Hero, Desktop (ab 1024 px)
-
-```
-┌───────────────────────────────────────────────────────────┐
-│ INNA          Über mich · Leistungen · …  ☎  [Termin]     │  transparent über Bild
-├──────────────────────────────┬────────────────────────────┤
-│                              │▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
-│                              │▒▒  Rückansicht,          ▒▒│
-│  Zeitlos                     │▒▒  Haar füllt den Rahmen ▒▒│
-│  schön.                      │▒▒  randabfallend rechts  ▒▒│
-│  ᴵ So natürlich wie du.      │▒▒                        ▒▒│
-│                              │▒▒                        ▒▒│
-│  Ich nehme mir Zeit für      │▒▒                        ▒▒│
-│  dein Haar, deine Wünsche    │▒▒                        ▒▒│
-│  und deine Persönlichkeit.   │▒▒                        ▒▒│
-│                              │▒▒                        ▒▒│
-│  [ Termin buchen ]           │▒▒                        ▒▒│
-├──────────────────────────────┤▒▒  ← Bild läuft über die  │
-│  nächster Abschnitt beginnt  │▒▒     Hero-Kante hinaus   │
-│                              │▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
-└──────────────────────────────┴────────────────────────────┘
-```
-
-Das Bild endet nicht mit dem Hero, sondern ragt in den nächsten Abschnitt. Die Länge des Haars
-wird dadurch erst beim Scrollen ganz sichtbar – das ist die eine formale Pointe des Layouts.
-
-### Hero, Mobil (360–768 px)
-
-```
-┌─────────────────────┐
-│ INNA           ☰    │
-├─────────────────────┤
-│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
-│▒▒  Rückansicht,   ▒▒│  58 vh, randabfallend
-│▒▒  oben beschnitten▒│
-│▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒│
-├─────────────────────┤
-│ Zeitlos             │
-│ schön.              │
-│ ᴵ So natürlich…     │
-│                     │
-│ Ich nehme mir Zeit… │
-│ [ Termin buchen ]   │
-└─────────────────────┘
-```
-
-Reihenfolge Bild → Text, weil am Handy zuerst die Arbeit überzeugt.
-Der Termin-Button bleibt ab dem Scrollen aus dem Hero als Leiste am unteren Rand erreichbar.
-
-### Die Verwandlung (Kernsektion 2)
-
-```
-┌───────────────────────────────────────────────────────────┐
-│  Die Verwandlung                                          │
-│  Dieselbe Kundin, 4 Stunden dazwischen. Zieh den Regler.  │
-│                                                           │
-│  ┌────────────────────────┃────────────────────────────┐  │
-│  │      vorher            ┃            nachher         │  │
-│  │                        ┃  ←  ⬤  →                   │  │
-│  │                        ┃                            │  │
-│  └────────────────────────┃────────────────────────────┘  │
-│  Airtouch, 4 Stunden · Naturbasis 6 auf 8 aufgehellt      │
-└───────────────────────────────────────────────────────────┘
-```
-
-Ein Bildpaar, ein Regler, eine Bildunterschrift mit Technik und Dauer.
-Kein Karussell, keine Galerie – eine Arbeit, dafür ganz.
+`.inhalt` (max. Breite, Innenabstand), `.raster` mit 6 Spalten am Handy und 12 ab 64 rem, `.randlos` für
+Bildkapitel und den Auslauf der Galerie. Alle Abschnitte sitzen auf derselben linken Kante, durchgehend
+linksbündig – Preisliste, Leistungen und Zeiten werden gelesen, nicht betrachtet.
 
 ---
 
-## Der eine mutige Moment
+## Abschnittsfolge und Höhen
 
-**Die Verwandlung.** Ein ganzseitiges Vorher/Nachher, das man mit dem Finger aufzieht.
-Es ist das einzige Element der Seite, das etwas verlangt – und das einzige, das den Beweis
-liefert, um den es bei einer Farbspezialistin geht. Alles andere bleibt ruhig: keine Hover-Effekte
-auf Karten, keine Zähler, keine zweite Interaktion.
+Hero (Kapitel: `100svh − Header`, min. 560 px, Video) → Verwandlung (Sand) → Arbeiten (Leinen) →
+Über mich (Sand) → Leistungen (Leinen) → Bildkapitel (Kapitel: `min(72vh, 640px)`, Vollbild) →
+Team (Leinen) → Philosophie (Sand) → Preise (Leinen) → Kontakt (Sand) → Fußzeile (Tinte).
 
----
-
-## Bewegung
-
-**Eine orchestrierte Sequenz:** der Aufbau des Heros beim Laden.
-Bild fährt aus einer Maske von oben auf, danach steigen die drei Textzeilen versetzt ein
-(GSAP-Timeline, 900 ms gesamt, Ease `power2.out`).
-
-**Sonst nur als Antwort auf eine Aktion:** der Regler der Verwandlung, das Ausklappen des
-Mobil-Menüs, der Fokusring bei Tastaturbedienung. Kein Fade-and-slide-up an jedem Abschnitt.
-
-Sanftes Scrollen über Lenis, mit `prefers-reduced-motion` komplett abgeschaltet:
-Dann erscheint der Hero fertig aufgebaut, und der Regler springt statt zu gleiten.
+Erzählung: Beweis (Verwandlung, Arbeiten) vor Person (Über mich) vor Leistung vor Weg zum Termin.
+Höhen: „normal" = `--spacing-sektion` `clamp(5rem, 10vw, 9rem)`, „Kapitel" = Hero und Bildkapitel.
+Die Stufe „knapp" ist nicht in Gebrauch – Preise und Philosophie laufen normal; wer sie braucht, trägt
+sie zuerst hier ein. Rhythmus: Sand und Leinen im Wechsel, zwei dunkle Kapitel als Takt.
 
 ---
 
-## Prinzipien
+## Bildhaushalt
 
-1. Die Arbeit spricht zuerst, die Person danach – deshalb öffnet die Seite mit einer Rückansicht
-   und nicht mit einem Lächeln in die Kamera.
-2. Ruhe ist das Versprechen des Salons („ein Termin ohne Hektik") – die Seite hält sich daran
-   und bewegt sich nur, wenn jemand etwas tut.
-3. Nichts wird versteckt: Preise, Öffnungszeiten und Telefonnummer stehen offen da,
-   weil Vertrauen bei einer Farbspezialistin über Offenheit entsteht, nicht über Inszenierung.
+Aus `docs/material-inventar.md`: neun Fotos (acht Instagram-Ausschnitte, eine Rückansicht), alle auf 4K
+hochskaliert und mit 1687 × 2400 px ausgeliefert; `next/image` liefert AVIF/WebP.
 
----
-
-## Austauschbarkeits-Prüfung (Phase 2b)
-
-Derselbe Brief für einen anderen Salon – käme ich beim gleichen Plan an?
-
-| Frage | Befund | Konsequenz |
+| Ort | Motiv | Format |
 |---|---|---|
-| Würde ich diese Palette für jeden Salon wählen? | Creme + Serif + Kupfer ist der bekannteste KI-Look 2026 und steht auf der Tell-Liste. | **Der Brief gewinnt.** Die Kundin hat die Palette selbst entworfen und mitgeschickt; sie ist ihre Marke, keine Setzung von uns. Unverändert übernommen, nur um Kupfer tief für Kontrast ergänzt. |
-| Ist die Schrift eine, die ich „immer" nehme? | Cormorant und Montserrat sind verbreitet. | **Der Brief gewinnt** – beide stehen im Brand-Board. Eigenheit entsteht über den Schnitt (Cormorant 300 statt 600) und den gesetzten Umbruch, nicht über eine andere Familie. |
-| Ist der Hero „Headline + Text + Button"? | Im ersten Entwurf ja. | **Revidiert:** Das Hero-Bild läuft über die Abschnittskante in den nächsten Abschnitt hinaus. Der Hero öffnet mit dem Material (Haar, Länge, Übergang), nicht mit einer Aussage über den Salon. |
-| Steht etwas auf der Tell-Liste? | Vier gleiche Leistungs-Karten mit Radius und Schatten waren geplant. | **Revidiert:** Die Leistungen werden zu randabfallenden Bildflächen in vier unterschiedlichen Breiten, gewichtet nach Bedeutung (Blond am größten). Kein Radius, kein Schatten. |
-| | Drei Testimonial-Karten mit Sternen. | **Revidiert:** gestrichen. Stattdessen eine einzige Kundenstimme im Fließtext neben der Arbeit, auf die sie sich bezieht. |
-| Gibt es mehr als einen mutigen Moment? | Zuerst waren Hero-Sequenz, Verwandlung und eine Scroll-Galerie geplant. | **Revidiert:** Die Galerie fällt weg. Die Verwandlung bleibt der einzige mutige Moment. |
+| Hero | Rückansicht → Video (Kling), Standbild = LCP | Vollbild |
+| Verwandlung | Farbkorrektur vorher / nachher | 7:10, Diptychon |
+| Arbeiten | acht Arbeiten mit Titel, Technik, Datum | 7:10, Reihe |
+| Über mich | Strähne in Innas Hand | 7:10 |
+| Leistungen | Textur-Ausschnitte von vier Galerie-Fotos (`ausschnitt` in `salon.ts`) | 7:10 |
+| Bildkapitel | Farbtransformation als Textur | Vollbild |
+| Team | Salonlicht als Stellvertreter, bis das Teamfoto da ist | 7:10 |
 
-**Bewusst gegen die Copy-Regel entschieden:** Versal-Labels („ÜBER MICH", „MEINE LEISTUNGEN")
-bleiben, obwohl die Regel Satzschreibweise verlangt. Sie sind im Brand-Board durchgehend das
-typografische System der Marke und tragen hier Information – sie benennen die Abschnitte,
-auf die auch die Navigation springt.
+Bekannte Doppelungen: Farbkorrektur-nachher, Strähne, Salonlicht, Farbtransformation – neun Fotos für
+sechzehn Plätze. Aufgelöst wird das mit dem Shooting (Portraits, Team, Salon), siehe `docs/pruefung.md` B4.
+
+---
+
+## Signature Moves
+
+- **16 Bewegtes Hero-Bild** – Hero. Muster 3 und 5 öffnen mit Vollbild und Text darauf; das Material
+  trägt es erst nach der Hochskalierung. Ping-Pong-Loop, WebM 992 KB, MP4 als Rückfall, Standbild als
+  LCP, bei reduzierter Bewegung wird kein Video angefragt. *Grad: lang.*
+- **01 Split-Text Reveal** – Hero-Titel als Timeline (Bild aus der Maske, drei Zeilen versetzt, 900 ms),
+  alle Abschnittstitel zeilenweise aus der Maske; Bilder werden einmalig aus einer Maske aufgedeckt
+  (`ZeilenReveal`, `BildReveal`). Muster 1 und 2 arbeiten mit Zeilen-Reveals. *Grad: kurz, Bilder minimal.*
+- **17 Werkgalerie mit Schnapp-Scrollen** – Arbeiten, nach der Verwandlung. Muster 1 und 2 zeigen
+  Arbeiten als Reihe mit Titeln darunter. Nativ am Handy, Pfeile am Rechner, `scroll-pl` auf der
+  Rasterkante.
+
+Nicht gewählt und nicht gebaut: 05 magnetische Knöpfe, 06 eigener Zeiger, 07 Laufband, 13 Parallax.
+Diptychon, Bildkapitel und die Termin-Leiste am Handy sind Layout und Mobilstrategie, keine Moves.
+
+---
+
+## Text auf Bild oder Video
+
+Hero: ein Verlauf von unten trägt den Textblock, einer von links die Schriftseite, rechts bleibt das
+Haar hell und offen. Bildkapitel: Verlauf von links für die Aussage. Jedes Textelement auf Bild trägt
+`data-auf-bild`; `npm run qa:kontrast` misst pixelweise je Zeile an vier Zeitpunkten des Videos.
+Stand 21.09.2026: Titel 6,75:1, Signaturzeile 4,34:1 (nötig 3:1), Lead 8,60:1 (nötig 4,5:1).
+
+---
+
+## Tokens
+
+`src/app/globals.css`: Farben als `--color-*` im `@theme inline`, shadcn-Tokens auf die Marke gemappt;
+Schriften über `next/font` an `--font-display`, `--font-sans`, `--font-signatur`; Skala als `.t-display`,
+`.t-titel`, `.t-aussage`, `.t-lead`, `.t-label`, `.t-signatur`; Raster `.inhalt`, `.raster`, `.randlos`;
+eine Hover-Grammatik `.link`; `--spacing-sektion`; `prefers-reduced-motion` schaltet Übergänge und das
+Video ab.
 
 ---
 
 ## Revidiert
+
+**21.09.2026 – Plan in die v4-Form gebracht:**
+
+Struktur nach `design-plan.md` des Skills v4: Maßstab aus den Referenzen, Bildhaushalt, Signature Moves
+mit Nummer, Ort und Grund. Gestrichen, weil vom Skill nicht mehr verlangt oder überholt:
+Austauschbarkeits-Prüfung, „der eine mutige Moment", „Bewegung nur als Antwort auf eine Aktion"
+(seit der Recherche fahren Titel und Bilder aus Masken). Korrigiert, was nicht mehr stimmte: Die
+Verwandlung ist ein Diptychon, kein Wischregler (zwei verschieden gerahmte Fotos lasen sich als zwei
+Frauen); die Galerie ist zurück; Team steht mit Stellvertreterbild statt als typografische Fläche;
+Leistungen sind Textur-Ausschnitte; Instagram ist raus. Die früheren Einträge bleiben als Geschichte.
 
 **21.09.2026 - Hero wird vollflaechig und bewegt:**
 

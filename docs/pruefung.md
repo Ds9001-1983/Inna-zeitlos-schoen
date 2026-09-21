@@ -11,6 +11,7 @@ Umbau der Leistungen-Kacheln. Quelle des Abgleichs: `projekt/auftrag.md`.
 | Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Abschnittsfolge, Navigation, Palette und Schriften wie die Vorlage; zusätzlich Verwandlung, Arbeiten, Preise, Kontakt aus B1 |
 | Hero mit Portrait von Inna (Vorlage) | bewusst anders | kein Portrait vorhanden → Bewegtbild aus der Rückansicht einer Kundin (Kling); Portrait bleibt offener Punkt |
 | Brand-Board: Farben und Schriften | umgesetzt | Sand/Leinen/Kupfer/Tinte, Cormorant + Grotesk + Signatur; Kupfer für Text als dunklere Schwester (AA) |
+| Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
 | Leistungen: vier Kacheln, Texte wörtlich | umgesetzt | Kacheln als Textur-Ausschnitte wie in der Vorlage; Dauer und Haltbarkeit offen |
 | Preise | offen | keine Preisliste – Tabelle zeigt Leistungen mit Hinweis, ohne Preis |
