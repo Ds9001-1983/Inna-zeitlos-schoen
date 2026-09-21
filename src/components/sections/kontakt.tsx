@@ -73,27 +73,6 @@ export function Kontakt() {
               Am schnellsten erreichst du mich über {salon.instagramName} – oder du kommst im
               Salon vorbei.
             </p>
-
-            <ol className="mt-14 border-t border-greige/60">
-              {ablauf.map((schritt) => (
-                <li
-                  key={schritt.nummer}
-                  className="grid grid-cols-[3rem_1fr] gap-x-5 border-b border-greige/60 py-6 sm:grid-cols-[4rem_1fr]"
-                >
-                  <span className="font-display text-2xl leading-none font-light text-kupfer-tief">
-                    {schritt.nummer}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-xl leading-tight font-light">
-                      {schritt.titel}
-                    </h3>
-                    <p className="mt-2 max-w-[48ch] text-sm leading-relaxed text-tinte/80">
-                      {schritt.text}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
           </div>
 
           <div>
@@ -134,6 +113,21 @@ export function Kontakt() {
             </div>
           </div>
         </div>
+        <ol className="raster mt-20 gap-y-10 border-t border-greige/60 pt-10">
+          {ablauf.map((schritt) => (
+            <li key={schritt.nummer} className="col-span-6 lg:col-span-4">
+              <span className="font-display block text-3xl leading-none font-light text-kupfer-tief">
+                {schritt.nummer}
+              </span>
+              <h3 className="font-display mt-4 text-xl leading-tight font-light">
+                {schritt.titel}
+              </h3>
+              <p className="mt-3 max-w-[38ch] text-sm leading-relaxed text-tinte/80">
+                {schritt.text}
+              </p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )
