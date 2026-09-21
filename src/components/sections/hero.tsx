@@ -1,35 +1,37 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { useRef } from 'react'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+import Image from "next/image";
+import { useRef } from "react";
+import { useLenis } from "lenis/react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(useGSAP);
 
 export function Hero() {
-  const container = useRef<HTMLElement>(null)
+  const container = useRef<HTMLElement>(null);
+  const lenis = useLenis();
 
   // Die eine orchestrierte Sequenz der Seite: Bild fährt auf, Zeilen steigen versetzt ein.
   useGSAP(
     () => {
-      const mm = gsap.matchMedia()
-      mm.add('(prefers-reduced-motion: no-preference)', () => {
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
         gsap
-          .timeline({ defaults: { ease: 'power2.out' } })
-          .from('[data-hero-bild]', {
-            clipPath: 'inset(0 0 100% 0)',
+          .timeline({ defaults: { ease: "power2.out" } })
+          .from("[data-hero-bild]", {
+            clipPath: "inset(0 0 100% 0)",
             duration: 0.9,
           })
           .from(
-            '[data-hero-zeile]',
+            "[data-hero-zeile]",
             { y: 28, autoAlpha: 0, duration: 0.7, stagger: 0.12 },
             0.25,
-          )
-      })
+          );
+      });
     },
     { scope: container },
-  )
+  );
 
   return (
     <section ref={container} className="relative z-10 bg-leinen">
@@ -63,20 +65,27 @@ export function Hero() {
           </p>
 
           <p data-hero-zeile className="t-lead mt-9">
-            Ich nehme mir Zeit für dein Haar, deine Wünsche und deine Persönlichkeit – damit du
-            den Salon nicht nur schöner, sondern auch mit einem guten Gefühl verlässt.
+            Ich nehme mir Zeit für dein Haar, deine Wünsche und deine
+            Persönlichkeit – damit du den Salon nicht nur schöner, sondern auch
+            mit einem guten Gefühl verlässt.
           </p>
 
           <div data-hero-zeile className="mt-10">
             <a
-              href="#termin"
+              href="#kontakt"
+              onClick={(e) => {
+                e.preventDefault();
+                const ziel = document.querySelector("#kontakt");
+                if (ziel instanceof HTMLElement)
+                  lenis?.scrollTo(ziel, { offset: -88 });
+              }}
               className="inline-block bg-kupfer-tief px-9 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte"
             >
-              Termin buchen
+              Termin anfragen
             </a>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

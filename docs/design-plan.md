@@ -183,6 +183,28 @@ auf die auch die Navigation springt.
 
 ## Revidiert
 
+**21.09.2026 - nach der Rueckmeldung des Kunden zum Prototyp:**
+
+Der Kunde hat den Prototyp als unfertig zurueckgewiesen - zu Recht. Drei Abschnitte ohne
+Navigation gegen einen Kundenentwurf mit acht Abschnitten ist kein Ergebnis, sondern ein
+Geruest. Der Phasen-Stopp bei Phase 3 ist deshalb aus dem Skill entfernt worden.
+
+- *Die Seite ist jetzt vollstaendig.* Navigation mit Mobilmenue, Ueber mich, Leistungen,
+  Inna & Nursah, Philosophie, Preise, Kontakt, Fusszeile, Impressum und Datenschutz.
+- *Die Austauschbarkeits-Pruefung wird fuer dieses Projekt ausgesetzt.* Innas Entwurf ist die
+  Spezifikation. Die gestrichenen Leistungskacheln und die Team-Sektion sind zurueck.
+- *Zwei Farben ergaenzt, beide aus Kontrastgruenden, keine neuen Markenfarben:*
+  Kupfer dunkel `#6E4429` fuer die 12px-Labels (das Kupfer tief kam auf Sand nur auf 3,5:1),
+  Kupfer hell `#C98A5E` fuer Kupfer auf der dunklen Flaeche (dort nur 3,1:1).
+- *Alle Texte in Tinte/60 und Tinte/70 auf Tinte/80 angehoben*, Fusszeile von Leinen/50 auf
+  Leinen/70. axe meldet auf allen drei Seiten und beiden Breiten null Verstoesse.
+- *Der Knopf heisst jetzt "Termin anfragen".* Es gibt kein Buchungssystem - "Termin buchen"
+  haette etwas versprochen, was die Seite nicht einloest.
+- *Team-Abschnitt bewusst ohne Foto*, als typografische Flaeche auf Tinte gebaut. Von Inna und
+  Nursah liegt kein echtes Portrait vor, und ein Stockfoto waere eine Luege ueber zwei reale
+  Personen. Das Foto kommt links neben den Text, sobald es da ist.
+- *"Das Gefuehl" aus dem Brand-Board* steht neben der Philosophie, statt die Spalte leer zu lassen.
+
 **21.09.2026 – aus der Screenshot-Kritik (Phase 3):**
 
 - *Header liegt nicht mehr über dem Hero-Bild, sondern auf Leinen darüber.* Die dunkle Wortmarke

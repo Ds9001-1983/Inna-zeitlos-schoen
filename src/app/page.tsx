@@ -1,19 +1,23 @@
-import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
 import { Hero } from '@/components/sections/hero'
 import { Verwandlung } from '@/components/sections/verwandlung'
-import { Termin } from '@/components/sections/termin'
+import { UeberMich } from '@/components/sections/ueber-mich'
+import { Leistungen } from '@/components/sections/leistungen'
+import { Team } from '@/components/sections/team'
+import { Philosophie } from '@/components/sections/philosophie'
+import { Preise } from '@/components/sections/preise'
+import { Kontakt } from '@/components/sections/kontakt'
 
 export default function Startseite() {
   return (
     <>
-      <SiteHeader />
-      <main className="flex-1">
-        <Hero />
-        <Verwandlung />
-        <Termin />
-      </main>
-      <SiteFooter />
+      <Hero />
+      <Verwandlung />
+      <UeberMich />
+      <Leistungen />
+      <Team />
+      <Philosophie />
+      <Preise />
+      <Kontakt />
     </>
   )
 }

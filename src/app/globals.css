@@ -14,6 +14,10 @@
   --color-greige: #b4aba1;
   --color-kupfer: #a56a43;
   --color-kupfer-tief: #8f5a38;
+  /* Labels in 12px brauchen auf Sand mehr Kontrast als Kupfer tief liefert (3,5:1) */
+  --color-kupfer-dunkel: #6e4429;
+  /* Kupfer auf der dunklen Flaeche: das Original kommt dort nur auf 3,1:1 */
+  --color-kupfer-hell: #c98a5e;
   --color-tinte: #2f2f2f;
 
   /* Schriften – geladen in layout.tsx über next/font */
@@ -61,7 +65,6 @@
 @layer base {
   html {
     font-family: var(--font-sans);
-    scroll-behavior: smooth;
   }
 
   body {
@@ -123,7 +126,7 @@
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-kupfer-tief);
+    color: var(--color-kupfer-dunkel);
   }
 
   .t-lead {

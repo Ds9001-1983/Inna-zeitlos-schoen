@@ -10,9 +10,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "qa:standard": "playwright test",
-    "qa:screens": "playwright test --grep Screenshots",
-    "qa:lighthouse": "node scripts/lighthouse-check.mjs"
+    "qa:standard": "npm run qa:lighthouse && npm run qa:a11y",
+    "qa:lighthouse": "node scripts/lighthouse-check.mjs",
+    "qa:a11y": "playwright test --grep @a11y",
+    "qa:playwright": "playwright test"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

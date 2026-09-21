@@ -37,7 +37,7 @@ export function Verwandlung() {
               &bdquo;Du hast mir nicht nur meine Haare gerettet, sondern mir
               auch mein Strahlen zurückgegeben.&ldquo;
             </p>
-            <footer className="mt-3 text-sm text-tinte/60">
+            <footer className="mt-3 text-sm text-tinte/80">
               Kundin nach der Farbkorrektur, Juli 2026
             </footer>
           </blockquote>
@@ -105,7 +105,7 @@ export function Verwandlung() {
             </label>
           </div>
 
-          <figcaption className="mt-6 max-w-[52ch] text-sm leading-relaxed text-tinte/70">
+          <figcaption className="mt-6 max-w-[52ch] text-sm leading-relaxed text-tinte/80">
             Airtouch rückwärts: Die hellen Bereiche wurden gezielt eingebettet,
             harte Übergänge ausgeglichen, das Gesamtbild wieder ruhig aufgebaut.
             Mehr Tiefe, mehr Natürlichkeit, mehr Harmonie.

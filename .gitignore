@@ -49,3 +49,6 @@ qa-reports/
 test-results/
 playwright-report/
 .lighthouseci/
+
+# lokale Hilfsskripte fuer Screenshots
+.*.mjs

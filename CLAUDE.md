@@ -25,4 +25,6 @@ Das Repo liegt auf einem FAT-Laufwerk. Node 24 kommt über nvm:
 standard_business – story-spec.json ist die Spezifikation.
 
 ## Status
-Aktuelle Phase: 3 (Hero-Prototyp gebaut, Freigabe steht aus).
+Aktuelle Phase: 3 abgeschlossen - die Seite ist vollstaendig.
+Offene Kundenangaben stehen gebuendelt in src/inhalte/salon.ts.
+Kein Freigabe-Stopp: Rueckmeldungen werden eingearbeitet, der Ausbau laeuft weiter.
