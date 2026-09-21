@@ -1,21 +1,32 @@
-'use client'
-
 import Image from 'next/image'
-import { useState } from 'react'
 import { BildReveal, ZeilenReveal } from '@/components/reveal'
 
 /**
- * Der eine mutige Moment der Seite (docs/design-plan.md).
- * Bedienbar mit Maus, Finger und Tastatur – der Regler ist ein echtes
- * <input type="range">, das nur unsichtbar über dem Bildpaar liegt.
+ * Diptychon statt Wischregler.
+ *
+ * Der Regler hat das Gegenteil von dem bewirkt, wofür er gedacht war: Die beiden
+ * Aufnahmen sind unterschiedlich gerahmt – links Färbeumhang vor dunklen Schränken,
+ * rechts Strickpullover vor heller Decke. In der Wische springt die Schulterlinie,
+ * und das Paar liest sich als zwei verschiedene Personen. Nebeneinander ist der
+ * Unterschied in der Rahmung erwartbar und der Vergleich trägt.
  *
  * Bilder und Text stammen aus Innas Instagram-Beitrag vom 26.07.2026.
  * Vor dem Live-Gang: Einwilligung der Kundin für Foto und Zitat einholen.
  */
-export function Verwandlung() {
-  const [position, setPosition] = useState(50)
-  const [fokus, setFokus] = useState(false)
+const paar = [
+  {
+    bild: '/arbeiten/farbkorrektur-vorher.jpg',
+    marke: 'vorher',
+    alt: 'Vor dem Termin: strohig aufgehelltes Haar mit harter Ansatzkante und ausgefransten Spitzen.',
+  },
+  {
+    bild: '/arbeiten/farbkorrektur-nachher.jpg',
+    marke: 'nachher',
+    alt: 'Nach der Farbkorrektur: dieselbe Länge mit eingebetteten hellen Partien, weichem Übergang und sichtbarer Tiefe.',
+  },
+]
 
+export function Verwandlung() {
   return (
     <section
       id="verwandlung"
@@ -31,7 +42,7 @@ export function Verwandlung() {
           <p className="t-lead mt-7 text-tinte/80">
             Diese Kundin kam nach mehreren enttäuschenden Friseurbesuchen zu mir – das Haar
             strapaziert, die Längen unruhig. Noch mehr Blond wäre keine verantwortungsvolle
-            Entscheidung gewesen. Zieh den Regler.
+            Entscheidung gewesen.
           </p>
 
           <blockquote className="mt-12 max-w-[34rem] border-l border-kupfer-tief pl-7">
@@ -46,68 +57,25 @@ export function Verwandlung() {
         </div>
 
         <figure className="col-span-6 lg:col-start-7 lg:col-end-13">
-          <BildReveal>
-            <div className="relative aspect-7/10 w-full overflow-hidden select-none">
-              <Image
-                src="/arbeiten/farbkorrektur-vorher.jpg"
-                alt="Vor dem Termin: strohig aufgehelltes Haar mit harter Ansatzkante und ausgefransten Spitzen."
-                fill
-                sizes="(max-width: 1024px) 100vw, 46rem"
-                className="object-cover"
-                data-bild
-              />
-
-              <div
-                className="absolute inset-0 transition-[clip-path] duration-150 ease-out"
-                style={{ clipPath: `inset(0 0 0 ${position}%)` }}
-              >
-                <Image
-                  src="/arbeiten/farbkorrektur-nachher.jpg"
-                  alt="Nach der Farbkorrektur: dieselbe Länge mit eingebetteten hellen Partien, weichem Übergang und sichtbarer Tiefe."
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 46rem"
-                  className="object-cover"
-                />
-              </div>
-
-              <span className="pointer-events-none absolute bottom-5 left-5 bg-tinte/75 px-3 py-1 text-[0.65rem] font-medium tracking-[0.2em] text-leinen uppercase">
-                vorher
-              </span>
-              <span className="pointer-events-none absolute right-5 bottom-5 bg-tinte/75 px-3 py-1 text-[0.65rem] font-medium tracking-[0.2em] text-leinen uppercase">
-                nachher
-              </span>
-
-              {/* Trennkante und Griff folgen dem Reglerwert */}
-              <div
-                className="pointer-events-none absolute inset-y-0 w-px bg-leinen transition-[left] duration-150 ease-out"
-                style={{ left: `${position}%` }}
-              >
-                <span
-                  className={`absolute top-1/2 left-1/2 block h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-kupfer-tief bg-leinen ${
-                    fokus ? 'ring-2 ring-kupfer-tief ring-offset-2' : ''
-                  }`}
-                />
-              </div>
-
-              <label className="absolute inset-0 cursor-ew-resize">
-                <span className="sr-only">
-                  Vergleich zwischen vorher und nachher – mit den Pfeiltasten verschiebbar
-                </span>
-                <input
-                  type="range"
-                  min={0}
-                  max={100}
-                  step={1}
-                  value={position}
-                  onChange={(event) => setPosition(Number(event.target.value))}
-                  onFocus={() => setFokus(true)}
-                  onBlur={() => setFokus(false)}
-                  className="h-full w-full cursor-ew-resize opacity-0"
-                  aria-valuetext={`${position} Prozent nachher sichtbar`}
-                />
-              </label>
-            </div>
-          </BildReveal>
+          <div className="grid grid-cols-2 gap-1">
+            {paar.map((seite) => (
+              <BildReveal key={seite.marke}>
+                <div className="relative aspect-7/10 w-full bg-sand">
+                  <Image
+                    src={seite.bild}
+                    alt={seite.alt}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 23rem"
+                    className="object-cover"
+                    data-bild
+                  />
+                  <span className="absolute bottom-3 left-3 bg-tinte/75 px-3 py-1 text-[0.6rem] font-medium tracking-[0.2em] text-leinen uppercase">
+                    {seite.marke}
+                  </span>
+                </div>
+              </BildReveal>
+            ))}
+          </div>
 
           <figcaption className="mt-6 max-w-[52ch] text-sm leading-relaxed text-tinte/80">
             Airtouch rückwärts: Die hellen Bereiche wurden gezielt eingebettet, harte Übergänge

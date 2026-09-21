@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image'
+import { HeroMedien } from '@/components/hero-medien'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -47,15 +47,7 @@ export function Hero() {
         data-hero-bild
         className="relative h-[44vh] min-h-[300px] w-full overflow-hidden lg:absolute lg:top-0 lg:right-0 lg:bottom-[-7rem] lg:h-auto lg:w-[46%] lg:min-h-0"
       >
-        <Image
-          data-hero-foto
-          src="/arbeiten/rueckansicht-hero.jpg"
-          alt="Rückansicht einer Kundin: langes Haar, das vom dunklen Ansatz ohne harte Kante in helle, gewellte Spitzen übergeht."
-          fill
-          preload
-          sizes="(max-width: 1024px) 100vw, 46vw"
-          className="object-cover object-[50%_28%]"
-        />
+        <HeroMedien />
       </div>
 
       <div className="inhalt relative">

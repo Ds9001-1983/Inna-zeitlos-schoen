@@ -183,6 +183,22 @@ auf die auch die Navigation springt.
 
 ## Revidiert
 
+**21.09.2026 - Hero bekommt Bewegung:**
+
+- *Das Hero-Standbild wird zum bewegten Bild.* Kein geschnittener Werbeclip: Innas Marke sagt
+  "ohne Hektik", ein schneller Spot wuerde ihr eigenes Versprechen brechen. Stattdessen ein
+  Cinemagraph aus ihrem eigenen Foto - nur die Straehnen bewegen sich, das Licht wandert langsam
+  ueber die Laengen, die Kamera steht still. Erzeugt mit Kling 3.0 (Bild zu Video), Start- und
+  Endbild identisch, damit die Schleife nahtlos schliesst.
+- *Das Standbild bleibt das LCP-Element.* Das Video legt sich erst darueber, wenn es wirklich
+  abspielt, und blendet sich ueber eine Sekunde ein. Dadurch aendert sich an der Ladezeit nichts.
+- *Nicht fuer jeden.* Wer `prefers-reduced-motion` gesetzt hat oder im Datensparmodus surft,
+  bekommt das Video gar nicht erst geladen. Verweigert der Browser Autoplay, bleibt das
+  Standbild stehen.
+- *Offen:* Das Video ist eine KI-Animation eines echten Kundinnenfotos. Die Einwilligung muss
+  das ausdruecklich mit abdecken. Sobald eine echte Aufnahme aus dem Salon vorliegt, ersetzt sie
+  den Cinemagraph - Dateiname bleibt public/video/hero.mp4.
+
 **21.09.2026 - nach der Recherche zu Spitzen-Seiten der Branche:**
 
 Der Kunde hat den Stand als "weiterhin nur Standard" zurueckgewiesen. Eine Recherche ueber

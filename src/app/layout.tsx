@@ -12,6 +12,9 @@ const cormorant = Cormorant_Garamond({
   variable: '--font-cormorant',
   subsets: ['latin'],
   weight: ['300', '400'],
+  // Die Schwungkursive ist das Erkennungsmerkmal von Cormorant Garamond.
+  // Ohne style-Array wird sie gar nicht geladen und der Browser verzerrt sie.
+  style: ['normal', 'italic'],
   display: 'swap',
 })
 

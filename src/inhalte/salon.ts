@@ -9,6 +9,32 @@
  * Nursahs Nachname, Portraits von Inna und Nursah.
  */
 
+/**
+ * NACHGEPRUEFT AM 21.09.2026 – Konflikt, der geklaert werden muss.
+ *
+ * Innas bestehender Betrieb "Der Wiehler Schoenheitsfleck" fuehrt auf seiner
+ * eigenen Seite (wiehlerschoenheitsfleck.de) eine ANDERE Anschrift als die hier
+ * eingetragene. Bestaetigt durch direkten Abruf der Seite am 21.09.2026:
+ *
+ *   strasse: 'Weiherplatz 28'
+ *   telefon: '02262 712978'
+ *   email: 'hallo@wiehlerschoenheitsfleck.de'
+ *   oeffnungszeiten: [
+ *     { tag: 'Dienstag bis Freitag', zeit: '9 – 18:30 Uhr' },
+ *     { tag: 'Samstag', zeit: '8 – 13 Uhr' },
+ *     { tag: 'Sonntag und Montag', zeit: 'geschlossen' },
+ *   ]
+ *   produkte: ['Maria Nila', 'Urban Alchemy', 'O&M', 'Olaplex']
+ *
+ * Eingetragen ist unten weiterhin "Schulstrasse 1", weil der Auftraggeber diese
+ * Adresse genannt hat – moeglicherweise entsteht "INNA – Zeitlos schoen" als neuer
+ * Salon an neuer Anschrift. Das muss Inna einmal bestaetigen.
+ *
+ * WICHTIG: Die Adresse geht ueber seo-schema.tsx als JSON-LD an Google. Weicht sie
+ * vom Google-Unternehmensprofil ab, schadet das der lokalen Auffindbarkeit aktiv.
+ * Vor dem Live-Gang also zwingend klaeren.
+ */
+
 export const salon = {
   marke: 'INNA – Zeitlos schön',
   /** OFFEN – Instagram heißt „Wiehler Schönheitsfleck". Welcher Name gilt für Impressum und Google? */
