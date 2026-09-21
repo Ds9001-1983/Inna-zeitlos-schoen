@@ -20,7 +20,7 @@ function lesen() {
 }
 
 /**
- * Hero-Bild, das zu leben anfängt.
+ * Vollflächiger Hero-Hintergrund.
  *
  * Das Standbild wird immer ausgeliefert und bleibt das LCP-Element – dadurch
  * bleibt die Seite schnell. Das Video legt sich erst darüber, wenn es
@@ -35,12 +35,12 @@ export function HeroMedien() {
     <>
       <Image
         data-hero-foto
-        src="/arbeiten/rueckansicht-hero.jpg"
-        alt="Rückansicht einer Kundin: langes Haar, das vom dunklen Ansatz ohne harte Kante in helle, gewellte Spitzen übergeht."
+        src="/arbeiten/hero-standbild.jpg"
+        alt="Lange, gewellte Längen mit weichem Verlauf vom dunklen Ansatz in helle Spitzen, aufgenommen im Salon."
         fill
         preload
-        sizes="(max-width: 1024px) 100vw, 46vw"
-        className="object-cover object-[50%_28%]"
+        sizes="100vw"
+        className="object-cover object-[50%_35%]"
       />
 
       {videoErlaubt ? (
@@ -58,7 +58,7 @@ export function HeroMedien() {
               .then(() => setSichtbar(true))
               .catch(() => undefined)
           }}
-          className={`absolute inset-0 h-full w-full object-cover object-[50%_28%] transition-opacity duration-1000 ${
+          className={`absolute inset-0 h-full w-full object-cover object-[50%_35%] transition-opacity duration-1000 ${
             sichtbar ? 'opacity-100' : 'opacity-0'
           }`}
         >

@@ -183,21 +183,29 @@ auf die auch die Navigation springt.
 
 ## Revidiert
 
-**21.09.2026 - Hero bekommt Bewegung:**
+**21.09.2026 - Hero wird vollflaechig und bewegt:**
 
-- *Das Hero-Standbild wird zum bewegten Bild.* Kein geschnittener Werbeclip: Innas Marke sagt
-  "ohne Hektik", ein schneller Spot wuerde ihr eigenes Versprechen brechen. Stattdessen ein
-  Cinemagraph aus ihrem eigenen Foto - nur die Straehnen bewegen sich, das Licht wandert langsam
-  ueber die Laengen, die Kamera steht still. Erzeugt mit Kling 3.0 (Bild zu Video), Start- und
-  Endbild identisch, damit die Schleife nahtlos schliesst.
-- *Das Standbild bleibt das LCP-Element.* Das Video legt sich erst darueber, wenn es wirklich
-  abspielt, und blendet sich ueber eine Sekunde ein. Dadurch aendert sich an der Ladezeit nichts.
-- *Nicht fuer jeden.* Wer `prefers-reduced-motion` gesetzt hat oder im Datensparmodus surft,
-  bekommt das Video gar nicht erst geladen. Verweigert der Browser Autoplay, bleibt das
-  Standbild stehen.
+Die halbe Bildspalte war zu zaghaft. Der Hero ist jetzt ein ganzer Bildschirm Haar.
+
+- *Vollflaechiges Video statt Bildspalte.* Innas eigenes Foto, in Bewegung gesetzt mit
+  Kling 3.0: eine langsame Fahrt in die Laengen hinein, bis das Haar den ganzen Rahmen
+  fuellt. Vier Varianten gerechnet, die sauberste genommen - eine andere lief am Ende in
+  einen Helligkeits-Artefakt.
+- *Nahtlose Schleife durch Vorwaerts-Rueckwaerts.* Der Clip laeuft hin und zurueck, dadurch
+  endet er genau dort, wo er anfaengt. Kein Sprung beim Neustart, und die Fahrt wirkt wie
+  ein ruhiges Atmen. 10 Sekunden, 992 KB als WebM.
+- *Zwei Verlaeufe mit Aufgabe:* von unten fuer den Textblock, von links fuer die
+  Schriftseite. Rechts bleibt das Haar hell und offen.
+- *Nachgemessen statt behauptet.* Der Kontrast des Textes gegen den Untergrund wurde an vier
+  Zeitpunkten des Videos pixelweise gemessen (hellstes Zweiprozent-Perzentil):
+  Headline schlechtestenfalls 5,10:1 (noetig 3), Signatur 8,94:1 (noetig 3),
+  Fliesstext 9,73:1 (noetig 4,5). axe kann Text auf Bewegtbild nicht bewerten.
+- *Das Standbild bleibt das LCP-Element* - es ist das erste Bild des Clips, dadurch springt
+  der Uebergang nicht. Bei `prefers-reduced-motion` und im Datensparmodus wird das Video gar
+  nicht erst angefragt.
 - *Offen:* Das Video ist eine KI-Animation eines echten Kundinnenfotos. Die Einwilligung muss
-  das ausdruecklich mit abdecken. Sobald eine echte Aufnahme aus dem Salon vorliegt, ersetzt sie
-  den Cinemagraph - Dateiname bleibt public/video/hero.mp4.
+  das mit abdecken. Sobald eine echte Aufnahme aus dem Salon vorliegt, ersetzt sie den Clip -
+  Dateiname bleibt public/video/hero.mp4.
 
 **21.09.2026 - nach der Recherche zu Spitzen-Seiten der Branche:**
 
