@@ -1,0 +1,114 @@
+{
+  "project": "inna-zeitlos-schoen",
+  "type": "standard_business",
+  "client": {
+    "brand": "INNA – Zeitlos schön",
+    "industry": "Friseur / Haarfarbe / Blond-Spezialisierung",
+    "language": "de",
+    "existingUrl": null,
+    "logoPath": "public/logo/inna-wortmarke.svg",
+    "brandColors": [
+      "#F6F3EE",
+      "#D8C8B5",
+      "#B4ABA1",
+      "#A56A43",
+      "#2F2F2F"
+    ]
+  },
+  "modules": [
+    {
+      "type": "hero_rueckansicht"
+    },
+    {
+      "type": "verwandlung_vorher_nachher",
+      "after": "hero_rueckansicht"
+    },
+    {
+      "type": "ueber_inna",
+      "after": "verwandlung_vorher_nachher"
+    },
+    {
+      "type": "leistungen",
+      "after": "ueber_inna"
+    },
+    {
+      "type": "team_inna_nursah",
+      "after": "leistungen"
+    },
+    {
+      "type": "philosophie",
+      "after": "team_inna_nursah"
+    },
+    {
+      "type": "preise",
+      "after": "philosophie"
+    },
+    {
+      "type": "termin_anfahrt",
+      "after": "preise"
+    }
+  ],
+  "performanceBudget": {
+    "lcp_max_ms": 2500,
+    "cls_max": 0.1,
+    "inp_max_ms": 200,
+    "initial_js_kb_max": 150,
+    "total_mb_max": 3,
+    "lighthouseScore_min": 85,
+    "accessibilityScore_min": 95
+  },
+  "qaChecks": {
+    "stufe": 1,
+    "breakpoints": [
+      360,
+      390,
+      768,
+      1280,
+      1440
+    ],
+    "interactions": [
+      "vorher_nachher_slider",
+      "mobile_menu",
+      "kontaktformular"
+    ]
+  },
+  "seo": {
+    "title": "INNA – Zeitlos schön | Friseur & Blond-Expertin",
+    "description": "Airtouch, Balayage und Farbkorrektur in Wiehl. Farben, die herauswachsen dürfen.",
+    "structuredData": {
+      "type": "HairSalon",
+      "additional": [
+        "LocalBusiness",
+        "Person"
+      ]
+    }
+  },
+  "versioning": {
+    "current": "0.2.0",
+    "status": "draft",
+    "changelog": [
+      {
+        "version": "0.1.0",
+        "date": "2026-09-21",
+        "changes": [
+          "Projekt-Setup nach superband-premium-web",
+          "Site-Typ standard_business aus Kunden-Mockup abgeleitet"
+        ]
+      },
+      {
+        "version": "0.2.0",
+        "date": "2026-09-21",
+        "changes": [
+          "Hero-Prototyp und Verwandlung gebaut, zwei Runden Screenshot-Kritik",
+          "Echte Arbeiten und Texte aus dem Instagram-Profil uebernommen",
+          "Adresse Schulstrasse 1, 51674 Wiehl; bewusst kein Buchungssystem"
+        ]
+      }
+    ]
+  },
+  "deploy": {
+    "platform": "vercel",
+    "plan": "pro",
+    "region": "fra1"
+  }
+}

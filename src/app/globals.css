@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+  Tokens aus docs/design-plan.md. Keine Farbe und keine Schriftgröße im Code,
+  die nicht hier definiert ist.
+*/
+
+@theme inline {
+  /* Palette – jede Farbe hat genau eine Rolle */
+  --color-leinen: #f6f3ee;
+  --color-sand: #d8c8b5;
+  --color-greige: #b4aba1;
+  --color-kupfer: #a56a43;
+  --color-kupfer-tief: #8f5a38;
+  --color-tinte: #2f2f2f;
+
+  /* Schriften – geladen in layout.tsx über next/font */
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-montserrat);
+  --font-signatur: var(--font-parisienne);
+  --font-heading: var(--font-cormorant);
+
+  /* Rhythmus */
+  --spacing-sektion: clamp(5rem, 10vw, 9rem);
+  --breite-text: 34rem;
+  --breite-inhalt: 82rem;
+
+  /* shadcn-Tokens auf die Marke gemappt – keine Standardoptik */
+  --color-background: var(--color-leinen);
+  --color-foreground: var(--color-tinte);
+  --color-card: var(--color-leinen);
+  --color-card-foreground: var(--color-tinte);
+  --color-popover: var(--color-leinen);
+  --color-popover-foreground: var(--color-tinte);
+  --color-primary: var(--color-kupfer-tief);
+  --color-primary-foreground: var(--color-leinen);
+  --color-secondary: var(--color-sand);
+  --color-secondary-foreground: var(--color-tinte);
+  --color-muted: var(--color-sand);
+  --color-muted-foreground: #6b6560;
+  --color-accent: var(--color-sand);
+  --color-accent-foreground: var(--color-tinte);
+  --color-destructive: #9a3412;
+  --color-border: var(--color-greige);
+  --color-input: var(--color-greige);
+  --color-ring: var(--color-kupfer-tief);
+
+  /* Die Marke hat keine runden Ecken */
+  --radius: 0rem;
+  --radius-sm: 0rem;
+  --radius-md: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+  --radius-2xl: 0rem;
+  --radius-3xl: 0rem;
+  --radius-4xl: 0rem;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-leinen);
+    color: var(--color-tinte);
+    font-size: 1.125rem;
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Tastaturfokus immer sichtbar – Quality Floor */
+  :focus-visible {
+    outline: 2px solid var(--color-kupfer-tief);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--color-sand);
+    color: var(--color-tinte);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  /* Typo-Skala aus dem Design-Plan */
+  .t-display {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3.25rem, 9vw, 7.5rem);
+    line-height: 0.98;
+    letter-spacing: -0.015em;
+  }
+
+  .t-titel {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.12;
+  }
+
+  .t-signatur {
+    font-family: var(--font-signatur);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .t-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-kupfer-tief);
+  }
+
+  .t-lead {
+    max-width: var(--breite-text);
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  .inhalt {
+    width: 100%;
+    max-width: var(--breite-inhalt);
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 5vw, 4rem);
+  }
+}
+
+/* Wer weniger Bewegung will, bekommt keine. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
