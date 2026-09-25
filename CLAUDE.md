@@ -21,9 +21,9 @@ Friseursalon von Inna. Gebaut nach dem Skill superband-premium-web v4
 - Git-Autor Ds9001-1983, Commit-Messages deutsch, kein Hinweis auf Claude.
 
 ## Lokale Umgebung
-Das Repo liegt auf einem FAT-Laufwerk. Node 24 kommt über nvm:
-`export PATH="$HOME/.nvm/versions/node/v24.14.0/bin:$PATH"`.
-`._*`-Dateien sind macOS-Artefakte des Dateisystems und in .gitignore.
+Das Repo liegt auf dem USB-Stick „MAC BACKUP“, seit 25.09.2026 APFS (vorher FAT32). Node 24 kommt
+über nvm: `export PATH="$HOME/.nvm/versions/node/v24.14.0/bin:$PATH"`.
+`._*` bleibt als Schutz in .gitignore und ESLint, falls Dateien über FAT/exFAT hereinkommen.
 
 ## Projektart
 Business-Seite (story-spec.json: standard_business). Die Vorlage der Kundin in projekt/vorlagen/ ist

@@ -19,9 +19,6 @@ Vor jedem Commit:
 npm run lint && npm run build
 ```
 
-Läuft gerade ein `npm run start`, vorher stoppen – sonst hält der Server den
-Turbopack-Cache und der Build bricht mit „Failed to open database" ab.
-
 ## Unterlagen
 
 - `docs/design-brief.md` – woraus die Gestaltung kommt
