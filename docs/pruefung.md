@@ -3,6 +3,10 @@
 Erste Prüfung nach Skill v4 (Phase 6). Stand: nach Entfernen des fremden Instagram-Profils und
 Umbau der Leistungen-Kacheln. Quelle des Abgleichs: `projekt/auftrag.md`.
 
+**Aktualisiert 25.09.2026** vor dem Push von drei Commits: Nacharbeiten nach der APFS-Umstellung
+des Sticks, Drucksachen (Entwurf) und fontkit. An der Seite selbst ändert sich nichts. `auftrag.md`
+ist seit dem 21.09. unverändert, Telefon, E-Mail, Öffnungszeiten und Domain sind weiter leer.
+
 ## A Abgleich mit dem Auftrag
 
 | Auftrag | Urteil | Anmerkung |
@@ -15,14 +19,15 @@ Umbau der Leistungen-Kacheln. Quelle des Abgleichs: `projekt/auftrag.md`.
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
 | Leistungen: vier Kacheln, Texte wörtlich | umgesetzt | Kacheln als Textur-Ausschnitte wie in der Vorlage; Dauer und Haltbarkeit offen |
 | Preise | offen | keine Preisliste – Tabelle zeigt Leistungen mit Hinweis, ohne Preis |
-| Telefon, E-Mail, Öffnungszeiten | **offen – Kontaktweg** | Kontakt zeigt „Weg zum Salon" und Adresse, Impressum markiert die Lücken. Vor dem nächsten Push: Telefon oder E-Mail von Inna |
+| Telefon, E-Mail, Öffnungszeiten | **offen – Kontaktweg** | Kontakt zeigt „Weg zum Salon" und Adresse, Impressum markiert die Lücken. Stand 25.09.: weiter offen. Gepusht wurde trotzdem (Dennis), die Preview auf inna-zeitlos.vercel.app zeigt seit 21.09. denselben Stand. Vor dem Live-Gang auf eigener Domain: Telefon oder E-Mail von Inna |
 | Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
 | Kein Buchungssystem (F4) | umgesetzt | überall „Termin anfragen", kein Buchungsversprechen |
 | Team Inna & Nursah | umgesetzt | ohne Personenfoto (Material); Nursahs Nachname offen |
 | Philosophie: vier Werte | umgesetzt | |
 | Arbeiten / Referenzen (B1) | umgesetzt | 8 Arbeiten mit Technik und Datum aus den Beiträgen |
 | Du-Form (F7) | umgesetzt | |
-| Vercel (F8) | offen | Vercel-Projekt noch nicht mit dem Repo verbunden (`vercel link` oder Dashboard) |
+| Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
+| Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | Entwurf | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Final-PDFs erst, wenn Telefon, E-Mail, Domain und Öffnungszeiten feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
 | Einwilligungen (Kundinnenfotos, Zitat, KI-Video) | offen | schriftliche Zustimmung fehlt |
 | Portraits Inna und Nursah | offen | Vorlage zeigt Menschen – Fotografin |
@@ -50,16 +55,19 @@ Kontrast auf dem Video (`qa:kontrast`, vier Zeitpunkte, Zeilenboxen, hellstes 2 
 Überbreite bei 360 px: 0, bei 640 px (entspricht Zoom 200 % auf 1280): 0 · Bilder beim zweiten Aufruf: 18/18 geladen ·
 Video läuft (`hero.webm`), bei reduzierter Bewegung 0 Videoanfragen · Tastatur: 23 fokussierbare Elemente, alle mit sichtbarem Fokus, keins außerhalb des Viewports.
 
+Nachmessung 25.09.2026 nach der APFS-Umstellung: Lint/Build grün, `next start` und `next dev` mit je
+97 Bild-URLs × AVIF/WebP/JPEG × 3 Abrufen = 873/873 korrekt (MISS → HIT, gleiche Bytes).
+
 Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `npm run qa:messungen` (Überbreite, Bilder, Video, Platzhalter, doppelte Motive, Tastatur, Aufnahmen). Zahlen vom 21.09.2026.
 
 ## Offene Punkte für Dennis
 
-- Telefon oder E-Mail von Inna – Kontaktweg, vor dem nächsten Push
+- Telefon oder E-Mail von Inna – Kontaktweg, vor dem Live-Gang auf eigener Domain
 - Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten, Preisliste, Dauer und Haltbarkeit je Leistung
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
 - Portraits von Inna und Nursah, Teamfoto, Salonfotos (Fotografin) – löst auch die doppelten Motive
 - Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Bildern, Verfasserin des Zitats, KI-Video aus dem Kundenfoto
-- Vercel-Projekt verbinden, Domain
+- Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100
