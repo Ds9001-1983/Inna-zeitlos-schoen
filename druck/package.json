@@ -1,0 +1,19 @@
+{
+  "name": "inna-druck",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Druckdaten für INNA – Zeitlos schön: Folienschild und Visitenkarten (Flyeralarm)",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "entwurf": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON erzeugen.mjs",
+    "final": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON erzeugen.mjs --final",
+    "pruefen": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON pruefen.mjs"
+  },
+  "dependencies": {
+    "pdfkit": "0.20.2",
+    "qrcode": "1.5.4"
+  }
+}

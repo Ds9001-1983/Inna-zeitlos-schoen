@@ -33,3 +33,6 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
 Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Telefon, E-Mail, Zeiten, Preise,
 Rechtsname, Instagram, Portraits, Einwilligungen). Kein Freigabe-Stopp.
+Drucksachen (Schild 600 × 500 mm hell, Kontakt-Visitenkarte, Flyeralarm): druck/, Doku docs/druck.md –
+Entwurf 23.09.2026, Varianten entschieden. Die Druck-PDFs (npm --prefix druck run final) entstehen,
+sobald Telefon, E-Mail, Domain und Öffnungszeiten in src/inhalte/salon.ts stehen.

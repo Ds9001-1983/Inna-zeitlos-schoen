@@ -150,6 +150,70 @@ Video ab.
 
 ## Revidiert
 
+**24.09.2026 – Innas Wunsch: Visitenkarte vorn in Cognac, mit beiger oder schwarzer Schrift.**
+Keine neue Farbe. Cognac sind die beiden Kupfer-Töne, und jede Schriftfarbe bekommt den Ton, auf dem
+sie lesbar bleibt:
+- *Beige* ist Leinen (Creme) auf Kupfer tief, 5,2:1. Sand wäre echtes Beige, kommt auf Kupfer tief
+  aber nur auf 3,5:1, und ZEITLOS SCHÖN mit 8,6 pt würde als vierfarbige Tönung unsauber. Weil die
+  Schrift ausgespart wird, stehen die Schnitte hier eine Stufe kräftiger: Cormorant 400 und
+  Montserrat 500. Feinere Haarstriche würden im Druck zulaufen.
+- *Schwarz* ist reines K auf dem helleren Kupfer, 3,0:1. Auf Kupfer tief wären es nur 2,3:1. Die
+  Schrift wird überdruckt statt ausgespart (Flyeralarm-Empfehlung für kleine schwarze Schrift). So
+  entstehen keine Blitzer, und es druckt ein warmes Tiefbraun (20/53/70/94, 237 %).
+
+Die Rückseite bleibt in allen Fassungen Leinen. Dort stehen 8-pt-Kleinschrift und der QR-Code, und
+beide brauchen hellen Grund. Inna wählt zwischen Leinen, Cognac-Beige und Cognac-Schwarz.
+
+**23.09.2026 – Entscheidung Drucksachen (Dennis):** Das Schild wird hell auf Leinen, die Karte eine
+Kontaktkarte. Die dunkle Schildfassung und die Terminkarte entfallen. Dadurch gibt es auf Papier
+kein Kupfer hell mehr, und die Unterschrift ist das einzige Kupfer der Kartenrückseite.
+
+**23.09.2026 – Drucksachen: Schild 600 × 500 mm und Visitenkarte 85 × 55 mm (Flyeralarm):**
+
+Keine neue Farbe und keine neue Schrift. Die Tokens oben gelten auf Papier weiter, dazu ihre
+CMYK-Separation. Gerechnet mit littleCMS, relativ farbmetrisch mit Tiefenkompensierung
+(`druck/farben-berechnen.py` → `druck/farben.mjs`). Kanäle unter 3 % entfallen.
+
+| Token | ISO Coated v2 (ECI) – Schild | ISO Coated v2 300 % (ECI) – Karte |
+|---|---|---|
+| Leinen | 4 / 4 / 7 / 0 | 4 / 4 / 7 / 0 |
+| Sand | 16 / 20 / 29 / 3 | 15 / 19 / 28 / 4 |
+| Greige | 29 / 27 / 32 / 9 | 28 / 26 / 31 / 11 |
+| Kupfer | 22 / 55 / 71 / 26 | 20 / 53 / 70 / 28 |
+| Kupfer tief | 28 / 58 / 74 / 35 | 24 / 56 / 72 / 38 |
+| Kupfer dunkel | 36 / 64 / 78 / 50 | 31 / 60 / 74 / 54 |
+| Kupfer hell | 14 / 47 / 63 / 11 | 13 / 47 / 62 / 13 |
+| Tinte (Flächen, Schrift ab 12 pt) | 71 / 61 / 58 / 67 | 65 / 55 / 52 / 71 |
+| Tinte Text (Schrift unter 12 pt) | 0 / 0 / 0 / 94 | 0 / 0 / 0 / 94 |
+
+- *Tinte Text* ist keine neue Farbe, sondern die Separation von Tinte für Kleinschrift. Es ist
+  reines K mit demselben gedruckten L\* (24) wie die vierfarbige Tinte. Flyeralarm verlangt Texte in
+  Schwarz, weil vierfarbige Kleinschrift bei Passerschwankungen unscharf wird.
+- *Kupfer auf Papier* nur für Flächen, Linien ab 0,5 pt und Schrift ab 12 pt. Kleinschrift auf
+  dunklem Grund nur als Leinen-Aussparung ab 7 pt.
+- *Cormorant auf dem Schild in 400, nicht 300.* Die Haarstriche des Light-Schnitts brechen draußen
+  auf Distanz weg. Mindest-Versalhöhen für 2–6 m Leseabstand: Wortmarke 80 mm, Leistungen 20 mm,
+  Angaben 15 mm, Labels 12 mm, Claim (Parisienne) 12 mm x-Höhe.
+- *Parisienne behält ihre zwei Rollen:* auf dem Schild der Claim „So natürlich wie du." wie die
+  zweite Hero-Zeile, auf der Karte Innas Unterschrift wie in „Über mich".
+- *Keine Fotos.* Die Einwilligungen der Kundinnen fehlen, und Außenwerbung ginge über die Website
+  hinaus. Die Drucksachen sind rein typografisch, wie die Karte in Innas eigenem Seitenentwurf.
+- *ZEITLOS SCHÖN auf Papier in Montserrat 400 statt 500.* Die Website setzt 500 in tinte/70. Papier
+  kennt keine Deckkraft, deshalb übernimmt der leichtere Schnitt die Abstufung. Die Zeile ist so
+  breit wie INNA, wie in der Wortmarke der Website.
+- *Innas Unterschrift auf der Karte in Kupfer tief* (Website: Tinte). Sie ist das einzige Kupfer
+  der Kontaktseite. Auf der Terminkarte übernimmt die Überschrift „Dein nächster Termin" diese Rolle.
+- *Schild, gewählt nach Jury (3 Varianten, 3 Richter, einstimmig):* eine Mittelachse wie die Karte
+  in Innas Entwurf, hell auf Leinen, dazu dieselbe Aufteilung dunkel auf Tinte als Alternative. Grade:
+  INNA 88 mm, ZEITLOS SCHÖN 27,5 mm (so breit wie INNA), Claim 13 mm x-Höhe in Kupfer tief,
+  „Zwei Friseurmeisterinnen. Ein Anspruch." 15 mm Cormorant Kursiv, Leistungen 20 mm in zwei
+  INNA-breiten Zeilen mit gezeichneten Kupferpunkten (Ø 5 mm), Öffnungszeiten 15 mm als
+  Linien-Tabelle wie die Preisliste, Telefon und Website 16 mm.
+- *Visitenkarte, gewählt nach Jury:* vorn die Wortmarke zentriert auf Leinen (INNA 7,2 mm
+  Versalhöhe, rund 45 % der Kartenbreite). Hinten eine linke Kante, Kleinschrift einheitlich 8 pt,
+  Versalien 7 pt, QR-Code auf die Website rechts. Die Terminkarte hat drei Schreibzeilen für Datum
+  und Uhrzeit im Abstand von 7 mm.
+
 **21.09.2026 – Plan in die v4-Form gebracht:**
 
 Struktur nach `design-plan.md` des Skills v4: Maßstab aus den Referenzen, Bildhaushalt, Signature Moves

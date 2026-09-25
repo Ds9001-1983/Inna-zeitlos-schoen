@@ -59,3 +59,8 @@ public/arbeiten-4k/
 # Projektordner: Rohvideo bleibt lokal
 projekt/video/*
 !projekt/video/.gitkeep
+
+# Druckdaten: Abhängigkeiten, erzeugte PDFs/PNGs und ECI-Profile (Lizenz der ECI, per profile/laden.sh)
+druck/node_modules/
+druck/ausgabe/
+druck/profile/*.icc

@@ -5,7 +5,7 @@
  * die Seite zeigt sie dann automatisch an und blendet bis dahin einen sinnvollen
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
- * OFFEN: telefon, email, oeffnungszeiten, Innas Instagram-Profil, Preise, Betriebsname
+ * OFFEN: telefon, email, domain, oeffnungszeiten, Innas Instagram-Profil, Preise, Betriebsname
  * fürs Impressum, Nursahs Nachname, Portraits von Inna und Nursah.
  */
 
@@ -18,6 +18,8 @@ export const salon = {
   region: 'Oberbergischer Kreis',
   telefon: null as string | null,
   email: null as string | null,
+  /** OFFEN – Domain ohne https://, sobald sie feststeht. Steht auf Schild und Visitenkarte. */
+  domain: null as string | null,
   /** OFFEN – Innas eigenes Profil. Erscheint erst, wenn beides gefüllt ist. */
   instagram: null as string | null,
   instagramName: null as string | null,
