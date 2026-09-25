@@ -13,6 +13,7 @@
     "pruefen": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON pruefen.mjs"
   },
   "dependencies": {
+    "fontkit": "2.0.4",
     "pdfkit": "0.20.2",
     "qrcode": "1.5.4"
   }
