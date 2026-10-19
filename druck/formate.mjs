@@ -2,7 +2,8 @@
  * Druckvorgaben je Produkt. Quelle: Flyeralarm – Checkliste zur Druckdatenerstellung und das
  * Datenblatt `vk_mass_q` (Visitenkarte plano, Querformat). Alle Maße in Millimetern.
  *
- * Schild: Das Datenblatt für „Schilder mit Foliendruck im Wunschformat" gibt Flyeralarm erst im
+ * Schild (seit 19.10.2026): „Alu-Verbundplatte weiß im Wunschformat" – Dibond 3 mm, UV-Direktdruck
+ * 4/0, Veredelung UV-Lack matt. Das Datenblatt gibt Flyeralarm erst im
  * Konfigurator heraus. Der Beschnitt von 3 mm ist eine ANNAHME – vor dem Upload mit dem Datenblatt
  * der Bestellung abgleichen und hier ändern. Der eigene Satzrand von 30 mm deckt jeden üblichen
  * Sicherheitsabstand und hält die Ecken für Bohrungen frei.
@@ -36,14 +37,14 @@ export const produkte = {
     pflichtfelder: ['telefon', 'email', 'domain'],
   },
   schild: {
-    titel: 'Schild mit Foliendruck 600 × 500 mm, quer, 4/0-farbig',
+    titel: 'Alu-Verbundplatte (Dibond) weiß 3 mm, 600 × 500 mm quer, UV-Direktdruck 4/0, UV-Lack matt',
     endformat: { breite: 600, hoehe: 500 },
     beschnitt: 3,
     beschnittIstAnnahme: true,
     sicherheit: 30,
     profil: 'isoCoatedV2',
     datenblatt:
-      'Flyeralarm Schilder mit Foliendruck im Wunschformat – Beschnitt 3 mm ANGENOMMEN, Datenblatt der Bestellung prüfen',
+      'Flyeralarm Alu-Verbundplatte weiß im Wunschformat, 3 mm, UV-Direktdruck – Beschnitt 3 mm ANGENOMMEN, Datenblatt der Bestellung prüfen',
     vorschauDpi: 40,
     /** Seit 13.10.2026 nur die Wortmarke – keine Angabe aus salon.ts nötig */
     pflichtfelder: [],

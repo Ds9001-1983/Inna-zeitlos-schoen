@@ -7,7 +7,7 @@ Farben und Schriften: `docs/design-plan.md`, Abschnitt „Revidiert 23.09.2026 �
 
 | | Schild vor dem Eingang | Visitenkarte |
 |---|---|---|
-| Flyeralarm-Produkt | Schilder mit Foliendruck im Wunschformat (Alu-Verbund, Folie, UV- und wetterfest) | Visitenkarte plano, Querformat, 4/4-farbig |
+| Flyeralarm-Produkt | [Alu-Verbundplatte weiß im Wunschformat](https://www.flyeralarm.com/de/shop/customformat/selectformat/id/5817/alu-verbundplatte-weiss-im-wunschformat.html): Materialstärke 3 mm, 4/0-farbig (UV-Direktdruck CMYK), Veredelung UV-Lack matt (seit 19.10.2026, vorher Foliendruck) | Visitenkarte plano, Querformat, 4/4-farbig |
 | Endformat | 600 × 500 mm quer | 85 × 55 mm quer |
 | Datenformat (PDF-Seite) | 606 × 506 mm | 87 × 57 mm |
 | Beschnitt | 3 mm – **Annahme**, Datenblatt der Bestellung prüfen | 1 mm (Datenblatt `vk_mass_q`) |
@@ -96,9 +96,11 @@ einem Abbruch liegt also nichts Veraltetes in `druck/ausgabe/final/`.
 
 ## Bestellung – Empfehlung
 
-- **Schild:** matte Laminierung statt glänzend. Das Schild hängt draußen, Glanz spiegelt Himmel
-  und Straße. Montage (Bohrungen, Abstandshalter, Schiene) vor der Bestellung mit Inna klären. Der
-  Satzrand von 30 mm hält die Ecken frei.
+- **Schild (Dennis, 19.10.2026):** Alu-Verbundplatte weiß im Wunschformat 60 × 50 cm, 3 mm,
+  4/0-farbig, UV-Lack matt. Matt, weil Glanz draußen Himmel und Straße spiegelt; der Lack schützt
+  den Druck zusätzlich gegen Wetter und Ausbleichen. Montage-Optionen im Konfigurator: 4-fach
+  Eckbohrung mit Edelstahl-Abstandshaltern, Plattenklammern, selbstklebende Aufhänger, abgerundete
+  Ecken. Die Wortmarke steht weit innerhalb des Satzrands von 30 mm, Eckbohrungen treffen nichts.
 - **Visitenkarte:** matt gestrichenes Papier ab 300 g/m² (Bilderdruck matt), ohne Glanzlack. Das
   passt zur ruhigen Marke und zum Flyeralarm-Profil ISO Coated v2 300 %.
 
