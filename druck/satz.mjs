@@ -42,7 +42,7 @@ function fontkitSchrift(name) {
 }
 
 /** Kleinschrift-Farben: reines K auf hell, oder Aussparung in Leinen auf dunklem Grund. */
-const K_FARBEN = new Set(['tinteText'])
+const K_FARBEN = new Set(['tinteText', 'schwarz'])
 const NEGATIV_FARBEN = new Set(['leinen'])
 
 const normal = (s) => s.toLowerCase().replaceAll('ß', 'ss')

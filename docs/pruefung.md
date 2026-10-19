@@ -35,7 +35,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Neukunden-Termin: Gespräch, ca. 30 Minuten | umgesetzt | Kontakttext nach Innas Korrektur vom 13.10.2026 |
 | Du-Form (F7) | umgesetzt | |
 | Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
-| Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | Entwurf | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Final-PDFs erst, wenn Telefon, E-Mail, Domain und Öffnungszeiten feststehen |
+| Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | Schild druckfertig, Karte Entwurf | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Schild seit 19.10. nach Innas Wunsch nur Wortmarke auf Cognac → `druck/ausgabe/final/schild.pdf`, Preflight ok, Beschnitt 3 mm angenommen. Karte erst, wenn Telefon, E-Mail und Domain feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
 | Einwilligungen (Kundinnenfotos, Zitat, KI-Video) | offen | schriftliche Zustimmung fehlt |
 | Portraits Inna und Nursah | offen | Vorlage zeigt Menschen – Fotografin |

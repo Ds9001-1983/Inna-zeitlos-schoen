@@ -1,6 +1,7 @@
 // ERZEUGT von farben-berechnen.py – nicht von Hand ändern.
 // Hex aus docs/design-plan.md, CMYK in Prozent je Flyeralarm-Profil (relativ farbmetrisch, Tiefenkompensierung).
 // tinteText = Separation von Tinte für kleine Schrift, reines K (keine neue Markenfarbe).
+// schwarz = reines K 100, überdruckt auf Kupfer für das Schild (Tinte in der dunkelsten Fassung).
 export const farbtabelle = {
   "quelle": "docs/design-plan.md",
   "profile": {
@@ -142,6 +143,22 @@ export const farbtabelle = {
             0
           ],
           "hinweis": "reines K, L* 24.3 gegen L* 24.3 der vierfarbigen Tinte"
+        },
+        "schwarz": {
+          "hex": "#2F2F2F",
+          "cmyk": [
+            0,
+            0,
+            0,
+            100
+          ],
+          "summe": 100,
+          "lab": [
+            17.3,
+            0,
+            0
+          ],
+          "hinweis": "reines K 100, nur überdruckt auf Kupfer (Schild)"
         }
       }
     },
@@ -283,6 +300,22 @@ export const farbtabelle = {
             0
           ],
           "hinweis": "reines K, L* 24.3 gegen L* 24.7 der vierfarbigen Tinte"
+        },
+        "schwarz": {
+          "hex": "#2F2F2F",
+          "cmyk": [
+            0,
+            0,
+            0,
+            100
+          ],
+          "summe": 100,
+          "lab": [
+            17.3,
+            0,
+            0
+          ],
+          "hinweis": "reines K 100, nur überdruckt auf Kupfer (Schild)"
         }
       }
     }

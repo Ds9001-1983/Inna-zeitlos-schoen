@@ -1,6 +1,6 @@
 # Drucksachen: Schild und Visitenkarte
 
-Stand: 23.09.2026 · Druckerei: Flyeralarm · Quelle der Fakten: `src/inhalte/salon.ts`
+Stand: 19.10.2026 (Schild neu), 23.09.2026 · Druckerei: Flyeralarm · Quelle der Fakten: `src/inhalte/salon.ts`
 Farben und Schriften: `docs/design-plan.md`, Abschnitt „Revidiert 23.09.2026 – Drucksachen"
 
 ## Produkte
@@ -23,7 +23,7 @@ erzeugt neu. Satz und Prüfung passen sich an.
 
 | Datei in `druck/ausgabe/` | Inhalt |
 |---|---|
-| `schild` | Mittelachse wie die Karte in Innas Entwurf, hell auf Leinen |
+| `schild` | seit 19.10.2026: nur die Wortmarke in Tiefschwarz auf Cognac, wie die Kartenvorderseite Cognac-Schwarz (Innas Wunsch vom 13.10.: „Schild wie Karte", Schrift dunkler). **Druck-PDF liegt in `druck/ausgabe/final/schild.pdf`** |
 | `visitenkarte` | vorn Wortmarke auf Leinen, hinten Unterschrift, Beruf, Telefon, E-Mail, Web, Adresse, QR-Code |
 | `visitenkarte-cognac-beige` | Innas Wunsch vom 24.09.2026: vorn Cognac (Kupfer tief) mit beiger Schrift (Leinen), hinten wie oben |
 | `visitenkarte-cognac-schwarz` | vorn Cognac (Kupfer) mit schwarzer Schrift, überdruckt; hinten wie oben |
@@ -32,15 +32,15 @@ Module: `druck/entwuerfe/schild.mjs` und `druck/entwuerfe/visitenkarte.mjs`. Dre
 Druck, Kundin) haben aus drei Schild- und zwei Kartenvarianten einstimmig ausgewählt. Die Begründung
 steht im Design-Plan unter „Revidiert". Am 23.09.2026 hat Dennis entschieden: Das Schild wird hell
 auf Leinen, die Karte eine Kontaktkarte. Die dunkle Fassung und die Terminkarte entfallen.
-Für die Vorderseite der Karte wählt Inna noch zwischen Leinen, Cognac-Beige und Cognac-Schwarz.
+Am 13.10.2026 hat Inna das Schild neu entschieden: wie die Kartenvorderseite Cognac-Schwarz, ohne
+Claim, Leistungen, Zeiten und Kontakt, die Schrift dunkler (reines K 100 überdruckt, Cormorant
+Regular und Montserrat Medium). Für die Vorderseite der Karte wählt Inna noch zwischen Leinen, Cognac-Beige und Cognac-Schwarz.
 Die beiden nicht gewählten Fassungen fliegen danach aus `visitenkarte.mjs`.
 
 Wie der Satz auf echte Angaben reagiert (getestet am 23.09.2026 mit typischen, langen und
 überlangen Werten):
 
-- **Schild:** Bis drei Zeilen Öffnungszeiten stehen im normalen Takt, bei vier Zeilen wird es enger.
-  Ab fünf Zeilen bricht der Satz mit einer Meldung ab. Dann die Tage zusammenfassen, z. B.
-  „Di – Fr". Passen Telefon und Website nicht in eine Zeile, stehen sie zentriert untereinander.
+- **Schild:** hängt seit 19.10.2026 an keiner Angabe mehr – nur die Wortmarke.
 - **Kontaktkarte:** Reichen E-Mail oder Website bis an den QR-Code, rückt er nach oben rechts neben
   die Unterschrift.
 - Was auch so nicht passt, bricht mit einer Meldung ab, die Maß und Platz nennt. Die übrigen Produkte
@@ -68,10 +68,10 @@ gelangen nie in eine Druckdatei.
 
 | Feld in `salon.ts` | Schild | Visitenkarte |
 |---|---|---|
-| `telefon` | Pflicht | Pflicht |
+| `telefon` | – | Pflicht |
 | `email` | – | Pflicht |
-| `domain` (Website, auch für den QR-Code) | Pflicht | Pflicht |
-| `oeffnungszeiten` | Pflicht | – |
+| `domain` (Website, auch für den QR-Code) | – | Pflicht |
+| `oeffnungszeiten` | – | – |
 
 Instagram steht auf keiner Drucksache, bis Innas eigenes Profil im Auftrag steht.
 
@@ -104,7 +104,9 @@ einem Abbruch liegt also nichts Veraltetes in `druck/ausgabe/final/`.
 
 ## Vor dem Upload
 
-1. Pflichtfelder in `src/inhalte/salon.ts` gefüllt, `npm --prefix druck run final` läuft durch.
+1. Pflichtfelder in `src/inhalte/salon.ts` gefüllt, `npm --prefix druck run final` läuft durch
+   (Schild allein: `npm --prefix druck run final -- --nur schild`).
 2. `npm --prefix druck run pruefen` ohne ✗.
 3. Beschnitt des Schilds gegen das Datenblatt der Bestellung.
 4. Vorschau-PNGs aus `druck/ausgabe/final/` einmal mit Inna ansehen (Telefonnummer, Zeiten, Domain).
+5. Schild: Weil das Cognac randabfallend ist, zählt der Beschnitt hier wirklich – 3 mm sind angenommen.

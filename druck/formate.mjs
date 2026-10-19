@@ -45,9 +45,13 @@ export const produkte = {
     datenblatt:
       'Flyeralarm Schilder mit Foliendruck im Wunschformat – Beschnitt 3 mm ANGENOMMEN, Datenblatt der Bestellung prüfen',
     vorschauDpi: 40,
-    pflichtfelder: ['telefon', 'domain', 'oeffnungszeiten'],
-    /** Mindest-Versalhöhe in mm je Rolle – Leseabstand 2 bis 6 m vor dem Eingang */
-    lesbarkeit: { wortmarke: 80, leistung: 20, angabe: 15, label: 12, claim: 12 },
+    /** Seit 13.10.2026 nur die Wortmarke – keine Angabe aus salon.ts nötig */
+    pflichtfelder: [],
+    /**
+     * Mindest-Versalhöhe in mm je Rolle. Die Wortmarke steht wie auf der Karte bei rund der halben
+     * Schildbreite (INNA 51 mm) – lesbar bis gut 15 m. Vorher 80 mm, als noch Angaben darunter standen.
+     */
+    lesbarkeit: { wortmarke: 50, leistung: 20, angabe: 15, label: 12, claim: 12 },
   },
 }
 

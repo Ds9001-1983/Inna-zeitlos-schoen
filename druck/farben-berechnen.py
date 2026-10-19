@@ -94,12 +94,24 @@ def main():
             "lab": (beste[1], 0, 0),
             "hinweis": f"reines K, L* {beste[1]} gegen L* {ziel_l} der vierfarbigen Tinte",
         }
+        # Schwarz: reines K 100 für die Schrift auf dem Cognac-Schild, überdruckt. Zusammen mit dem
+        # Kupfer darunter druckt es ein warmes Tiefschwarz – keine neue Markenfarbe, nur die dunkelste
+        # Fassung von Tinte (Innas Wunsch vom 13.10.2026: Schrift dunkler).
+        l_schwarz = lab_aus_pil(zu_lab.apply(pixel("CMYK", (0, 0, 0, 255))).getpixel((0, 0)))[0]
+        farben["schwarz"] = {
+            "hex": TOKENS["tinte"],
+            "cmyk": [0, 0, 0, 100],
+            "summe": 100,
+            "lab": (l_schwarz, 0, 0),
+            "hinweis": "reines K 100, nur überdruckt auf Kupfer (Schild)",
+        }
         ergebnis["profile"][name] = {"datei": pfad.name, "farben": farben}
 
     kopf = (
         "// ERZEUGT von farben-berechnen.py – nicht von Hand ändern.\n"
         "// Hex aus docs/design-plan.md, CMYK in Prozent je Flyeralarm-Profil (relativ farbmetrisch, Tiefenkompensierung).\n"
         "// tinteText = Separation von Tinte für kleine Schrift, reines K (keine neue Markenfarbe).\n"
+        "// schwarz = reines K 100, überdruckt auf Kupfer für das Schild (Tinte in der dunkelsten Fassung).\n"
     )
     (HIER / "farben.mjs").write_text(
         kopf + "export const farbtabelle = " + json.dumps(ergebnis, ensure_ascii=False, indent=2) + "\n",

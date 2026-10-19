@@ -35,6 +35,7 @@ Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Telefon, E-Mail, 
 Rechtsname, Instagram, Portraits, Einwilligungen, Ersatzfoto Über mich). Kein Freigabe-Stopp.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
 docs/design-plan.md „Revidiert“.
-Drucksachen (Schild 600 × 500 mm hell, Kontakt-Visitenkarte, Flyeralarm): druck/, Doku docs/druck.md –
-Entwurf 23.09.2026, Varianten entschieden. Die Druck-PDFs (npm --prefix druck run final) entstehen,
-sobald Telefon, E-Mail, Domain und Öffnungszeiten in src/inhalte/salon.ts stehen.
+Drucksachen (Schild 600 × 500 mm Cognac, Kontakt-Visitenkarte, Flyeralarm): druck/, Doku docs/druck.md –
+Schild seit 19.10.2026 druckfertig (nur Wortmarke in Tiefschwarz auf Cognac, wie die Karte;
+npm --prefix druck run final -- --nur schild). Die Visitenkarte entsteht, sobald Telefon, E-Mail
+und Domain in src/inhalte/salon.ts stehen.

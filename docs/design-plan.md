@@ -150,6 +150,18 @@ Video ab.
 
 ## Revidiert
 
+**19.10.2026 – Schild wie die Karte (Inna, 13.10.2026: „Schild wie Karte", Schrift dunkler).**
+Das Schild zeigt nur noch die Wortmarke auf Cognac (Kupfer), in den Proportionen der
+Kartenvorderseite Cognac-Schwarz. Claim, Leistungen, Öffnungszeiten und Kontakt entfallen.
+- *Dunkler:* Die Schrift ist reines K 100 statt K 94 und wird überdruckt. Auf dem Kupfer druckt das ein
+  warmes Tiefschwarz mit L* 13 statt 17 (3,8:1 statt 3,4:1 gegen den Grund). Vierfarbiges Tiefschwarz
+  käme nur auf L* 12, dafür mit Blitzer-Gefahr. Dazu kommen kräftigere Schnitte: Cormorant Regular statt
+  Light, Montserrat Medium statt Regular.
+- *Neues Druck-Token `schwarz`* (K 100). Es ist keine neue Markenfarbe, sondern Tinte in der dunkelsten
+  Fassung, nur zum Überdrucken auf Kupfer. Erzeugt von `druck/farben-berechnen.py`.
+- Die Mindest-Versalhöhe der Wortmarke auf dem Schild sinkt von 80 auf 50 mm. INNA steht wie auf der
+  Karte bei rund der halben Schildbreite (51 mm) und ist damit gut 15 m weit lesbar.
+
 **19.10.2026 – Korrekturrunde von Inna (Anmerkungen auf der Preview vom 13.10., über Dennis).**
 Die Seite wird kürzer: Hero → Über mich → Leistungen → Bildkapitel → Team → Philosophie → Kontakt.
 - *Gestrichen:* Die Verwandlung (Diptychon samt Kundenstimme), Die Arbeiten (Werkgalerie, Move 17) und
