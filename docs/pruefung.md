@@ -30,7 +30,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Kein Buchungssystem (F4) | umgesetzt | überall „Termin anfragen", kein Buchungsversprechen |
 | Team Inna & Nursah | umgesetzt | ohne Personenfoto (Material); Nursahs Nachname offen |
 | Philosophie: vier Werte | umgesetzt | |
-| Arbeiten / Referenzen (B1), Verwandlung | entfallen | gestrichen (Inna, 13.10.2026); Bilddateien liegen weiter in `public/arbeiten/`, werden aber nicht mehr eingebunden |
+| Arbeiten / Referenzen (B1), Verwandlung | entfallen | gestrichen (Inna, 13.10.2026); die nicht mehr genutzten Bilder (Farbkorrektur vorher/nachher, Rückansicht) sind aus `public/arbeiten/` gelöscht, damit sie ohne Einwilligung nicht abrufbar bleiben |
 | Über mich | umgesetzt | Wortmarke statt Unterschrift (13.10.); **Foto offen** – Ersatz kommt von Inna, bis dahin die Strähne |
 | Neukunden-Termin: Gespräch, ca. 30 Minuten | umgesetzt | Kontakttext nach Innas Korrektur vom 13.10.2026 |
 | Du-Form (F7) | umgesetzt | |
