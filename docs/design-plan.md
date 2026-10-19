@@ -150,6 +150,20 @@ Video ab.
 
 ## Revidiert
 
+**19.10.2026 – Korrekturrunde von Inna (Anmerkungen auf der Preview vom 13.10., über Dennis).**
+Die Seite wird kürzer: Hero → Über mich → Leistungen → Bildkapitel → Team → Philosophie → Kontakt.
+- *Gestrichen:* Die Verwandlung (Diptychon samt Kundenstimme), Die Arbeiten (Werkgalerie, Move 17) und
+  die Preise (Linien-Tabelle). Damit entfallen in der Navigation „Arbeiten“ und „Preise“. Der Hero-Link
+  heißt jetzt „Leistungen ansehen“. Die Abschnittsfolge, der Bildhaushalt und Move 17 weiter oben sind damit überholt.
+- *Leistungen:* Die Überschrift heißt „Haar, was zu dir passt.“ (Wortlaut von Inna). Die vier Kacheln
+  stehen ohne Titel und Beschreibung, also als reine Bildreihe. Die Titel bleiben im Alt-Text und auf dem Schild.
+- *Über mich:* Die Wortmarke ersetzt die Unterschrift „Inna ♡“, gleiche Schriften, nur größer
+  (`Wortmarke groesse="gross"`). Parisienne kommt damit nur noch in der Hero-Zeile vor.
+  Das Foto (Strähne) bleibt, bis Inna einen Ersatz schickt.
+- *Kontakt:* Der Text beginnt mit dem Neukunden-Termin: erst das Gespräch, ca. 30 Minuten. Der Satz zum
+  Online-Kalender und „in zwei Minuten“ sind raus.
+- Keine neue Farbe, Schrift oder Bewegung.
+
 **24.09.2026 – Innas Wunsch: Visitenkarte vorn in Cognac, mit beiger oder schwarzer Schrift.**
 Keine neue Farbe. Cognac sind die beiden Kupfer-Töne, und jede Schriftfarbe bekommt den Ton, auf dem
 sie lesbar bleibt:

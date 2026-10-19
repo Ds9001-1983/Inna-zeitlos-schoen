@@ -95,14 +95,14 @@ export function Hero() {
                 Termin anfragen
               </a>
               <a
-                href="#arbeiten"
+                href="#leistungen"
                 onClick={(e) => {
                   e.preventDefault()
-                  springeZu('#arbeiten')
+                  springeZu('#leistungen')
                 }}
                 className="link text-sm text-leinen"
               >
-                Arbeiten ansehen
+                Leistungen ansehen
               </a>
             </div>
           </div>

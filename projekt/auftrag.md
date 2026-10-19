@@ -21,6 +21,8 @@ Domain:
 ## Personen
 Name | Rolle | Foto vorhanden (ja/nein)
 Inna | Inhaberin, Friseurmeisterin – Farbe, Transformation, Beratung | nein (der Seitenentwurf zeigt ein Model)
+
+Foto „Über mich“: Ersatz kommt von Inna (13.10.2026). Bis dahin bleibt die Strähne.
 Nursah (Nachname offen) | Friseurmeisterin – klassische Schnitte, Farbe | nein
 
 ## Leistungen und Preise
@@ -29,7 +31,8 @@ Blond Expertin | Airtouch, Balayage, Babylights, Faceframe, Glossing | |
 Farbtransformation | Individuelle Farbkonzepte für den perfekten Farbton | | 
 Tressen & Verdichtung | Hochwertige Tressen für Länge, Volumen und natürliches Haargefühl | | 
 Schnitt & Styling | Maßgeschneiderte Schnitte | | 
-Preisliste: nicht übergeben.
+Preisliste: nicht übergeben. Der Abschnitt Preise entfällt (Korrektur 13.10.2026).
+Die Leistungen stehen auf der Seite als Bildreihe ohne Text, die Beschreibungen oben bleiben als Quelle.
 
 ## Besonderheiten
 Zwei Friseurmeisterinnen, ein Anspruch. Farben, die herauswachsen dürfen – typgerecht, gesundes Haar,
@@ -38,6 +41,7 @@ Vorher/Nachher-Arbeiten aus Instagram-Beiträgen (Januar und Juli 2026).
 
 ## Kontaktwege
 Kein Buchungssystem (Vorgabe Dennis, 21.09.2026 – evtl. später eine Verknüpfung).
+Neukunden-Termin beginnt mit einem Gespräch, ca. 30 Minuten einplanen (Inna, Korrektur 13.10.2026).
 Telefon und E-Mail sind noch nicht übergeben → Kontaktweg offen.
 
 ## Rechtliches
@@ -62,6 +66,12 @@ F7  Anrede: Du
 F8  Hosting: Vercel
 F9  Bestandsseite: nein
 F10 Dringlichkeit: standard
-B1  Abschnitte: Über mich, Arbeiten (Referenzen), Leistungen, Team, Philosophie, Preise, Kontakt
+B1  Abschnitte: Über mich, Leistungen, Team, Philosophie, Kontakt
+    (Verwandlung, Arbeiten und Preise am 13.10.2026 von Inna gestrichen)
 B2  Einzugsgebiet: Wiehl, Oberbergischer Kreis
 B3  Google-Unternehmensprofil: weiß nicht
+
+## Korrekturen
+13.10.2026 (Inna, Anmerkungen auf der Preview, über Dennis): Verwandlung, Arbeiten und Preise raus.
+Leistungen: Überschrift „Haar, was zu dir passt.“, Kacheln ohne Text. Über mich: Wortmarke statt
+Unterschrift, Foto wird ersetzt. Kontakt: Neukunden-Termin mit Gespräch, ca. 30 Minuten.

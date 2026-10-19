@@ -7,24 +7,32 @@ Umbau der Leistungen-Kacheln. Quelle des Abgleichs: `projekt/auftrag.md`.
 des Sticks, Drucksachen (Entwurf) und fontkit. An der Seite selbst ändert sich nichts. `auftrag.md`
 ist seit dem 21.09. unverändert, Telefon, E-Mail, Öffnungszeiten und Domain sind weiter leer.
 
+**Aktualisiert 19.10.2026** nach der Korrekturrunde von Inna (Anmerkungen vom 13.10.): Verwandlung,
+Arbeiten und Preise gestrichen, Leistungen als Bildreihe ohne Text, Wortmarke statt Unterschrift,
+neuer Kontakttext. `auftrag.md` ist nachgezogen (Abschnitt „Korrekturen“). Lint/Build grün, die Seite
+im Browser geprüft: Navigation mit vier Punkten, keine toten Sprungmarken, Druckentwurf läuft unverändert.
+Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
+
 ## A Abgleich mit dem Auftrag
 
 | Auftrag | Urteil | Anmerkung |
 |---|---|---|
 | Marke „INNA – Zeitlos schön", Schulstraße 1, 51674 Wiehl | umgesetzt | Header, Kontakt, Footer, Impressum, LocalBusiness-Schema |
-| Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Abschnittsfolge, Navigation, Palette und Schriften wie die Vorlage; zusätzlich Verwandlung, Arbeiten, Preise, Kontakt aus B1 |
+| Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Abschnittsfolge, Navigation, Palette und Schriften wie die Vorlage; zusätzlich Kontakt aus B1; Verwandlung, Arbeiten, Preise am 13.10.2026 von Inna gestrichen |
 | Hero mit Portrait von Inna (Vorlage) | bewusst anders | kein Portrait vorhanden → Bewegtbild aus der Rückansicht einer Kundin (Kling); Portrait bleibt offener Punkt |
 | Brand-Board: Farben und Schriften | umgesetzt | Sand/Leinen/Kupfer/Tinte, Cormorant + Grotesk + Signatur; Kupfer für Text als dunklere Schwester (AA) |
 | Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
-| Leistungen: vier Kacheln, Texte wörtlich | umgesetzt | Kacheln als Textur-Ausschnitte wie in der Vorlage; Dauer und Haltbarkeit offen |
-| Preise | offen | keine Preisliste – Tabelle zeigt Leistungen mit Hinweis, ohne Preis |
+| Leistungen: vier Kacheln | umgesetzt | Korrektur 13.10.: Überschrift „Haar, was zu dir passt.“, Kacheln nur als Bild (Textur-Ausschnitte), Titel im Alt-Text |
+| Preise | entfallen | Abschnitt gestrichen (Inna, 13.10.2026) |
 | Telefon, E-Mail, Öffnungszeiten | **offen – Kontaktweg** | Kontakt zeigt „Weg zum Salon" und Adresse, Impressum markiert die Lücken. Stand 25.09.: weiter offen. Gepusht wurde trotzdem (Dennis), die Preview auf inna-zeitlos.vercel.app zeigt seit 21.09. denselben Stand. Vor dem Live-Gang auf eigener Domain: Telefon oder E-Mail von Inna |
 | Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
 | Kein Buchungssystem (F4) | umgesetzt | überall „Termin anfragen", kein Buchungsversprechen |
 | Team Inna & Nursah | umgesetzt | ohne Personenfoto (Material); Nursahs Nachname offen |
 | Philosophie: vier Werte | umgesetzt | |
-| Arbeiten / Referenzen (B1) | umgesetzt | 8 Arbeiten mit Technik und Datum aus den Beiträgen |
+| Arbeiten / Referenzen (B1), Verwandlung | entfallen | gestrichen (Inna, 13.10.2026); Bilddateien liegen weiter in `public/arbeiten/`, werden aber nicht mehr eingebunden |
+| Über mich | umgesetzt | Wortmarke statt Unterschrift (13.10.); **Foto offen** – Ersatz kommt von Inna, bis dahin die Strähne |
+| Neukunden-Termin: Gespräch, ca. 30 Minuten | umgesetzt | Kontakttext nach Innas Korrektur vom 13.10.2026 |
 | Du-Form (F7) | umgesetzt | |
 | Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
 | Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | Entwurf | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Final-PDFs erst, wenn Telefon, E-Mail, Domain und Öffnungszeiten feststehen |
@@ -64,10 +72,11 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 
 - Telefon oder E-Mail von Inna – Kontaktweg, vor dem Live-Gang auf eigener Domain
 - Innas eigenes Instagram-Profil, falls gewünscht
-- Öffnungszeiten, Preisliste, Dauer und Haltbarkeit je Leistung
+- Öffnungszeiten
+- Ersatzfoto für „Über mich“ (Inna, angekündigt 13.10.2026)
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
 - Portraits von Inna und Nursah, Teamfoto, Salonfotos (Fotografin) – löst auch die doppelten Motive
-- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Bildern, Verfasserin des Zitats, KI-Video aus dem Kundenfoto
+- Schriftliche Einwilligung: Kundinnen auf den gezeigten Bildern, KI-Video aus dem Kundenfoto (Vorher/Nachher und Zitat sind mit der Verwandlung entfallen)
 - Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100

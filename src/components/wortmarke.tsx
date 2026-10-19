@@ -1,14 +1,27 @@
 /**
  * Wortmarke aus dem Brand-Board. Bis die Vektordatei von Inna da ist,
  * als Typo gesetzt – dieselben Schriften, dieselbe Laufweite.
+ * „gross“ steht unter dem Über-mich-Text, wo vorher die Signatur stand.
  */
-export function Wortmarke({ className = '' }: { className?: string }) {
+const groessen = {
+  kopf: { marke: 'text-[1.65rem]', zusatz: 'mt-1 text-[0.5rem]' },
+  gross: { marke: 'text-[2.75rem]', zusatz: 'mt-2 text-[0.8rem]' },
+} as const
+
+export function Wortmarke({
+  className = '',
+  groesse = 'kopf',
+}: {
+  className?: string
+  groesse?: keyof typeof groessen
+}) {
+  const g = groessen[groesse]
   return (
     <span className={`inline-flex flex-col leading-none ${className}`}>
-      <span className="font-display text-[1.65rem] font-light tracking-[0.34em] text-tinte">
+      <span className={`font-display ${g.marke} font-light tracking-[0.34em] text-tinte`}>
         INNA
       </span>
-      <span className="mt-1 text-[0.5rem] font-medium tracking-[0.36em] text-tinte/70">
+      <span className={`${g.zusatz} font-medium tracking-[0.36em] text-tinte/70`}>
         ZEITLOS SCHÖN
       </span>
     </span>

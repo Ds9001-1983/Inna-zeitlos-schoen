@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import { BildReveal, ZeilenReveal } from '@/components/reveal'
+import { Wortmarke } from '@/components/wortmarke'
 
-/** Texte wörtlich aus Innas Entwurf und Brand-Board. */
+/**
+ * Texte wörtlich aus Innas Entwurf und Brand-Board.
+ * OFFEN: Das Foto wird ersetzt, sobald Inna ein neues schickt (Korrektur 13.10.2026).
+ */
 export function UeberMich() {
   return (
     <section id="ueber-mich" className="scroll-mt-24 bg-sand py-[var(--spacing-sektion)]">
@@ -38,9 +42,8 @@ export function UeberMich() {
             </p>
           </div>
 
-          <p className="t-signatur mt-10 text-[clamp(2.75rem,5vw,3.75rem)] text-tinte">
-            Inna <span className="text-kupfer-tief">♡</span>
-          </p>
+          {/* Korrektur 13.10.2026: Wortmarke statt Signatur „Inna ♡“ */}
+          <Wortmarke groesse="gross" className="mt-10" />
         </div>
       </div>
     </section>

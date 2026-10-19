@@ -10,7 +10,8 @@ function kontaktSatz() {
 }
 
 /**
- * Bewusst ohne Online-Kalender: Inna will vor einem Farbtermin kurz sprechen.
+ * Ohne Online-Kalender: Neukundinnen beginnen mit einem Gespräch, ca. 30 Minuten
+ * (Korrektur 13.10.2026).
  * Telefon und Öffnungszeiten stehen in src/inhalte/salon.ts – solange sie dort
  * null sind, zeigt die Seite den Weg über Instagram und den Besuch im Salon.
  */
@@ -48,10 +49,9 @@ export function Kontakt() {
         <div className="mt-10 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,26rem)] lg:gap-20">
           <div>
             <p className="t-lead text-tinte/80">
-              Dein Termin beginnt mit einem Gespräch. Einen Online-Kalender gibt es hier bewusst
-              nicht. Wie lange dein Haar braucht, hängt von Ausgangsfarbe, Länge und Struktur ab –
-              das klären wir vorher in zwei Minuten, statt dich in einen Slot zu setzen, der nicht
-              passt.
+              Dein Neukunden-Termin beginnt mit einem Gespräch. Wie lange dein Haar braucht, hängt
+              von Ausgangsfarbe, Länge und Struktur ab – das klären wir ausführlich, statt dich in
+              einen Slot zu setzen, der nicht passt. Plan dafür ca. 30 Minuten ein.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
