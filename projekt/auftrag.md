@@ -11,7 +11,7 @@ Inhaber/in:       Inna, Friseurmeisterin
 Branche:          Friseur – Schwerpunkt Farbe (Blond, Airtouch, Farbkorrektur, Tressen)
 Straße:           Schulstraße 1
 PLZ Ort:          51674 Wiehl
-Telefon:          
+Telefon:          0170 66 19 452 (mobil, Dennis 21.10.2026)
 E-Mail:           
 Öffnungszeiten:   
 Instagram:        (nicht übergeben – „Wiehler Schönheitsfleck" gehört nicht zu diesem Projekt)

@@ -150,6 +150,15 @@ Video ab.
 
 ## Revidiert
 
+**21.10.2026 – Visitenkarte im Design des Schilds (Dennis).**
+Die Karte ist jetzt beidseitig Cognac mit Tiefschwarz (K 100, überdruckt), Cormorant Regular und
+Montserrat Medium wie auf dem Schild. Die drei Vorderseiten-Fassungen (Leinen, Cognac-Beige,
+Cognac-Schwarz mit K 94) entfallen. Auf der Rückseite steht der Name in Cormorant statt als
+Parisienne-Unterschrift, weil Inna die Unterschrift auf der Website gestrichen hat. Die Telefonnummer ist
+mit 10 pt Medium die stärkste Zeile, die Kleinschrift steht in 9 statt 8 pt, weil Tiefschwarz auf
+Cognac (3,8:1) weniger Kontrast hat als Tinte auf Leinen. E-Mail, Website und QR-Code sind optional.
+Damit ersetzt dieser Eintrag die frühere Begründung „Rückseite bleibt Leinen“ (24.09.).
+
 **19.10.2026 – Schild wie die Karte (Inna, 13.10.2026: „Schild wie Karte", Schrift dunkler).**
 Das Schild zeigt nur noch die Wortmarke auf Cognac (Kupfer), in den Proportionen der
 Kartenvorderseite Cognac-Schwarz. Claim, Leistungen, Öffnungszeiten und Kontakt entfallen.

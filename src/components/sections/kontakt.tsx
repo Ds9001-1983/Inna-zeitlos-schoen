@@ -57,7 +57,7 @@ export function Kontakt() {
             <div className="mt-8 flex flex-wrap gap-4">
               {salon.telefon ? (
                 <a
-                  href={`tel:${salon.telefon.replace(/\s/g, '')}`}
+                  href={`tel:${salon.telefon.replace(/[\s-]/g, '').replace(/^0/, '+49')}`}
                   className="bg-kupfer-tief px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte"
                 >
                   {salon.telefon} anrufen

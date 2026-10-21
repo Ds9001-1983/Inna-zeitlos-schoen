@@ -1,6 +1,6 @@
 # Drucksachen: Schild und Visitenkarte
 
-Stand: 19.10.2026 (Schild neu), 23.09.2026 · Druckerei: Flyeralarm · Quelle der Fakten: `src/inhalte/salon.ts`
+Stand: 21.10.2026 (Visitenkarte im Design des Schilds), 19.10.2026 (Schild neu), 23.09.2026 · Druckerei: Flyeralarm · Quelle der Fakten: `src/inhalte/salon.ts`
 Farben und Schriften: `docs/design-plan.md`, Abschnitt „Revidiert 23.09.2026 – Drucksachen"
 
 ## Produkte
@@ -24,9 +24,7 @@ erzeugt neu. Satz und Prüfung passen sich an.
 | Datei in `druck/ausgabe/` | Inhalt |
 |---|---|
 | `schild` | seit 19.10.2026: nur die Wortmarke in Tiefschwarz auf Cognac, wie die Kartenvorderseite Cognac-Schwarz (Innas Wunsch vom 13.10.: „Schild wie Karte", Schrift dunkler). **Druck-PDF liegt in `druck/ausgabe/final/schild.pdf`** |
-| `visitenkarte` | vorn Wortmarke auf Leinen, hinten Unterschrift, Beruf, Telefon, E-Mail, Web, Adresse, QR-Code |
-| `visitenkarte-cognac-beige` | Innas Wunsch vom 24.09.2026: vorn Cognac (Kupfer tief) mit beiger Schrift (Leinen), hinten wie oben |
-| `visitenkarte-cognac-schwarz` | vorn Cognac (Kupfer) mit schwarzer Schrift, überdruckt; hinten wie oben |
+| `visitenkarte` | seit 21.10.2026 im Design des Schilds: beidseitig Tiefschwarz auf Cognac. Vorn die Wortmarke, hinten Name, Beruf, Schwerpunkt, Telefon und Adresse. E-Mail, Website und QR-Code erscheinen, sobald sie in `salon.ts` stehen. **Druck-PDF liegt in `druck/ausgabe/final/visitenkarte.pdf`** |
 
 Module: `druck/entwuerfe/schild.mjs` und `druck/entwuerfe/visitenkarte.mjs`. Drei Richter (Marke,
 Druck, Kundin) haben aus drei Schild- und zwei Kartenvarianten einstimmig ausgewählt. Die Begründung
@@ -42,7 +40,7 @@ Wie der Satz auf echte Angaben reagiert (getestet am 23.09.2026 mit typischen, l
 
 - **Schild:** hängt seit 19.10.2026 an keiner Angabe mehr – nur die Wortmarke.
 - **Kontaktkarte:** Reichen E-Mail oder Website bis an den QR-Code, rückt er nach oben rechts neben
-  die Unterschrift.
+  den Namen.
 - Was auch so nicht passt, bricht mit einer Meldung ab, die Maß und Platz nennt. Die übrigen Produkte
   entstehen trotzdem.
 - Schmale Leerzeichen, geschützte Bindestriche und ein versehentliches `https://` werden bereinigt.
@@ -68,9 +66,9 @@ gelangen nie in eine Druckdatei.
 
 | Feld in `salon.ts` | Schild | Visitenkarte |
 |---|---|---|
-| `telefon` | – | Pflicht |
-| `email` | – | Pflicht |
-| `domain` (Website, auch für den QR-Code) | – | Pflicht |
+| `telefon` | – | Pflicht (seit 21.10.2026 gefüllt) |
+| `email` | – | optional, erscheint wenn gefüllt |
+| `domain` (Website, auch für den QR-Code) | – | optional, erscheint mit QR-Code wenn gefüllt |
 | `oeffnungszeiten` | – | – |
 
 Instagram steht auf keiner Drucksache, bis Innas eigenes Profil im Auftrag steht.

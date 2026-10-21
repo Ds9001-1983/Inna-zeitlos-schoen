@@ -26,9 +26,9 @@ export default function Impressum() {
       <div>
         <h2>Kontakt</h2>
         <p>
-          Telefon: <Offen was="Telefonnummer" />
+          Telefon: {salon.telefon ?? <Offen was="Telefonnummer" />}
           <br />
-          E-Mail: <Offen was="E-Mail-Adresse" />
+          E-Mail: {salon.email ?? <Offen was="E-Mail-Adresse" />}
           {salon.instagram && salon.instagramName ? (
             <>
               <br />

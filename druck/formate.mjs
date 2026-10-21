@@ -33,8 +33,8 @@ export const produkte = {
     profil: 'isoCoatedV2_300',
     datenblatt: 'Flyeralarm vk_mass_q (Datenformat 87 × 57 mm, Beschnitt 1 mm, Sicherheitsabstand 3 mm)',
     vorschauDpi: 600,
-    /** Felder, ohne die keine Druck-PDF entsteht */
-    pflichtfelder: ['telefon', 'email', 'domain'],
+    /** Felder, ohne die keine Druck-PDF entsteht. E-Mail und Website erscheinen, sobald es sie gibt. */
+    pflichtfelder: ['telefon'],
   },
   schild: {
     titel: 'Alu-Verbundplatte (Dibond) weiß 3 mm, 600 × 500 mm quer, UV-Direktdruck 4/0, UV-Lack matt',

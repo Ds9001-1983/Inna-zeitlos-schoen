@@ -1,14 +1,17 @@
 /**
- * Visitenkarte 85 × 55 mm quer – Kontaktkarte (gewählt am 23.09.2026).
+ * Visitenkarte 85 × 55 mm quer – im Design des Schilds (Dennis, 21.10.2026).
  *
- * Vorn die Wortmarke wie die Karte auf dem Tisch in Innas Seitenentwurf: zentriert auf Leinen,
- * rund die halbe Kartenbreite. Hinten eine linke Kante für alles.
+ * Beide Seiten Cognac (Kupfer), die Schrift in Tiefschwarz: reines K 100, überdruckt, Cormorant
+ * Regular und Montserrat Medium – wie auf dem Schild. Vorn nur die Wortmarke, hinten eine linke
+ * Kante für alles.
  *
- * Aus der Jury (23.09.2026): Wortmarke größer (INNA 7,2 mm statt 5,5 mm Versalhöhe), ZEITLOS SCHÖN
- * in Montserrat 400 wie auf dem Schild, ein Kleinschriftgrad (8 pt – lesbar ohne Lesebrille),
- * Versalien 7 pt, Unterschrift in Kupfer tief, QR-Code auf die Website rechts auf der Rückseite.
+ * Hinten steht der Name in Cormorant statt als Unterschrift in Parisienne – Inna hat die Signatur
+ * auf der Website gestrichen. Die Kleinschrift ist eine Stufe größer als auf der früheren
+ * Leinen-Rückseite (9 statt 8 pt), weil Tiefschwarz auf Cognac weniger Kontrast hat als auf Leinen.
+ * E-Mail, Website und der QR-Code auf die Website erscheinen erst, wenn sie in salon.ts stehen.
+ *
+ * Die früheren Fassungen (Leinen, Cognac-Beige, Cognac-Schwarz mit K 94) stehen in der Git-Geschichte.
  */
-import { feldBeschreibung } from '../inhalte.mjs'
 
 /** Gestaltungsrand – weit innerhalb des Sicherheitsabstands von 3 mm */
 const RAND = 8
@@ -18,17 +21,20 @@ const MITTE_X = 85 / 2
 /** optische Mitte der Wortmarke, knapp über der geometrischen (27,5) */
 const MITTE_Y = 26.6
 
-const tinte = 'tinteText'
-const kleinschrift = { schrift: 'sans', groessePt: 8, farbe: tinte }
+const TON = { grund: 'kupfer', farbe: 'schwarz', ueberdrucken: true }
+const schrift = { farbe: TON.farbe, ueberdrucken: TON.ueberdrucken }
+
+const name = { schrift: 'display', groessePt: 20, ...schrift }
 /** ein Versaliengrad für die ganze Karte, wie t-label der Website */
-const versalien = { schrift: 'sansMedium', groessePt: 7, laufweite: 0.18, farbe: tinte }
-/** die Unterschrift – das Kupfer-Moment der Rückseite, über 12 pt */
-const kupfer = 'kupferTief'
+const versalien = { schrift: 'sansMedium', groessePt: 7, laufweite: 0.18, ...schrift }
+const schwerpunkt = { schrift: 'displayKursiv', groessePt: 10.5, ...schrift }
+const telefon = { schrift: 'sansMedium', groessePt: 10, ...schrift }
+const kleinschrift = { schrift: 'sans', groessePt: 9, ...schrift }
 /** sichtbare Codefläche des QR in mm; die Ruhezone (4 Module, bei Version 2 rund 2,1 mm) liegt außen */
 const QR = 13
 const QR_RUHE = (4 * QR) / 25
 /** Zeilenabstand der Kleinschrift */
-const ZEILE = 3.9
+const ZEILE = 4.3
 
 /** Bricht mit verständlicher Meldung ab, wenn eine Angabe breiter ist als die Karte zulässt. */
 function passt(breite, platz, was) {
@@ -49,38 +55,14 @@ function zentriert(s, inhalt, o) {
   return s.text(inhalt, { ...o, x: o.x - (m.links + m.rechts) / 2, ausrichtung: 'links' })
 }
 
-/** Angabe auf der linken Kante; offen → Platzhalter ab x. */
-function angabeLinks(s, angaben, feld, o) {
-  const wert = angaben[feld]
-  const x = wert ? o.x - s.messen(wert, o).links : o.x
-  return s.angabe(feld, { ...o, x, ausrichtung: 'links' })
-}
-
-/** Breite, die eine Angabe belegt – Wert oder Platzhalter-Muster. */
-const angabeBreite = (s, angaben, feld, o) => s.messen(angaben[feld] ?? feldBeschreibung[feld].muster, o).breite
-
 /**
- * Vorderseiten: Leinen (gewählt am 23.09.2026) und Innas Wunsch vom 24.09.2026, Cognac mit beiger
- * oder schwarzer Schrift. Jede Schriftfarbe bekommt den Cognac-Ton, auf dem sie lesbar bleibt:
- * - Beige (Leinen) auf Kupfer tief, 5,2:1. Als Aussparung aus vier Farben: Cormorant 400 und
- *   Montserrat 500, weil feinere Haarstriche im Druck zulaufen würden.
- * - Schwarz (reines K) auf dem helleren Kupfer. Auf Kupfer tief käme es nur auf 2,3:1. Die Schrift
- *   wird überdruckt statt ausgespart, dadurch entsteht ein warmes Tiefbraun ohne Blitzer.
+ * Wortmarke wie auf dem Schild: INNA in Cormorant Regular, Laufweite 0,34; ZEITLOS SCHÖN in
+ * Montserrat Medium, Laufweite 0,36 – so groß, dass beide Zeilen sichtbar gleich breit sind.
  */
-const VORDERSEITE = {
-  leinen: { grund: 'leinen', farbe: tinte, inna: 'displayLight', zeile2: 'sans' },
-  cognacBeige: { grund: 'kupferTief', farbe: 'leinen', inna: 'display', zeile2: 'sansMedium', aufDunkel: true },
-  cognacSchwarz: { grund: 'kupfer', farbe: tinte, inna: 'displayLight', zeile2: 'sans', ueberdrucken: true },
-}
-
-/**
- * Wortmarke wie auf der Website: INNA in Cormorant, Laufweite 0,34; ZEITLOS SCHÖN in Montserrat,
- * Laufweite 0,36 – so groß, dass beide Zeilen sichtbar gleich breit sind (rund 45 % der Karte).
- */
-function wortmarke(s, { text }, ton) {
-  const farbe = { farbe: ton.farbe, aufDunkel: ton.aufDunkel, ueberdrucken: ton.ueberdrucken }
-  const inna = { schrift: ton.inna, versalhoehe: 7.2, laufweite: 0.34, ...farbe }
-  const probe = { schrift: ton.zeile2, groessePt: 8, laufweite: 0.36, ...farbe }
+function vorn(s, { text }) {
+  s.flaeche(TON.grund)
+  const inna = { schrift: 'display', versalhoehe: 7.2, laufweite: 0.34, ...schrift }
+  const probe = { schrift: 'sansMedium', groessePt: 8, laufweite: 0.36, ...schrift }
   const faktor = sichtbar(s.messen(text.wortmarke, inna)) / sichtbar(s.messen(text.wortmarkeZeile2, probe))
   const zeile2 = { ...probe, groessePt: probe.groessePt * faktor }
 
@@ -92,47 +74,52 @@ function wortmarke(s, { text }, ton) {
   zentriert(s, text.wortmarkeZeile2, { ...zeile2, x: MITTE_X, y: grundlinie1 + abstand + versal2 })
 }
 
-const vorn = (ton) => (s, inhalte) => {
-  s.flaeche(ton.grund)
-  wortmarke(s, inhalte, ton)
-}
+function hinten(s, { text, angaben }) {
+  s.flaeche(TON.grund)
 
-const hinten = (s, { text, angaben }) => {
-  s.flaeche('leinen')
-
-  // Person: die Unterschrift führt, Beruf und Schwerpunkt ordnen sich unter
-  const unterschrift = { schrift: 'signatur', groessePt: 26, farbe: kupfer }
-  const grundlinieName = RAND + s.messen(text.name, unterschrift).oben
-  const grundlinieBeruf = grundlinieName + 5.6
-  linksbuendig(s, text.name, { ...unterschrift, x: RAND, y: grundlinieName })
+  // Person: Name, Beruf, Schwerpunkt
+  const grundlinieName = RAND + s.messen(text.name, name).oben
+  const grundlinieBeruf = grundlinieName + 5.4
+  linksbuendig(s, text.name, { ...name, x: RAND, y: grundlinieName })
   linksbuendig(s, text.beruf.toUpperCase(), { ...versalien, x: RAND, y: grundlinieBeruf })
-  linksbuendig(s, text.schwerpunkt, { schrift: 'displayKursiv', groessePt: 10.5, farbe: tinte, x: RAND, y: grundlinieBeruf + 4.4 })
+  linksbuendig(s, text.schwerpunkt, { ...schwerpunkt, x: RAND, y: grundlinieBeruf + 4.6 })
 
-  // Kontaktwege, darunter mit eigenem Abstand der Ort – die Adresse steht auf dem unteren Rand
-  const grundlinieWeb = UNTEN - 1.4 * ZEILE
-  const kanaele = ['telefon', 'email', 'domain']
-  const breitesteZeile = Math.max(...kanaele.map((f) => angabeBreite(s, angaben, f, kleinschrift)), s.messen(text.adresse, kleinschrift).breite)
+  // Kontakt von unten nach oben: Adresse auf dem unteren Rand, darüber Website und E-Mail, sofern
+  // es sie gibt, ganz oben die Telefonnummer – sie ist der Weg zum Termin
+  const zeilen = [{ inhalt: text.adresse, o: kleinschrift }]
+  if (angaben.domain) zeilen.unshift({ feld: 'domain', o: kleinschrift })
+  if (angaben.email) zeilen.unshift({ feld: 'email', o: kleinschrift })
+  zeilen.unshift({ feld: 'telefon', o: telefon, abstandDanach: 1 })
+
+  const breite = (z) => s.messen(z.feld ? (angaben[z.feld] ?? '02262 000000') : z.inhalt, z.o).breite
+  const breitesteZeile = Math.max(...zeilen.map(breite))
   passt(breitesteZeile, RECHTS - RAND, 'die längste Kontaktzeile')
-  kanaele.forEach((feld, i) =>
-    angabeLinks(s, angaben, feld, { ...kleinschrift, x: RAND, y: grundlinieWeb - (kanaele.length - 1 - i) * ZEILE }),
-  )
-  linksbuendig(s, text.adresse, { ...kleinschrift, x: RAND, y: UNTEN })
 
-  // QR-Code auf die Website: unten rechts auf der Adress-Grundlinie. Reichen E-Mail oder Domain bis
-  // an seine Ruhezone, weicht er nach oben rechts neben die Unterschrift aus.
-  const qrX = RECHTS - QR
-  const untenFrei = RAND + breitesteZeile + 1 <= qrX - QR_RUHE
-  s.qr({ x: qrX, y: untenFrei ? UNTEN - QR : RAND, groesse: QR })
+  let y = UNTEN
+  for (const z of [...zeilen].reverse()) {
+    if (z.feld) {
+      const wert = angaben[z.feld]
+      const x = wert ? RAND - s.messen(wert, z.o).links : RAND
+      s.angabe(z.feld, { ...z.o, x, y, ausrichtung: 'links' })
+    } else {
+      linksbuendig(s, z.inhalt, { ...z.o, x: RAND, y })
+    }
+    y -= ZEILE + (z.abstandDanach ?? 0)
+  }
+
+  // QR-Code auf die Website, erst wenn es eine gibt: unten rechts auf der Adress-Grundlinie, sonst
+  // oben rechts neben dem Namen. Tiefschwarz auf Cognac, überdruckt.
+  if (angaben.domain) {
+    const qrX = RECHTS - QR
+    const untenFrei = RAND + breitesteZeile + 1 <= qrX - QR_RUHE
+    s.qr({ x: qrX, y: untenFrei ? UNTEN - QR : RAND, groesse: QR, farbe: TON.farbe })
+  }
 }
 
 const auftrag = {
   produkt: 'visitenkarte',
-  beschreibung: 'Visitenkarte 85 × 55 mm – vorn die Wortmarke (Leinen oder Cognac), hinten Kontakt mit QR-Code auf die Website',
-  ausgaben: {
-    default: [vorn(VORDERSEITE.leinen), hinten],
-    'cognac-beige': [vorn(VORDERSEITE.cognacBeige), hinten],
-    'cognac-schwarz': [vorn(VORDERSEITE.cognacSchwarz), hinten],
-  },
+  beschreibung: 'Visitenkarte 85 × 55 mm im Design des Schilds – beidseitig Tiefschwarz auf Cognac, hinten Kontakt',
+  ausgaben: { default: [vorn, hinten] },
 }
 
 export default auftrag
