@@ -12,5 +12,9 @@
 - Zeit: Ein Termin ohne Stress. Ohne Hektik. Ohne Druck.
 - Bereit für dein neues Haargefühl?
 
+Nachgetragen:
+
+- Du bist zeitlos schön. (Inna, 21.10.2026 per WhatsApp – für die Rückseite der Visitenkarte)
+
 Leistungen laut Entwurf: Blond Expertin (Airtouch, Balayage, Babylights, Faceframe, Glossing) ·
 Farbtransformation · Tressen & Verdichtung · Schnitt & Styling.

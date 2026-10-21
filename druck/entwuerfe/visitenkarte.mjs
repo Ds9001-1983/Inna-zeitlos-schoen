@@ -3,11 +3,11 @@
  *
  * Beide Seiten Cognac (Kupfer), die Schrift in Tiefschwarz: reines K 100, überdruckt, Cormorant
  * Regular und Montserrat Medium – wie auf dem Schild. Vorn nur die Wortmarke, hinten links der
- * Name und die Kontaktwege, rechts der QR-Code auf die Website. Beruf und Schwerpunkt sind am
+ * Satz und die Kontaktwege, rechts der QR-Code auf die Website. Beruf und Schwerpunkt sind am
  * 21.10.2026 entfallen (Dennis).
  *
- * Hinten steht INNA wie in der Wortmarke (Versalien, Laufweite 0,34) statt als Unterschrift in
- * Parisienne – Inna hat die Signatur auf der Website gestrichen. Die Kleinschrift ist eine Stufe größer als auf der früheren
+ * Hinten steht oben Innas Satz „Du bist zeitlos schön." in Cormorant Kursiv – ihr Name stand ihr
+ * sonst zu oft auf der Karte (21.10.2026). Die Kleinschrift ist eine Stufe größer als auf der früheren
  * Leinen-Rückseite (9 statt 8 pt), weil Tiefschwarz auf Cognac weniger Kontrast hat als auf Leinen.
  * E-Mail, Website und der QR-Code erscheinen nur, wenn sie in salon.ts stehen.
  *
@@ -25,8 +25,8 @@ const MITTE_Y = 26.6
 const TON = { grund: 'kupfer', farbe: 'schwarz', ueberdrucken: true }
 const schrift = { farbe: TON.farbe, ueberdrucken: TON.ueberdrucken }
 
-/** INNA wie in der Wortmarke: Versalien, Laufweite 0,34 – etwas kleiner als vorn (7,2 mm) */
-const name = { schrift: 'display', versalhoehe: 5.6, laufweite: 0.34, ...schrift }
+/** Innas Satz statt eines zweiten INNA – Cormorant Kursiv, ruhig neben der Grotesk der Kontaktzeilen */
+const zuspruch = { schrift: 'displayKursiv', groessePt: 17, ...schrift }
 const telefon = { schrift: 'sansMedium', groessePt: 10, ...schrift }
 const kleinschrift = { schrift: 'sans', groessePt: 9, ...schrift }
 /** sichtbare Codefläche des QR in mm; die Ruhezone (4 Module, bei Version 2 rund 2,1 mm) liegt außen */
@@ -76,8 +76,9 @@ function vorn(s, { text }) {
 function hinten(s, { text, angaben }) {
   s.flaeche(TON.grund)
 
-  const grundlinieName = RAND + s.messen(text.wortmarke, name).oben
-  linksbuendig(s, text.wortmarke, { ...name, x: RAND, y: grundlinieName })
+  // „INNA" steht schon vorn – hinten Innas eigener Satz (21.10.2026: „zu oft mein Name")
+  const grundlinieZuspruch = RAND + s.messen(text.zuspruch, zuspruch).oben
+  linksbuendig(s, text.zuspruch, { ...zuspruch, x: RAND, y: grundlinieZuspruch })
 
   // Kontakt von unten nach oben: Adresse auf dem unteren Rand, darüber Website und E-Mail, sofern
   // es sie gibt, ganz oben die Telefonnummer – sie ist der Weg zum Termin

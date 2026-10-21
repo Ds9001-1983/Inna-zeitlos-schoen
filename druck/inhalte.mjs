@@ -67,6 +67,8 @@ export const text = {
   /** Hero-Zeile 1 und 2 der Website */
   titel: 'Zeitlos schön.',
   claim: 'So natürlich wie du.',
+  /** Innas Satz für die Kartenrückseite (21.10.2026) */
+  zuspruch: 'Du bist zeitlos schön.',
   team: 'Zwei Friseurmeisterinnen. Ein Anspruch.',
   name: 'Inna',
   beruf: 'Friseurmeisterin',
