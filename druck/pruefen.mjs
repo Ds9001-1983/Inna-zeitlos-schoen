@@ -71,7 +71,8 @@ for (const datei of pdfs.sort()) {
       fehler.push(`Seite ${seite}: TrimBox ${bb.toFixed(2)} × ${bh.toFixed(2)} mm bei ${bx.toFixed(2)}/${by.toFixed(2)}, erwartet Endformat mit ${produkt.beschnitt} mm Rand`)
   }
   const seitenZahl = Number(info.match(/Pages:\s+(\d+)/)[1])
-  const sollSeiten = bericht.produkt === 'visitenkarte' ? 2 : 1
+  // so viele Seiten, wie erzeugen.mjs gesetzt hat (Visitenkarte seit 21.10.2026 je Seite ein PDF)
+  const sollSeiten = bericht.seiten.length
   if (seitenZahl !== sollSeiten) fehler.push(`${seitenZahl} Seiten, erwartet ${sollSeiten}`)
   else ok.push(`${seitenZahl} Seite(n), MediaBox ${format.breite} × ${format.hoehe} mm, TrimBox ${produkt.endformat.breite} × ${produkt.endformat.hoehe} mm`)
 

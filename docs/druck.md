@@ -13,7 +13,7 @@ Farben und Schriften: `docs/design-plan.md`, Abschnitt „Revidiert 23.09.2026 �
 | Beschnitt | 3 mm – **Annahme**, Datenblatt der Bestellung prüfen | 1 mm (Datenblatt `vk_mass_q`) |
 | Sicherheitsabstand | eigener Satzrand 30 mm | 3 mm |
 | Farbprofil | ISO Coated v2 (ECI) – Werbetechnik, Digitaldruck | ISO Coated v2 300 % (ECI) |
-| Datei | PDF/X-3:2002, CMYK, Output-Intent FOGRA39, Schriften eingebettet, keine Schnittmarken | ebenso, 2 Seiten: 1 = vorne, 2 = hinten |
+| Datei | PDF/X-3:2002, CMYK, Output-Intent FOGRA39, Schriften eingebettet, keine Schnittmarken | ebenso, je Seite eine Datei: `visitenkarte-vorderseite.pdf`, `visitenkarte-rueckseite.pdf` |
 
 Der Beschnitt des Schilds ist der einzige unbestätigte Wert. Flyeralarm liefert das Datenblatt für
 Wunschformate erst im Konfigurator. Weicht es ab, ändert man `beschnitt` in `druck/formate.mjs` und
@@ -24,7 +24,7 @@ erzeugt neu. Satz und Prüfung passen sich an.
 | Datei in `druck/ausgabe/` | Inhalt |
 |---|---|
 | `schild` | seit 19.10.2026: nur die Wortmarke in Tiefschwarz auf Cognac, wie die Kartenvorderseite Cognac-Schwarz (Innas Wunsch vom 13.10.: „Schild wie Karte", Schrift dunkler). **Druck-PDF liegt in `druck/ausgabe/final/schild.pdf`** |
-| `visitenkarte` | seit 21.10.2026 im Design des Schilds: beidseitig Tiefschwarz auf Cognac. Vorn die Wortmarke, hinten links Name, Telefon, E-Mail, Website und Adresse, rechts der QR-Code auf https://inna-zeitlosschoen.de (Beruf und Schwerpunkt seit 21.10. weg; QR mit OpenCV aus der Vorschau gelesen, auch bei 30 % Größe). **Druck-PDF liegt in `druck/ausgabe/final/visitenkarte.pdf`** |
+| `visitenkarte` | seit 21.10.2026 im Design des Schilds: beidseitig Tiefschwarz auf Cognac. Vorn die Wortmarke, hinten oben „Du bist zeitlos schön.“, links Telefon, E-Mail, Website und Adresse, rechts der QR-Code auf https://inna-zeitlosschoen.de (Beruf und Schwerpunkt seit 21.10. weg; QR mit OpenCV aus der Vorschau gelesen, auch bei 30 % Größe). **Druck-PDFs: `druck/ausgabe/final/visitenkarte-vorderseite.pdf` und `-rueckseite.pdf`** |
 
 Module: `druck/entwuerfe/schild.mjs` und `druck/entwuerfe/visitenkarte.mjs`. Drei Richter (Marke,
 Druck, Kundin) haben aus drei Schild- und zwei Kartenvarianten einstimmig ausgewählt. Die Begründung

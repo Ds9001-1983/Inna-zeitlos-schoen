@@ -112,10 +112,14 @@ function hinten(s, { text, angaben }) {
   }
 }
 
+vorn.seitenname = 'vorderseite'
+hinten.seitenname = 'rueckseite'
+
+/** Zwei Druck-PDFs, je eine Seite (Dennis, 21.10.2026): visitenkarte-vorderseite.pdf, visitenkarte-rueckseite.pdf */
 const auftrag = {
   produkt: 'visitenkarte',
   beschreibung: 'Visitenkarte 85 × 55 mm im Design des Schilds – beidseitig Tiefschwarz auf Cognac, hinten Kontakt',
-  ausgaben: { default: [vorn, hinten] },
+  ausgaben: { vorderseite: [vorn], rueckseite: [hinten] },
 }
 
 export default auftrag

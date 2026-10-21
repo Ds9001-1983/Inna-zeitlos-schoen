@@ -296,7 +296,8 @@ function vorschauen(pdf, a, produkt) {
   const dateien = []
   rendern(produkt.vorschauDpi, `${basis}-%d.png`)
   a.seiten.forEach((zeichne, i) => {
-    const seitenname = zeichne.seitenname ?? (a.produkt === 'visitenkarte' ? ['vorderseite', 'rueckseite'][i] : null)
+    // Eine Seite je PDF → die Vorschau heißt wie das PDF
+    const seitenname = a.seiten.length === 1 ? null : (zeichne.seitenname ?? (a.produkt === 'visitenkarte' ? ['vorderseite', 'rueckseite'][i] : null))
     const ziel = seitenname ? `${basis}-${seitenname}.png` : `${basis}.png`
     renameSync(`${basis}-${i + 1}.png`, ziel)
     dateien.push(ziel)
