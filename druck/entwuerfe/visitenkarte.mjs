@@ -6,8 +6,8 @@
  * Name und die Kontaktwege, rechts der QR-Code auf die Website. Beruf und Schwerpunkt sind am
  * 21.10.2026 entfallen (Dennis).
  *
- * Hinten steht der Name in Cormorant statt als Unterschrift in Parisienne – Inna hat die Signatur
- * auf der Website gestrichen. Die Kleinschrift ist eine Stufe größer als auf der früheren
+ * Hinten steht INNA wie in der Wortmarke (Versalien, Laufweite 0,34) statt als Unterschrift in
+ * Parisienne – Inna hat die Signatur auf der Website gestrichen. Die Kleinschrift ist eine Stufe größer als auf der früheren
  * Leinen-Rückseite (9 statt 8 pt), weil Tiefschwarz auf Cognac weniger Kontrast hat als auf Leinen.
  * E-Mail, Website und der QR-Code erscheinen nur, wenn sie in salon.ts stehen.
  *
@@ -25,7 +25,8 @@ const MITTE_Y = 26.6
 const TON = { grund: 'kupfer', farbe: 'schwarz', ueberdrucken: true }
 const schrift = { farbe: TON.farbe, ueberdrucken: TON.ueberdrucken }
 
-const name = { schrift: 'display', groessePt: 28, ...schrift }
+/** INNA wie in der Wortmarke: Versalien, Laufweite 0,34 – etwas kleiner als vorn (7,2 mm) */
+const name = { schrift: 'display', versalhoehe: 5.6, laufweite: 0.34, ...schrift }
 const telefon = { schrift: 'sansMedium', groessePt: 10, ...schrift }
 const kleinschrift = { schrift: 'sans', groessePt: 9, ...schrift }
 /** sichtbare Codefläche des QR in mm; die Ruhezone (4 Module, bei Version 2 rund 2,1 mm) liegt außen */
@@ -75,8 +76,8 @@ function vorn(s, { text }) {
 function hinten(s, { text, angaben }) {
   s.flaeche(TON.grund)
 
-  const grundlinieName = RAND + s.messen(text.name, name).oben
-  linksbuendig(s, text.name, { ...name, x: RAND, y: grundlinieName })
+  const grundlinieName = RAND + s.messen(text.wortmarke, name).oben
+  linksbuendig(s, text.wortmarke, { ...name, x: RAND, y: grundlinieName })
 
   // Kontakt von unten nach oben: Adresse auf dem unteren Rand, darüber Website und E-Mail, sofern
   // es sie gibt, ganz oben die Telefonnummer – sie ist der Weg zum Termin
