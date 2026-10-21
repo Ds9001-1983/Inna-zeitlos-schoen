@@ -25,7 +25,7 @@ const MITTE_Y = 26.6
 const TON = { grund: 'kupfer', farbe: 'schwarz', ueberdrucken: true }
 const schrift = { farbe: TON.farbe, ueberdrucken: TON.ueberdrucken }
 
-const name = { schrift: 'display', groessePt: 20, ...schrift }
+const name = { schrift: 'display', groessePt: 28, ...schrift }
 const telefon = { schrift: 'sansMedium', groessePt: 10, ...schrift }
 const kleinschrift = { schrift: 'sans', groessePt: 9, ...schrift }
 /** sichtbare Codefläche des QR in mm; die Ruhezone (4 Module, bei Version 2 rund 2,1 mm) liegt außen */
