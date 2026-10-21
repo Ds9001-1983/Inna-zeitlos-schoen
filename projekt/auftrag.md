@@ -12,11 +12,11 @@ Branche:          Friseur – Schwerpunkt Farbe (Blond, Airtouch, Farbkorrektur,
 Straße:           Schulstraße 1
 PLZ Ort:          51674 Wiehl
 Telefon:          0170 66 19 452 (mobil, Dennis 21.10.2026)
-E-Mail:           
+E-Mail:           info@inna-zeitlosschoen.de (Dennis 21.10.2026)
 Öffnungszeiten:   
 Instagram:        (nicht übergeben – „Wiehler Schönheitsfleck" gehört nicht zu diesem Projekt)
 Google-Profil:    
-Domain:           
+Domain:           inna-zeitlosschoen.de (Dennis 21.10.2026, registriert bei Alfahosting)
 
 ## Personen
 Name | Rolle | Foto vorhanden (ja/nein)

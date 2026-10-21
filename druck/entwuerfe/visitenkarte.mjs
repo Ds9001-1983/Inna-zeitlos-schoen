@@ -2,13 +2,14 @@
  * Visitenkarte 85 × 55 mm quer – im Design des Schilds (Dennis, 21.10.2026).
  *
  * Beide Seiten Cognac (Kupfer), die Schrift in Tiefschwarz: reines K 100, überdruckt, Cormorant
- * Regular und Montserrat Medium – wie auf dem Schild. Vorn nur die Wortmarke, hinten eine linke
- * Kante für alles.
+ * Regular und Montserrat Medium – wie auf dem Schild. Vorn nur die Wortmarke, hinten links der
+ * Name und die Kontaktwege, rechts der QR-Code auf die Website. Beruf und Schwerpunkt sind am
+ * 21.10.2026 entfallen (Dennis).
  *
  * Hinten steht der Name in Cormorant statt als Unterschrift in Parisienne – Inna hat die Signatur
  * auf der Website gestrichen. Die Kleinschrift ist eine Stufe größer als auf der früheren
  * Leinen-Rückseite (9 statt 8 pt), weil Tiefschwarz auf Cognac weniger Kontrast hat als auf Leinen.
- * E-Mail, Website und der QR-Code auf die Website erscheinen erst, wenn sie in salon.ts stehen.
+ * E-Mail, Website und der QR-Code erscheinen nur, wenn sie in salon.ts stehen.
  *
  * Die früheren Fassungen (Leinen, Cognac-Beige, Cognac-Schwarz mit K 94) stehen in der Git-Geschichte.
  */
@@ -25,9 +26,6 @@ const TON = { grund: 'kupfer', farbe: 'schwarz', ueberdrucken: true }
 const schrift = { farbe: TON.farbe, ueberdrucken: TON.ueberdrucken }
 
 const name = { schrift: 'display', groessePt: 20, ...schrift }
-/** ein Versaliengrad für die ganze Karte, wie t-label der Website */
-const versalien = { schrift: 'sansMedium', groessePt: 7, laufweite: 0.18, ...schrift }
-const schwerpunkt = { schrift: 'displayKursiv', groessePt: 10.5, ...schrift }
 const telefon = { schrift: 'sansMedium', groessePt: 10, ...schrift }
 const kleinschrift = { schrift: 'sans', groessePt: 9, ...schrift }
 /** sichtbare Codefläche des QR in mm; die Ruhezone (4 Module, bei Version 2 rund 2,1 mm) liegt außen */
@@ -77,12 +75,8 @@ function vorn(s, { text }) {
 function hinten(s, { text, angaben }) {
   s.flaeche(TON.grund)
 
-  // Person: Name, Beruf, Schwerpunkt
   const grundlinieName = RAND + s.messen(text.name, name).oben
-  const grundlinieBeruf = grundlinieName + 5.4
   linksbuendig(s, text.name, { ...name, x: RAND, y: grundlinieName })
-  linksbuendig(s, text.beruf.toUpperCase(), { ...versalien, x: RAND, y: grundlinieBeruf })
-  linksbuendig(s, text.schwerpunkt, { ...schwerpunkt, x: RAND, y: grundlinieBeruf + 4.6 })
 
   // Kontakt von unten nach oben: Adresse auf dem unteren Rand, darüber Website und E-Mail, sofern
   // es sie gibt, ganz oben die Telefonnummer – sie ist der Weg zum Termin
@@ -108,7 +102,7 @@ function hinten(s, { text, angaben }) {
   }
 
   // QR-Code auf die Website, erst wenn es eine gibt: unten rechts auf der Adress-Grundlinie, sonst
-  // oben rechts neben dem Namen. Tiefschwarz auf Cognac, überdruckt.
+  // oben rechts neben dem Namen. Tiefschwarz auf Cognac.
   if (angaben.domain) {
     const qrX = RECHTS - QR
     const untenFrei = RAND + breitesteZeile + 1 <= qrX - QR_RUHE

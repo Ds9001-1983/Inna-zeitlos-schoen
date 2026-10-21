@@ -24,7 +24,7 @@ erzeugt neu. Satz und Prüfung passen sich an.
 | Datei in `druck/ausgabe/` | Inhalt |
 |---|---|
 | `schild` | seit 19.10.2026: nur die Wortmarke in Tiefschwarz auf Cognac, wie die Kartenvorderseite Cognac-Schwarz (Innas Wunsch vom 13.10.: „Schild wie Karte", Schrift dunkler). **Druck-PDF liegt in `druck/ausgabe/final/schild.pdf`** |
-| `visitenkarte` | seit 21.10.2026 im Design des Schilds: beidseitig Tiefschwarz auf Cognac. Vorn die Wortmarke, hinten Name, Beruf, Schwerpunkt, Telefon und Adresse. E-Mail, Website und QR-Code erscheinen, sobald sie in `salon.ts` stehen. **Druck-PDF liegt in `druck/ausgabe/final/visitenkarte.pdf`** |
+| `visitenkarte` | seit 21.10.2026 im Design des Schilds: beidseitig Tiefschwarz auf Cognac. Vorn die Wortmarke, hinten links Name, Telefon, E-Mail, Website und Adresse, rechts der QR-Code auf https://inna-zeitlosschoen.de (Beruf und Schwerpunkt seit 21.10. weg; QR mit OpenCV aus der Vorschau gelesen, auch bei 30 % Größe). **Druck-PDF liegt in `druck/ausgabe/final/visitenkarte.pdf`** |
 
 Module: `druck/entwuerfe/schild.mjs` und `druck/entwuerfe/visitenkarte.mjs`. Drei Richter (Marke,
 Druck, Kundin) haben aus drei Schild- und zwei Kartenvarianten einstimmig ausgewählt. Die Begründung
@@ -67,8 +67,8 @@ gelangen nie in eine Druckdatei.
 | Feld in `salon.ts` | Schild | Visitenkarte |
 |---|---|---|
 | `telefon` | – | Pflicht (seit 21.10.2026 gefüllt) |
-| `email` | – | optional, erscheint wenn gefüllt |
-| `domain` (Website, auch für den QR-Code) | – | optional, erscheint mit QR-Code wenn gefüllt |
+| `email` | – | optional – gefüllt seit 21.10.2026 |
+| `domain` (Website, auch für den QR-Code) | – | optional – gefüllt seit 21.10.2026 |
 | `oeffnungszeiten` | – | – |
 
 Instagram steht auf keiner Drucksache, bis Innas eigenes Profil im Auftrag steht.

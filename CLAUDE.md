@@ -31,11 +31,12 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 
 ## Status
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
-Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (E-Mail, Zeiten,
+Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten,
 Rechtsname, Instagram, Portraits, Einwilligungen, Ersatzfoto Über mich). Kein Freigabe-Stopp.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
 docs/design-plan.md „Revidiert“.
 Drucksachen (Schild 600 × 500 mm Cognac, Kontakt-Visitenkarte, Flyeralarm): druck/, Doku docs/druck.md –
 Schild seit 19.10.2026 druckfertig (nur Wortmarke in Tiefschwarz auf Cognac, wie die Karte;
 npm --prefix druck run final -- --nur schild). Visitenkarte seit 21.10.2026 im selben Design
-druckfertig (Telefon und Adresse; E-Mail, Website und QR-Code kommen automatisch dazu).
+druckfertig (Telefon, E-Mail, Website, Adresse, QR-Code). Domain inna-zeitlosschoen.de liegt bei
+Alfahosting und zeigt noch nicht auf Vercel.

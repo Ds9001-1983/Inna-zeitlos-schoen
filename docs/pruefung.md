@@ -7,7 +7,7 @@ Umbau der Leistungen-Kacheln. Quelle des Abgleichs: `projekt/auftrag.md`.
 des Sticks, Drucksachen (Entwurf) und fontkit. An der Seite selbst ändert sich nichts. `auftrag.md`
 ist seit dem 21.09. unverändert, Telefon, E-Mail, Öffnungszeiten und Domain sind weiter leer.
 
-**Aktualisiert 21.10.2026:** Telefonnummer eingetragen (Website, Impressum, Schema, Visitenkarte), Visitenkarte im Design des Schilds druckfertig.
+**Aktualisiert 21.10.2026:** Telefon, E-Mail und Domain eingetragen (Website, Impressum, Schema, Visitenkarte), Visitenkarte im Design des Schilds druckfertig.
 
 **Aktualisiert 19.10.2026** nach der Korrekturrunde von Inna (Anmerkungen vom 13.10.): Verwandlung,
 Arbeiten und Preise gestrichen, Leistungen als Bildreihe ohne Text, Wortmarke statt Unterschrift,
@@ -28,7 +28,9 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Leistungen: vier Kacheln | umgesetzt | Korrektur 13.10.: Überschrift „Haar, was zu dir passt.“, Kacheln nur als Bild (Textur-Ausschnitte), Titel im Alt-Text |
 | Preise | entfallen | Abschnitt gestrichen (Inna, 13.10.2026) |
 | Telefon | umgesetzt | 0170 66 19 452 seit 21.10.2026: Knopf „anrufen“ im Kontakt (tel:+491706619452), Impressum, LocalBusiness-Schema, Visitenkarte |
-| E-Mail, Öffnungszeiten | offen | Kontakt zeigt seit 21.10. den Anruf-Knopf, ohne Öffnungszeiten steht „Termine nach Vereinbarung“. Das Impressum markiert die E-Mail als Lücke |
+| E-Mail info@inna-zeitlosschoen.de | umgesetzt | seit 21.10.: Knopf „E-Mail schreiben“, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte |
+| Domain inna-zeitlosschoen.de | **teilweise** | steht auf der Visitenkarte samt QR-Code. Liegt bei Alfahosting, A-Record zeigt noch nicht auf Vercel – vor dem Druck der Karten in Vercel hinzufügen und DNS umstellen |
+| Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
 | Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
 | Kein Buchungssystem (F4) | umgesetzt | überall „Termin anfragen", kein Buchungsversprechen |
 | Team Inna & Nursah | umgesetzt | ohne Personenfoto (Material); Nursahs Nachname offen |
@@ -73,7 +75,7 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 
 ## Offene Punkte für Dennis
 
-- E-Mail von Inna (Impressum braucht sie, Karte zeigt sie dann automatisch)
+- Domain inna-zeitlosschoen.de in Vercel hinzufügen und bei Alfahosting auf Vercel zeigen lassen (A/CNAME), MX für info@ unverändert lassen
 - Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten
 - Ersatzfoto für „Über mich“ (Inna, angekündigt 13.10.2026)

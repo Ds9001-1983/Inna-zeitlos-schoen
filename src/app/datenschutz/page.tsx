@@ -61,7 +61,7 @@ export default function Datenschutz() {
       <div>
         <h2>Kontaktaufnahme</h2>
         <p>
-          Wenn du über Instagram oder telefonisch Kontakt aufnimmst, werden die dabei mitgeteilten
+          Wenn du per E-Mail, telefonisch oder über Instagram Kontakt aufnimmst, werden die dabei mitgeteilten
           Angaben zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO) und
           gelöscht, sobald sie nicht mehr benötigt werden und keine gesetzlichen
           Aufbewahrungspflichten entgegenstehen.

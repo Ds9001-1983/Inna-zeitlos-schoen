@@ -5,7 +5,7 @@
  * die Seite zeigt sie dann automatisch an und blendet bis dahin einen sinnvollen
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
- * OFFEN: email, domain, oeffnungszeiten, Innas Instagram-Profil, Betriebsname
+ * OFFEN: oeffnungszeiten, Innas Instagram-Profil, Betriebsname
  * fürs Impressum, Nursahs Nachname, Portraits von Inna und Nursah, Ersatzfoto für „Über mich“.
  */
 
@@ -18,9 +18,10 @@ export const salon = {
   region: 'Oberbergischer Kreis',
   /** Innas Mobilnummer, durchgegeben von Dennis am 21.10.2026 */
   telefon: '0170 66 19 452' as string | null,
-  email: null as string | null,
-  /** OFFEN – Domain ohne https://, sobald sie feststeht. Steht dann auch auf der Visitenkarte (mit QR-Code). */
-  domain: null as string | null,
+  /** Dennis, 21.10.2026 */
+  email: 'info@inna-zeitlosschoen.de' as string | null,
+  /** Domain ohne https:// (Dennis, 21.10.2026). Steht auf der Visitenkarte, der QR-Code führt dorthin. */
+  domain: 'inna-zeitlosschoen.de' as string | null,
   /** OFFEN – Innas eigenes Profil. Erscheint erst, wenn beides gefüllt ist. */
   instagram: null as string | null,
   instagramName: null as string | null,

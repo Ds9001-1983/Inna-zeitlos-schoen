@@ -158,6 +158,8 @@ Parisienne-Unterschrift, weil Inna die Unterschrift auf der Website gestrichen h
 mit 10 pt Medium die stärkste Zeile, die Kleinschrift steht in 9 statt 8 pt, weil Tiefschwarz auf
 Cognac (3,8:1) weniger Kontrast hat als Tinte auf Leinen. E-Mail, Website und QR-Code sind optional.
 Damit ersetzt dieser Eintrag die frühere Begründung „Rückseite bleibt Leinen“ (24.09.).
+Nachtrag am selben Tag: Beruf und Schwerpunkt sind von der Rückseite gestrichen. Dazu gekommen sind
+E-Mail, Website und rechts der QR-Code auf die Website, Tiefschwarz auf Cognac.
 
 **19.10.2026 – Schild wie die Karte (Inna, 13.10.2026: „Schild wie Karte", Schrift dunkler).**
 Das Schild zeigt nur noch die Wortmarke auf Cognac (Kupfer), in den Proportionen der
