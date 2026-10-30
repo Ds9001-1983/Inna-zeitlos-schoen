@@ -122,8 +122,9 @@ Innas eigene Vorlage. Das wird zum Leitmotiv der Seite.
 ## Tonalität
 
 Du-Form, wie in Innas Vorlage. Ruhig, erwachsen, ohne Beauty-Superlative. Kurze Sätze.
-Ich-Perspektive für Inna persönlich, Wir-Perspektive dort, wo Nursah mitgemeint ist –
-diese Trennung steht so schon in den Vorlagen und wird konsequent durchgehalten.
+Seit Innas finaler Fassung vom 30.10.2026 durchgehend Wir-Perspektive: Inna und Nursah treten als
+Team auf. Über die beiden einzeln wird in der dritten Person gesprochen („Inna liebt Blond …“).
+(Bis dahin: Ich für Inna, Wir nur dort, wo Nursah mitgemeint war.)
 
 ---
 

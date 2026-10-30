@@ -7,6 +7,11 @@ Umbau der Leistungen-Kacheln. Quelle des Abgleichs: `projekt/auftrag.md`.
 des Sticks, Drucksachen (Entwurf) und fontkit. An der Seite selbst ändert sich nichts. `auftrag.md`
 ist seit dem 21.09. unverändert, Telefon, E-Mail, Öffnungszeiten und Domain sind weiter leer.
 
+**Aktualisiert 30.10.2026** nach Innas finaler Textfassung: alle Texte ersetzt (Wir-Form), Vorher & Nachher
+als Regler zurück (sechs Paare aus Innas Fotos vom 13.10.), Leistungen mit Aufklappliste, neue Abschnitte
+„Neu bei uns“ und „Termine“ (WhatsApp für Neukundinnen, Onlinebuchung für Stammkundinnen, Link offen).
+Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messungen siehe C, Nachmessung 30.10.
+
 **Aktualisiert 21.10.2026:** Telefon, E-Mail und Domain eingetragen (Website, Impressum, Schema, Visitenkarte), Visitenkarte im Design des Schilds druckfertig.
 
 **Aktualisiert 19.10.2026** nach der Korrekturrunde von Inna (Anmerkungen vom 13.10.): Verwandlung,
@@ -20,29 +25,33 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Auftrag | Urteil | Anmerkung |
 |---|---|---|
 | Marke „INNA – Zeitlos schön", Schulstraße 1, 51674 Wiehl | umgesetzt | Header, Kontakt, Footer, Impressum, LocalBusiness-Schema |
-| Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Abschnittsfolge, Navigation, Palette und Schriften wie die Vorlage; zusätzlich Kontakt aus B1; Verwandlung, Arbeiten, Preise am 13.10.2026 von Inna gestrichen |
+| Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Layout, Palette und Schriften wie die Vorlage; seit 30.10. Innas finale Texte auf die Abschnitte verteilt, Abschluss in der Fußzeile; Arbeiten und Preise am 13.10.2026 gestrichen |
+| Innas finale Textfassung (30.10.2026) | umgesetzt | wörtlich, Wir-Form; Marke einheitlich „INNA – Zeitlos schön“ (Inna schreibt „Schön“); funktionale Überschriften nur dort, wo Inna keine geliefert hat („Vorher & Nachher“, „Termine“) |
 | Hero mit Portrait von Inna (Vorlage) | bewusst anders | kein Portrait vorhanden → Bewegtbild aus der Rückansicht einer Kundin (Kling); Portrait bleibt offener Punkt |
 | Brand-Board: Farben und Schriften | umgesetzt | Sand/Leinen/Kupfer/Tinte, Cormorant + Grotesk + Signatur; Kupfer für Text als dunklere Schwester (AA) |
 | Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
-| Leistungen: vier Kacheln | umgesetzt | Korrektur 13.10.: Überschrift „Haar, was zu dir passt.“, Kacheln nur als Bild (Textur-Ausschnitte), Titel im Alt-Text |
+| Leistungen | umgesetzt | seit 30.10.: fünf Kacheln aus Innas Fotos (Blond, Farbe, Farbkorrekturen, Tressen, Schnitt & Styling), darunter Innas Texte als Aufklappliste; Überschrift „Haar, das zu dir passt.“ |
+| Vorher & Nachher zum Wischen (Inna, 30.10.) | umgesetzt | sechs Paare, Regler mit Maus, Finger und Tastatur; Kategorien von Inna bestätigen lassen |
 | Preise | entfallen | Abschnitt gestrichen (Inna, 13.10.2026) |
-| Telefon | umgesetzt | 0170 66 19 452 seit 21.10.2026: Knopf „anrufen“ im Kontakt (tel:+491706619452), Impressum, LocalBusiness-Schema, Visitenkarte |
-| E-Mail info@inna-zeitlosschoen.de | umgesetzt | seit 21.10.: Knopf „E-Mail schreiben“, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte |
+| Telefon | umgesetzt | 0170 66 19 452: Fußzeile (tel:+491706619452), Impressum, LocalBusiness-Schema, Visitenkarte; der Knopf im Kontakt entfällt seit 30.10. (Beratung bewusst nicht per Telefon) |
+| E-Mail info@inna-zeitlosschoen.de | umgesetzt | Fußzeile, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte; Knopf im Kontakt entfällt seit 30.10. |
+| WhatsApp für Neukundinnen (30.10.) | umgesetzt | Knopf „Beratung per WhatsApp anfragen“ in „Neu bei uns“ und „Termine“ (wa.me/491706619452), Datenschutz-Abschnitt WhatsApp |
+| Onlinebuchung für Stammkundinnen (30.10.) | **offen** | Innas Satz steht im Abschnitt Termine; Knopf „Online Termin buchen“ und Datenschutz-Abschnitt erscheinen, sobald `salon.buchung` gesetzt ist; Anbieter dann im Datenschutz ergänzen |
 | Domain inna-zeitlosschoen.de | **teilweise** | steht auf der Visitenkarte samt QR-Code. Liegt bei Alfahosting, A-Record zeigt noch nicht auf Vercel – vor dem Druck der Karten in Vercel hinzufügen und DNS umstellen |
 | Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
 | Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
-| Kein Buchungssystem (F4) | umgesetzt | überall „Termin anfragen", kein Buchungsversprechen |
-| Team Inna & Nursah | umgesetzt | ohne Personenfoto (Material); Nursahs Nachname offen |
-| Philosophie: vier Werte | umgesetzt | |
-| Arbeiten / Referenzen (B1), Verwandlung | entfallen | gestrichen (Inna, 13.10.2026); die nicht mehr genutzten Bilder (Farbkorrektur vorher/nachher, Rückansicht) sind aus `public/arbeiten/` gelöscht, damit sie ohne Einwilligung nicht abrufbar bleiben |
-| Über mich | umgesetzt | Wortmarke statt Unterschrift (13.10.); **Foto offen** – Ersatz kommt von Inna, bis dahin die Strähne |
-| Neukunden-Termin: Gespräch, ca. 30 Minuten | umgesetzt | Kontakttext nach Innas Korrektur vom 13.10.2026 |
-| Du-Form (F7) | umgesetzt | |
+| Kein Buchungssystem (F4) | abgelöst | seit 30.10. externe Onlinebuchung für Stammkundinnen (Link offen); „Termin anfragen“ führt zum Abschnitt Termine mit beiden Wegen |
+| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; ohne Personenfoto, Portraits folgen von Inna; Nursahs Nachname offen |
+| Philosophie | umgesetzt | seit 30.10. Innas Text statt der vier Werte |
+| Arbeiten / Referenzen (B1) | entfallen | gestrichen (Inna, 13.10.2026); Vorher & Nachher seit 30.10. zurück, siehe oben |
+| Über uns (vorher Über mich) | umgesetzt | Innas Text vom 30.10.; neues Foto aus ihren Arbeiten statt der Strähne – von Inna absegnen lassen |
+| Neukundinnen: Beratungstermin im Salon | umgesetzt | Abschnitt „Neu bei uns“ mit Innas Text und „Deine persönliche Beratung“ (01–03) |
+| Du-Form (F7), Wir-Perspektive | umgesetzt | keine Ich-Form mehr im Seitentext (geprüft per grep) |
 | Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
 | Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | beide druckfertig | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Schild seit 19.10. nach Innas Wunsch nur Wortmarke auf Cognac → `druck/ausgabe/final/schild.pdf`, Preflight ok, Beschnitt 3 mm angenommen. Karte seit 21.10. im Design des Schilds mit Telefon und Adresse → `druck/ausgabe/final/visitenkarte.pdf`, Preflight ok; E-Mail, Website und QR-Code kommen dazu, sobald sie feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
-| Einwilligungen (Kundinnenfotos, Zitat, KI-Video) | offen | schriftliche Zustimmung fehlt |
+| Einwilligungen (Kundinnenfotos, KI-Video) | **offen** | schriftliche Zustimmung der Kundinnen auf den Vorher/Nachher-Paaren, Kacheln und „Über uns“ fehlt; die Originale liegen nicht im (öffentlichen) Repo |
 | Portraits Inna und Nursah | offen | Vorlage zeigt Menschen – Fotografin |
 | Credit-Rahmen 100 | umgesetzt | 63 verbraucht (9 × Upscaling, 6 × Video) |
 | Git: Ds9001-1983, deutsch, kein Hinweis auf Claude | umgesetzt | |
@@ -71,6 +80,16 @@ Video läuft (`hero.webm`), bei reduzierter Bewegung 0 Videoanfragen · Tastatur
 Nachmessung 25.09.2026 nach der APFS-Umstellung: Lint/Build grün, `next start` und `next dev` mit je
 97 Bild-URLs × AVIF/WebP/JPEG × 3 Abrufen = 873/873 korrekt (MISS → HIT, gleiche Bytes).
 
+Nachmessung 30.10.2026 (Next.js 16.4.3): Lint/Build grün · `qa:a11y` 1/1 bestanden (axe, 0 Verstöße) ·
+`qa:kontrast` (zwei Läufe): Titel 6,70–6,74:1, Signaturzeile 4,41:1, Lead 8,60:1; Lead im Bildkapitel von Hand gemessen 5,35:1 (1440 px)
+und 5,62:1 (390 px), nötig 4,5:1 – das Skript misst nur den ersten Bildschirm · `qa:messungen`: Überbreite 360 und
+640 px: 0, Bilder 17/17, Video läuft, Reduced Motion 0 Videoanfragen, Platzhalter keine, Tastatur 34 Elemente, alle mit
+sichtbarem Fokus · Bedienung (Playwright, eigenes Skript): Sprungmarken, Regler per Pfeiltasten, Paarwechsel, Aufklappliste,
+WhatsApp-Link, Termin-Leiste am Handy – 24/24 · `qa:playwright`: 16 bestanden, 8 übersprungen (andere Seitentypen),
+5 rot = „Screenshots an Scroll-Positionen“: Es gibt keine Referenzbilder, und das laufende Hero-Video lässt keine
+zwei gleichen Aufnahmen zu – kein Befund an der Seite · Druckdaten: `npm --prefix druck run pruefen` 3/3 ok.
+Gefunden und behoben: Die sr-only-Texte der Vorschaubilder verbreiterten die Seite bei 360 px um 245 px.
+
 Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `npm run qa:messungen` (Überbreite, Bilder, Video, Platzhalter, doppelte Motive, Tastatur, Aufnahmen). Zahlen vom 21.09.2026.
 
 ## Offene Punkte für Dennis
@@ -78,10 +97,11 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 - Domain inna-zeitlosschoen.de in Vercel hinzufügen und bei Alfahosting auf Vercel zeigen lassen (A/CNAME), MX für info@ unverändert lassen
 - Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten
-- Ersatzfoto für „Über mich“ (Inna, angekündigt 13.10.2026)
+- Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
+- Inna absegnen lassen: neues Foto „Über uns“ und die Kategorien der sechs Vorher/Nachher-Paare
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
-- Portraits von Inna und Nursah, Teamfoto, Salonfotos (Fotografin) – löst auch die doppelten Motive
-- Schriftliche Einwilligung: Kundinnen auf den gezeigten Bildern, KI-Video aus dem Kundenfoto (Vorher/Nachher und Zitat sind mit der Verwandlung entfallen)
+- Portraits von Inna und Nursah (Inna schickt sie), Teamfoto, Salonfotos
+- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Paaren, Kacheln und „Über uns“ sowie KI-Video aus dem Kundenfoto
 - Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100

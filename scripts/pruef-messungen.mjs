@@ -79,7 +79,8 @@ for (const w of [360, 640]) {
     return v ? { vorhanden: true, laeuft: !v.paused, quelle: v.currentSrc.replace(location.origin, '') } : { vorhanden: false }
   })
   ergebnis.platzhalter = await p2.evaluate(() => {
-    const t = document.body.innerText
+    // „zu folgen“ ist kein Platzhalter – Innas Hero-Satz „jedem Trend zu folgen“ (30.10.2026)
+    const t = document.body.innerText.replace(/\bzu folgen\b/gi, '')
     return ['folgt', 'folgen', 'auf Anfrage', 'im Gespräch', 'Lorem', 'wird ergänzt'].filter((w) => new RegExp(`\\b${w}\\b`, 'i').test(t))
   })
   ergebnis.doppelte_motive = await p2.evaluate(() => {

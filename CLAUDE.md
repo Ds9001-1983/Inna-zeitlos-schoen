@@ -31,10 +31,13 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 
 ## Status
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
-Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten,
-Rechtsname, Instagram, Portraits, Einwilligungen, Ersatzfoto Über mich). Kein Freigabe-Stopp.
+Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Buchungslink,
+Rechtsname, Instagram, Portraits, Einwilligungen). Kein Freigabe-Stopp.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
-docs/design-plan.md „Revidiert“.
+docs/design-plan.md „Revidiert“. Seit 30.10.2026 Innas finale Texte (Wir-Form), Vorher & Nachher als Regler
+zurück, Neukundinnen per WhatsApp, Onlinebuchung für Stammkundinnen (Link offen: `salon.buchung`).
+Innas Originalfotos liegen in projekt/fotos/original-2026-10-13/ (gitignored, Repo ist öffentlich);
+Web-Fassungen erzeugt `node scripts/fotos-aufbereiten.mjs`.
 Drucksachen (Schild 600 × 500 mm Cognac, Kontakt-Visitenkarte, Flyeralarm): druck/, Doku docs/druck.md –
 Schild seit 19.10.2026 druckfertig (nur Wortmarke in Tiefschwarz auf Cognac, wie die Karte;
 npm --prefix druck run final -- --nur schild). Visitenkarte seit 21.10.2026 im selben Design

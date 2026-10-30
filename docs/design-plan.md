@@ -150,6 +150,32 @@ Video ab.
 
 ## Revidiert
 
+**30.10.2026 – Innas finale Texte, Vorher/Nachher zurück, zwei Wege zum Termin (Inna, über Dennis).**
+Layout, Farben und Gestaltung bleiben; Innas Texte ersetzen die bisherigen und sind auf die Abschnitte
+verteilt. Neue Folge: Hero → Über uns (Sand) → Leistungen (Leinen) → Vorher & Nachher (Sand) →
+Bildkapitel → Team (Leinen) → Philosophie (Sand) → Neu bei uns (Leinen) → Termine (Sand) → Fußzeile.
+- *Wir-Form statt Ich-Form.* Inna und Nursah treten als Team auf; Navigation „Über uns“, „Unsere Leistungen“.
+- *Vorher & Nachher als Regler, wieder.* Am 21.09. war der Wischregler gestrichen, weil die beiden Fotos
+  verschieden gerahmt waren. Jetzt sind sechs Paare aus Innas neuen Fotos so zugeschnitten
+  (`scripts/fotos-aufbereiten.mjs`), dass Scheitel und Haarbreite übereinanderliegen. Der Regler ist
+  derselbe wie damals (`<input type="range">`, Griff mit Kupfer-Haarlinie). Neu: sechs Vorschaubilder zur
+  Auswahl, am Handy als Wischreihe unter dem Regler.
+- *Leistungen:* fünf Kacheln (Blond, Farbe, Farbkorrekturen, Tressen, Schnitt & Styling) aus Innas neuen
+  Fotos, darunter eine Aufklappliste (`<details>`): Titel und Innas erster Satz offen, der Rest auf Wunsch.
+  Einzige neue Bewegung: Das Plus dreht beim Öffnen um 45° (300 ms, entfällt bei reduzierter Bewegung).
+  Am Handy läuft die fünfte Kachel quer über beide Spalten.
+- *Über uns* zeigt eine neue Arbeit statt der Strähne. *Team:* längerer Text, das Bild steht am Rechner
+  fest (sticky), die Wortmarke steht jetzt unter „Das sind wir.“
+- *Philosophie:* Die vier Werte mit Symbolen und „Das Gefühl“ entfallen; die Linienreihe trägt Innas drei
+  „sagen wir“-Sätze, ohne Symbole. Ihr Schlusssatz steht in Cormorant Kursiv, samt „😉“.
+- *Bildkapitel:* Innas Satz „Mit Erfahrung … Sondern sich auch morgen noch nach dir anfühlen.“ statt
+  „Ein Ort zum Ankommen“. Lead auf Bild gemessen: 5,35:1 (1440 px), 5,62:1 (390 px).
+- *Termine:* Neukundinnen fragen per WhatsApp einen Beratungstermin an, Stammkundinnen buchen online
+  (Knopf erscheint, sobald der Link in `salon.ts` steht). Knöpfe für Telefon und E-Mail entfallen,
+  Nummer und Adresse stehen in der Fußzeile. Der Ablauf 01–03 ist jetzt Innas „Deine persönliche
+  Beratung“ im neuen Abschnitt „Neu bei uns“.
+- Keine neue Farbe, keine neue Schrift.
+
 **21.10.2026 – Visitenkarte im Design des Schilds (Dennis).**
 Die Karte ist jetzt beidseitig Cognac mit Tiefschwarz (K 100, überdruckt), Cormorant Regular und
 Montserrat Medium wie auf dem Schild. Die drei Vorderseiten-Fassungen (Leinen, Cognac-Beige,

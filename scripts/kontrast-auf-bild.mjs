@@ -140,7 +140,10 @@ await browser.close()
 mkdirSync('docs', { recursive: true })
 const zeilen = ergebnis.map(
   (f) =>
-    `| \`${f.selektor}\` | ${f.text} | ${f.schlechtester === Infinity ? '–' : f.schlechtester.toFixed(2) + ':1'} | ${f.noetig}:1 | ${f.schlechtester >= f.noetig ? 'bestanden' : '**durchgefallen**'} |`,
+    `| \`${f.selektor}\` | ${f.text} | ${f.schlechtester === Infinity ? '–' : f.schlechtester.toFixed(2) + ':1'} | ${f.noetig}:1 | ${
+      // Gemessen wird nur der erste Bildschirm – alles darunter von Hand nachmessen
+      f.schlechtester === Infinity ? 'nicht gemessen (unter dem ersten Bildschirm)' : f.schlechtester >= f.noetig ? 'bestanden' : '**durchgefallen**'
+    } |`,
 )
 const bericht = `# Kontrast auf Bild/Video\n\nURL: ${url} · Breite ${breite} px · Zeitpunkte: ${messpunkte.join(', ')} s · Messgröße: hellstes bzw. dunkelstes 2 % des Untergrunds\n\n| Element | Text | schlechtester Wert | nötig | Urteil |\n|---|---|---|---|---|\n${zeilen.join('\n')}\n`
 writeFileSync('docs/pruefung-kontrast.md', bericht)
