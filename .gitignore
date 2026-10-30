@@ -64,3 +64,6 @@ projekt/video/*
 druck/node_modules/
 druck/ausgabe/
 druck/profile/*.icc
+
+# Originalfotos von Inna (Kundinnen, volle Auflösung) – Repo ist öffentlich, nur Web-Fassungen committen
+/projekt/fotos/original-*/

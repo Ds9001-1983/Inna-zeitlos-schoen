@@ -1,0 +1,113 @@
+#!/usr/bin/env node
+/**
+ * Innas Originalfotos (projekt/fotos/original-2026-10-13/, nicht im Repo) → Web-Fassungen in public/arbeiten/.
+ *
+ * Dreht nach EXIF und schreibt ohne Metadaten (kein GPS, kein Gerät). Die Vorher/Nachher-Paare werden auf
+ * 7:10 zugeschnitten, je Bild mit eigenem Ausschnitt: Kopf und Schulterlinie sollen in beiden Bildern an
+ * derselben Stelle sitzen, sonst springt das Bild beim Ziehen des Reglers (design-plan.md, 21.09.2026).
+ *
+ *   node scripts/fotos-aufbereiten.mjs [--pruefbilder <ordner>]
+ *
+ * --pruefbilder legt je Paar ein Vergleichsbild an: vorher | nachher | beide zu 50 % überblendet.
+ * Ausschnitt: x und y = linke obere Ecke, b = Breite, alles als Anteil am gedrehten Original.
+ */
+import sharp from 'sharp'
+import { mkdirSync, readdirSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+
+const quelle = 'projekt/fotos/original-2026-10-13'
+const ziel = 'public/arbeiten'
+const arg = (name) => {
+  const i = process.argv.indexOf(`--${name}`)
+  return i > -1 ? process.argv[i + 1] : null
+}
+const pruefbilder = arg('pruefbilder')
+
+/** Volle Höhe, mittig – der Ausgangspunkt für jeden Ausschnitt eines 3:4-Originals. */
+const mittig = { x: 0.0333, y: 0, b: 0.9333 }
+
+const paare = [
+  // Nachher stand weiter weg: näher heran, bis Haarbreite und Scheitel zum Vorher passen
+  { name: '1-blond', vorher: ['ed0b2190', mittig], nachher: ['60544736', { x: 0.105, y: 0, b: 0.79 }] },
+  // Nachher sitzt tiefer im Bild: Ausschnitt nach unten, damit der Scheitel auf gleicher Höhe liegt
+  { name: '2-blond', vorher: ['072768a3', mittig], nachher: ['462fe25a', { x: 0.068, y: 0.074, b: 0.864 }] },
+  { name: '3-farbe', vorher: ['4a560a01', mittig], nachher: ['24b1b8cf', mittig] },
+  { name: '4-farbe', vorher: ['0c1ec213', { x: 0.1, y: 0.074, b: 0.864 }], nachher: ['60cda4cb', { x: 0.011, y: 0, b: 0.9333 }] },
+  { name: '5-farbkorrektur', vorher: ['26dd10f6', mittig], nachher: ['4f8b559d', { x: 0.065, y: 0.053, b: 0.848 }] },
+  { name: '6-tressen', vorher: ['59ec2eca', mittig], nachher: ['608feafd', mittig] },
+]
+
+/** Ganze Bilder, nur verkleinert – die Seite wählt den Ausschnitt per object-position. */
+const einzeln = [
+  { id: 'fa6e4356', datei: 'leistungen/blond.jpg' },
+  { id: '24b1b8cf', datei: 'leistungen/farbe.jpg' },
+  { id: '4f8b559d', datei: 'leistungen/farbkorrekturen.jpg' },
+  { id: '7f180534', datei: 'leistungen/tressen.jpg' },
+  { id: 'c17e5ddb', datei: 'leistungen/schnitt-styling.jpg' },
+  { id: '44bbd013', datei: 'ueber-uns.jpg' },
+]
+
+const dateien = readdirSync(quelle).filter((f) => !f.startsWith('._'))
+const pfad = (id) => {
+  const datei = dateien.find((f) => f.startsWith(id))
+  if (!datei) throw new Error(`Foto ${id} fehlt in ${quelle}`)
+  return join(quelle, datei)
+}
+
+const breite = 1120
+const hoehe = 1600
+
+async function zuschnitt(id, { x, y, b }) {
+  const gedreht = await sharp(pfad(id)).rotate().toBuffer({ resolveWithObject: true })
+  const { width, height } = gedreht.info
+  const w = Math.round(width * b)
+  const h = Math.round((w * 10) / 7)
+  const left = Math.round(width * x)
+  const top = Math.round(height * y)
+  if (left + w > width || top + h > height) {
+    throw new Error(`Ausschnitt von ${id} ragt über das Bild hinaus (${left}+${w}/${width}, ${top}+${h}/${height})`)
+  }
+  return sharp(gedreht.data).extract({ left, top, width: w, height: h }).resize(breite, hoehe)
+}
+
+for (const paar of paare) {
+  const seiten = {}
+  for (const seite of ['vorher', 'nachher']) {
+    const [id, ausschnitt] = paar[seite]
+    const datei = join(ziel, 'vorher-nachher', `${paar.name}-${seite}.jpg`)
+    mkdirSync(dirname(datei), { recursive: true })
+    seiten[seite] = await (await zuschnitt(id, ausschnitt)).jpeg({ quality: 82, mozjpeg: true }).toBuffer()
+    await sharp(seiten[seite]).toFile(datei)
+    console.log('✓', datei)
+  }
+
+  if (pruefbilder) {
+    mkdirSync(pruefbilder, { recursive: true })
+    const klein = async (buf, opacity = 1) =>
+      sharp(buf)
+        .resize(420, 600)
+        .ensureAlpha(opacity)
+        .png()
+        .toBuffer()
+    await sharp({ create: { width: 1260, height: 600, channels: 4, background: '#ffffff' } })
+      .composite([
+        { input: await klein(seiten.vorher), left: 0, top: 0 },
+        { input: await klein(seiten.nachher), left: 420, top: 0 },
+        { input: await klein(seiten.vorher), left: 840, top: 0 },
+        { input: await klein(seiten.nachher, 0.5), left: 840, top: 0 },
+      ])
+      .jpeg({ quality: 80 })
+      .toFile(join(pruefbilder, `${paar.name}.jpg`))
+  }
+}
+
+for (const { id, datei } of einzeln) {
+  const ausgabe = join(ziel, datei)
+  mkdirSync(dirname(ausgabe), { recursive: true })
+  await sharp(pfad(id))
+    .rotate()
+    .resize({ width: 1800, withoutEnlargement: true })
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toFile(ausgabe)
+  console.log('✓', ausgabe)
+}
