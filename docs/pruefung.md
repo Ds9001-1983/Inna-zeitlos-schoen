@@ -85,9 +85,10 @@ Nachmessung 30.10.2026 (Next.js 16.4.3): Lint/Build grün · `qa:a11y` 1/1 besta
 und 5,62:1 (390 px), nötig 4,5:1 – das Skript misst nur den ersten Bildschirm · `qa:messungen`: Überbreite 360 und
 640 px: 0, Bilder 17/17, Video läuft, Reduced Motion 0 Videoanfragen, Platzhalter keine, Tastatur 34 Elemente, alle mit
 sichtbarem Fokus · Bedienung (Playwright, eigenes Skript): Sprungmarken, Regler per Pfeiltasten, Paarwechsel, Aufklappliste,
-WhatsApp-Link, Termin-Leiste am Handy – 24/24 · `qa:playwright`: 16 bestanden, 8 übersprungen (andere Seitentypen),
-5 rot = „Screenshots an Scroll-Positionen“: Es gibt keine Referenzbilder, und das laufende Hero-Video lässt keine
-zwei gleichen Aufnahmen zu – kein Befund an der Seite · Druckdaten: `npm --prefix druck run pruefen` 3/3 ok.
+WhatsApp-Link, Termin-Leiste am Handy – 24/24 · `qa:playwright`: 21 bestanden, 8 übersprungen (andere Seitentypen) ·
+„Screenshots an Scroll-Positionen“ repariert: Im Test bleibt das Hero-Video blockiert (Standbild steht), 25 Referenzbilder liegen
+in `qa-tests/qa.spec.ts-snapshots/` (nur Chromium auf dem Mac), nach gewollten Änderungen `npx playwright test --update-snapshots` ·
+`qa:messungen` meldet als „doppeltes Motiv“ nur das aktive Vorher/Nachher-Paar (Regler und Vorschaubild), gewollt · Druckdaten: `npm --prefix druck run pruefen` 3/3 ok.
 Gefunden und behoben: Die sr-only-Texte der Vorschaubilder verbreiterten die Seite bei 360 px um 245 px.
 
 Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `npm run qa:messungen` (Überbreite, Bilder, Video, Platzhalter, doppelte Motive, Tastatur, Aufnahmen). Zahlen vom 21.09.2026.

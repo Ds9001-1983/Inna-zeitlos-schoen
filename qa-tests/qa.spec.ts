@@ -89,6 +89,8 @@ test.describe('Visual Regression', () => {
       })
 
       test('Screenshots an Scroll-Positionen', async ({ page }) => {
+        // Ohne Video bleibt im Hero das Standbild stehen, sonst gleicht kein Bild dem anderen
+        await page.route(/\/video\//, (route) => route.abort())
         await page.goto('/')
         await page.waitForLoadState('networkidle')
         await page.waitForTimeout(1500) // GSAP-Init aussitzen
