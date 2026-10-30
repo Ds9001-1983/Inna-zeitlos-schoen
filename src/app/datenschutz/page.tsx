@@ -59,9 +59,35 @@ export default function Datenschutz() {
       </div>
 
       <div>
+        <h2>WhatsApp</h2>
+        <p>
+          Neukundinnen können ihren Beratungstermin per WhatsApp anfragen. Der Knopf auf dieser
+          Seite ist ein reiner Link – Daten werden erst übertragen, wenn du ihn anklickst und uns
+          schreibst. Den Dienst betreibt die WhatsApp Ireland Limited, Merrion Road, Dublin 4,
+          Irland, ein Unternehmen der Meta-Gruppe. Verarbeitet werden deine Telefonnummer, dein
+          Profilname und der Inhalt deiner Nachricht; Meta verarbeitet Daten auch außerhalb der
+          EU, Näheres steht in der Datenschutzerklärung von WhatsApp. Wir nutzen deine Angaben nur,
+          um deine Anfrage zu beantworten (Art. 6 Abs. 1 lit. b DSGVO). Wer WhatsApp nicht nutzen
+          möchte, erreicht uns auch per E-Mail oder telefonisch.
+        </p>
+      </div>
+
+      {salon.buchung ? (
+        <div>
+          <h2>Onlinebuchung</h2>
+          <p>
+            Stammkundinnen können ihre Termine über eine Onlinebuchung vereinbaren. Sie wird
+            betrieben von <Offen was="Anbieter der Onlinebuchung mit Anschrift" />, diese Seite
+            verlinkt nur dorthin. Bei der Buchung werden die dort eingegebenen Angaben zur
+            Terminvereinbarung verarbeitet (Art. 6 Abs. 1 lit. b DSGVO).
+          </p>
+        </div>
+      ) : null}
+
+      <div>
         <h2>Kontaktaufnahme</h2>
         <p>
-          Wenn du per E-Mail, telefonisch oder über Instagram Kontakt aufnimmst, werden die dabei mitgeteilten
+          Wenn du per E-Mail, telefonisch, über WhatsApp oder über Instagram Kontakt aufnimmst, werden die dabei mitgeteilten
           Angaben zur Bearbeitung deiner Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO) und
           gelöscht, sobald sie nicht mehr benötigt werden und keine gesetzlichen
           Aufbewahrungspflichten entgegenstehen.

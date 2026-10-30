@@ -13,7 +13,7 @@ export function SeoSchema({ seitenUrl }: { seitenUrl: string }) {
     name: salon.marke,
     alternateName: salon.betrieb,
     description:
-      'Friseursalon mit Schwerpunkt Haarfarbe in Wiehl. Airtouch, Balayage, Farbkorrektur und Grauhaarkaschierung von zwei Friseurmeisterinnen.',
+      'Friseursalon in Wiehl: Blond, Farbe, Farbkorrekturen, Tressen sowie Schnitt und Styling. Persönliche Beratung im Salon vor jeder größeren Veränderung.',
     url: seitenUrl,
     image: `${seitenUrl}/og-bild.jpg`,
     address: {
@@ -35,9 +35,11 @@ export function SeoSchema({ seitenUrl }: { seitenUrl: string }) {
       'Babylights',
       'Faceframe',
       'Glossing',
+      'Grey Blending',
       'Farbkorrektur',
       'Grauhaarkaschierung',
       'Tressen und Haarverdichtung',
+      'Haarverlängerung',
     ],
   }
 

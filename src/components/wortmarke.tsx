@@ -1,7 +1,7 @@
 /**
  * Wortmarke aus dem Brand-Board. Bis die Vektordatei von Inna da ist,
  * als Typo gesetzt – dieselben Schriften, dieselbe Laufweite.
- * „gross“ steht unter dem Über-mich-Text, wo vorher die Signatur stand.
+ * „gross“ steht am Ende des Team-Abschnitts unter „Das sind wir.“
  */
 const groessen = {
   kopf: { marke: 'text-[1.65rem]', zusatz: 'mt-1 text-[0.5rem]' },

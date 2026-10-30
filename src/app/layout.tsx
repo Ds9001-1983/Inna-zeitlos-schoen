@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(seitenUrl),
   title: 'INNA – Zeitlos schön | Friseur & Blond-Expertin in Wiehl',
   description:
-    'Airtouch, Balayage und Farbkorrektur in Wiehl. Farben, die herauswachsen dürfen – von zwei Friseurmeisterinnen.',
+    'Blond, Farbe, Farbkorrekturen, Tressen sowie Schnitt und Styling in Wiehl. Zwei Frauen. Viel Erfahrung. Ehrliches Handwerk.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'INNA – Zeitlos schön',
-    description: 'Typgerechte Schönheit. Gesundes Haar. Ergebnisse, die zu dir passen.',
+    description: 'Zwei Frauen. Viel Erfahrung. Ehrliches Handwerk. Und Haare, die zu dir passen.',
     url: '/',
     siteName: 'INNA – Zeitlos schön',
     locale: 'de_DE',

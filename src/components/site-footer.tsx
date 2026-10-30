@@ -11,7 +11,11 @@ export function SiteFooter() {
             Zeitlos schön
           </p>
           <p className="mt-6 max-w-[28ch] text-sm leading-relaxed text-leinen/70">
-            Typgerechte Schönheit. Gesundes Haar. Ergebnisse, die zu dir passen.
+            Zwei Frauen. Viel Erfahrung.
+            <br />
+            Ehrliches Handwerk.
+            <br />
+            Und Haare, die zu dir passen.
           </p>
         </div>
 
@@ -37,6 +41,25 @@ export function SiteFooter() {
             {salon.strasse}
             <br />
             {salon.plz} {salon.ort}
+            {salon.telefon ? (
+              <>
+                <br />
+                <a
+                  href={`tel:${salon.telefon.replace(/[\s-]/g, '').replace(/^0/, '+49')}`}
+                  className="mt-2 inline-block underline-offset-4 hover:underline"
+                >
+                  {salon.telefon}
+                </a>
+              </>
+            ) : null}
+            {salon.email ? (
+              <>
+                <br />
+                <a href={`mailto:${salon.email}`} className="underline-offset-4 hover:underline">
+                  {salon.email}
+                </a>
+              </>
+            ) : null}
             {salon.instagram && salon.instagramName ? (
               <>
                 <br />

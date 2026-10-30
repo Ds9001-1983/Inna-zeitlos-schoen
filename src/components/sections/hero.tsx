@@ -75,12 +75,13 @@ export function Hero() {
               data-auf-bild
               className="t-signatur mt-3 text-[clamp(1.875rem,4vw,3rem)] text-kupfer-hell"
             >
-              So natürlich wie du.
+              So individuell wie du.
             </p>
 
             <p data-hero-zeile data-auf-bild className="t-lead mt-6 text-leinen/90">
-              Ich nehme mir Zeit für dein Haar, deine Wünsche und deine Persönlichkeit – damit du
-              den Salon nicht nur schöner, sondern auch mit einem guten Gefühl verlässt.
+              Haare sind persönlich. Deshalb geht es bei uns nicht darum, jedem Trend zu folgen.
+              Sondern darum, herauszufinden, was wirklich zu dir, deinem Haar und deinem Alltag
+              passt.
             </p>
 
             <div data-hero-zeile className="mt-9 flex flex-wrap items-center gap-8">

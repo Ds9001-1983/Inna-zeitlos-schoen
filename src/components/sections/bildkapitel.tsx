@@ -4,7 +4,7 @@ import { ZeilenReveal } from '@/components/reveal'
 /**
  * Der einzige randlose Abschnitt der Seite. Er bricht aus dem Inhaltsmaß
  * aus und gibt dem Auge eine Pause zwischen zwei Textstrecken.
- * Der Satz stammt aus Innas Brand-Board.
+ * Die Sätze stammen aus Innas Einstiegstext (finale Fassung, 30.10.2026).
  */
 export function Bildkapitel() {
   return (
@@ -20,8 +20,12 @@ export function Bildkapitel() {
       <div className="absolute inset-0 bg-gradient-to-t from-tinte/85 via-tinte/35 to-tinte/5" />
 
       <div className="inhalt relative pb-14">
-        <ZeilenReveal as="h2" className="t-titel max-w-[16ch] text-leinen">
-          Ein Ort zum Ankommen. Für dich. Für dein Haar. Für deine Auszeit.
+        <p data-auf-bild className="t-lead text-leinen/90">
+          Mit Erfahrung, ehrlicher Beratung und ganz viel Liebe zu unserem Handwerk schaffen wir
+          Ergebnisse, die nicht nur heute schön sind.
+        </p>
+        <ZeilenReveal as="h2" className="t-titel mt-5 max-w-[16ch] text-leinen">
+          Sondern sich auch morgen noch nach dir anfühlen.
         </ZeilenReveal>
       </div>
     </section>
