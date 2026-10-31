@@ -46,7 +46,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
 | Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
 | Kein Buchungssystem (F4) | abgelöst | seit 30.10. externe Onlinebuchung für Stammkundinnen (Link offen); „Termin anfragen“ führt zum Abschnitt Termine mit beiden Wegen |
-| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; Portraits seit 31.10. nebeneinander mit Namen; Nursahs Nachname offen |
+| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; Portraits seit 31.10. nebeneinander mit Namen, Nursah links, Inna rechts (Innas Wunsch); Nursahs Nachname offen |
 | Philosophie | umgesetzt | seit 30.10. Innas Text statt der vier Werte |
 | Arbeiten / Referenzen (B1) | entfallen | gestrichen (Inna, 13.10.2026); Vorher & Nachher seit 30.10. zurück, siehe oben |
 | Über uns (vorher Über mich) | umgesetzt | Innas Text vom 30.10.; neues Foto aus ihren Arbeiten statt der Strähne – von Inna absegnen lassen |

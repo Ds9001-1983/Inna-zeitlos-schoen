@@ -398,3 +398,6 @@ die fünf Kacheln und ihre Bilddateien entfallen.
 entfallen. Der Regler steht aufgeklappt neben dem Text (am Rechner drei Spalten, am Handy darunter), ein Paar je Leistung.
 Griff und Beschriftung etwas kleiner als zuvor, sonst keine neue
 Farbe, Schrift oder Bewegung. Die Paare hat Inna ausgewählt, bei Blond und Schnitt & Styling dasselbe (`projekt/fotos/README.md`).
+
+**31.10.2026 – Team (Inna per WhatsApp, über Dennis):** Portraits samt Namen getauscht, Nursah links, Inna rechts, wegen der
+Bildausschnitte. Die Überschrift und die Texte bleiben in der Reihenfolge Inna, Nursah.

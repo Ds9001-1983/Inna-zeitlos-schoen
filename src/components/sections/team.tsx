@@ -2,16 +2,17 @@ import Image from 'next/image'
 import { BildReveal, ZeilenReveal } from '@/components/reveal'
 import { Wortmarke } from '@/components/wortmarke'
 
+// Reihenfolge auf Innas Wunsch wegen der Bildausschnitte (31.10.2026)
 const portraits = [
-  {
-    name: 'Inna',
-    src: '/team/inna-frontal.jpg',
-    alt: 'Inna mit langen, rotbraunen Wellen und weißem Rollkragen, sie lächelt leicht.',
-  },
   {
     name: 'Nursah',
     src: '/team/nursah.jpg',
     alt: 'Nursah mit dunklen Locken und Brille lächelt im Salon vor einem Regal mit Pflegeprodukten.',
+  },
+  {
+    name: 'Inna',
+    src: '/team/inna-frontal.jpg',
+    alt: 'Inna mit langen, rotbraunen Wellen und weißem Rollkragen, sie lächelt leicht.',
   },
 ]
 

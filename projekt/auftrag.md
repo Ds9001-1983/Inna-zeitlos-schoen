@@ -89,4 +89,5 @@ trotz längerer Texte ruhig bleiben. Portraits von Inna und Nursah folgen.
 31.10.2026 (Inna per WhatsApp, über Dennis): Die Bildreihe über den Leistungen kann raus. Überschrift und Aufklappliste bleiben.
 Vorher/Nachher unter die einzelnen Leistungen („01 Blond, Beschreibung, Vorher/Nachher“), beim Aufklappen. „Etwas
 komprimierter und nicht zu viele Bilder von Haaren … die Neugierigen können zu Insta.“ Instagram-Link fehlt noch.
+Team: Fotos samt Namen getauscht, Nursah links, Inna rechts, wegen der Bildausschnitte.
 Paare von Inna ausgewählt: Blond und Schnitt/Styling 072768a3 → 462fe25a, Farbe 4a560a01 → 24b1b8cf, Korrekturen 8ae59f8e → fa6e4356, Tressen ed0b2190 → 60544736.
