@@ -2,33 +2,50 @@ import Image from 'next/image'
 import { BildReveal, ZeilenReveal } from '@/components/reveal'
 import { Wortmarke } from '@/components/wortmarke'
 
+const portraits = [
+  {
+    name: 'Inna',
+    src: '/team/inna-frontal.jpg',
+    alt: 'Inna mit langen, rotbraunen Wellen und weißem Rollkragen, sie lächelt leicht.',
+  },
+  {
+    name: 'Nursah',
+    src: '/team/nursah.jpg',
+    alt: 'Nursah mit dunklen Locken und Brille lächelt im Salon vor einem Regal mit Pflegeprodukten.',
+  },
+]
+
 /**
- * Aufbau wie in Innas Seitenentwurf: Bild links, Text rechts, heller Grund.
- * Texte wörtlich aus Innas finaler Fassung vom 30.10.2026. Das Bild steht am Rechner
+ * Aufbau wie in Innas Seitenentwurf: Bilder links, Text rechts, heller Grund.
+ * Texte wörtlich aus Innas finaler Fassung vom 30.10.2026. Die Portraits stehen am Rechner
  * fest, während der längere Text daneben läuft.
- *
- * Das Bild ist ein Platzhalter aus Innas Arbeiten - Portraits der beiden gibt es noch
- * nicht (Inna schickt sie), und ein Stockfoto wäre eine Lüge über zwei reale Personen.
- * Sobald das Foto da ist, nur die Bilddatei tauschen.
  */
 export function Team() {
   return (
     <section className="bg-leinen py-[var(--spacing-sektion)]">
       <div className="inhalt raster items-start gap-y-12">
-        <BildReveal className="col-span-6 lg:sticky lg:top-28 lg:col-span-5">
-          <div className="relative aspect-7/10 w-full">
-            <Image
-              src="/arbeiten/salonlicht.jpg"
-              alt="Warm ausgeleuchtete Längen mit weichem Verlauf, fotografiert im Salon in Wiehl."
-              fill
-              sizes="(max-width: 1024px) 100vw, 26rem"
-              className="object-cover"
-              data-bild
-            />
-          </div>
-        </BildReveal>
+        <div className="col-span-6 grid grid-cols-2 gap-[clamp(1rem,2vw,1.75rem)] lg:sticky lg:top-28">
+          {portraits.map((p) => (
+            <figure key={p.name}>
+              <BildReveal>
+                <div className="relative aspect-7/10 w-full">
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 20rem"
+                    quality={90}
+                    className="object-cover"
+                    data-bild
+                  />
+                </div>
+              </BildReveal>
+              <figcaption className="t-label mt-3">{p.name}</figcaption>
+            </figure>
+          ))}
+        </div>
 
-        <div className="col-span-6 lg:col-start-7 lg:col-end-13">
+        <div className="col-span-6 lg:col-start-8 lg:col-end-13">
           <p className="t-label">Wir sind</p>
           <ZeilenReveal as="h2" className="t-titel mt-4">
             Inna &amp; Nursah
@@ -47,7 +64,7 @@ export function Team() {
             <p>Wir müssen dabei nicht alles gleich machen. Im Gegenteil.</p>
           </div>
 
-          <div className="mt-10 grid gap-8 border-t border-greige/60 pt-8 sm:grid-cols-2">
+          <div className="mt-10 grid gap-8 border-t border-greige/60 pt-8 sm:grid-cols-2 lg:grid-cols-1">
             <div>
               <h3 className="font-display text-2xl font-light text-tinte">Inna</h3>
               <p className="mt-3 leading-relaxed text-tinte/80">

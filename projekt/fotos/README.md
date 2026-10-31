@@ -22,7 +22,7 @@ kürzer, außer bei Tressen). Die Kategorien sollte Inna noch bestätigen.
 | 6 | Tressen | 59ec2eca | 608feafd (7f180534 = zweite Aufnahme) |
 
 **Auf der Seite – sonst:** Leistungs-Kacheln Blond fa6e4356 · Farbe 24b1b8cf · Farbkorrekturen 4f8b559d ·
-Tressen 7f180534 · Schnitt & Styling c17e5ddb. Über uns 44bbd013.
+Tressen 7f180534 · Schnitt & Styling c17e5ddb. 44bbd013 (bis 31.10. auf „Über uns“) ist jetzt Reserve.
 
 **Reserve** (vorher und nachher verschieden gerahmt, für den Regler nicht ohne Weiteres geeignet):
 8ae59f8e → 6a1bd11a (Farbkorrektur zurück zum Naturton) · b336041e → c7195341 / 17f2dc67 (Blond) ·
@@ -35,5 +35,9 @@ Einwilligungen der Kundinnen: offen (siehe `projekt/auftrag.md`).
 Die übrigen Bilder hier sind Ausschnitte aus Instagram-Screenshots (760 × 1085 px), die Dennis im
 Chat übergeben hat – Vorher/Nachher-Arbeiten aus Innas Beiträgen (Januar und Juli 2026) und eine
 Rückansicht nach Airtouch (984 × 1400 px). Sie wurden mit Higgsfield auf 4K hochskaliert; auf der
-Seite sind davon nur noch Hero, Salonlicht (Team) und Farbtransformation (Bildkapitel).
-Portraits von Inna und Nursah fehlen – Inna schickt sie.
+Seite sind davon nur noch Hero und Farbtransformation (Bildkapitel).
+
+## Portraits (31.10.2026)
+
+`original-portraits-2026-10-31/` (nicht im Repo), Dateiname = Rufname: `Inna-01.jpeg` → `public/team/inna-seitlich.jpg`
+(Über uns), `Inna-02.jpeg` → `inna-frontal.jpg` und `Nursahs.jpeg` → `nursah.jpg` (Team). Stark komprimiert, rund 800 px breit.

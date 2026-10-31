@@ -101,7 +101,7 @@ test.describe('Visual Regression', () => {
         for (const pos of SCROLL_POSITIONS) {
           const targetY = (fullHeight - viewportHeight) * pos
           await page.evaluate((y) => window.scrollTo({ top: y, behavior: 'instant' }), targetY)
-          await page.waitForTimeout(1200)
+          await page.waitForTimeout(2000) // BildReveal zoomt 1,5 s aus, sonst fehlen Bruchteile eines Pixels
           await expect(page).toHaveScreenshot(
             `${breakpoint.name.replace(/\s/g, '-')}-scroll-${Math.round(pos * 100)}.png`,
             { maxDiffPixels: 200, fullPage: false }

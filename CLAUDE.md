@@ -32,7 +32,7 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 ## Status
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
 Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Buchungslink,
-Rechtsname, Instagram, Portraits, Einwilligungen). Kein Freigabe-Stopp.
+Rechtsname, Instagram, Einwilligungen). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
 docs/design-plan.md „Revidiert“. Seit 30.10.2026 Innas finale Texte (Wir-Form), Vorher & Nachher als Regler
 zurück, Neukundinnen per WhatsApp, Onlinebuchung für Stammkundinnen (Link offen: `salon.buchung`).

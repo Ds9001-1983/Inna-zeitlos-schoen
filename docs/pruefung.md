@@ -12,6 +12,8 @@ als Regler zurück (sechs Paare aus Innas Fotos vom 13.10.), Leistungen mit Aufk
 „Neu bei uns“ und „Termine“ (WhatsApp für Neukundinnen, Onlinebuchung für Stammkundinnen, Link offen).
 Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messungen siehe C, Nachmessung 30.10.
 
+**Aktualisiert 31.10.2026:** Portraits eingebaut: Inna auf „Über uns“, Inna und Nursah im Team (Dateinamen = Rufnamen). Messungen siehe C, Nachmessung 31.10.
+
 **Aktualisiert 21.10.2026:** Telefon, E-Mail und Domain eingetragen (Website, Impressum, Schema, Visitenkarte), Visitenkarte im Design des Schilds druckfertig.
 
 **Aktualisiert 19.10.2026** nach der Korrekturrunde von Inna (Anmerkungen vom 13.10.): Verwandlung,
@@ -27,7 +29,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Marke „INNA – Zeitlos schön", Schulstraße 1, 51674 Wiehl | umgesetzt | Header, Kontakt, Footer, Impressum, LocalBusiness-Schema |
 | Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Layout, Palette und Schriften wie die Vorlage; seit 30.10. Innas finale Texte auf die Abschnitte verteilt, Abschluss in der Fußzeile; Arbeiten und Preise am 13.10.2026 gestrichen |
 | Innas finale Textfassung (30.10.2026) | umgesetzt | wörtlich, Wir-Form; Marke einheitlich „INNA – Zeitlos schön“ (Inna schreibt „Schön“); funktionale Überschriften nur dort, wo Inna keine geliefert hat („Vorher & Nachher“, „Termine“) |
-| Hero mit Portrait von Inna (Vorlage) | bewusst anders | kein Portrait vorhanden → Bewegtbild aus der Rückansicht einer Kundin (Kling); Portrait bleibt offener Punkt |
+| Hero mit Portrait von Inna (Vorlage) | bewusst anders | Bewegtbild aus der Rückansicht einer Kundin (Kling) bleibt; Portraits seit 31.10. auf „Über uns“ und im Team |
 | Brand-Board: Farben und Schriften | umgesetzt | Sand/Leinen/Kupfer/Tinte, Cormorant + Grotesk + Signatur; Kupfer für Text als dunklere Schwester (AA) |
 | Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
@@ -42,7 +44,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
 | Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
 | Kein Buchungssystem (F4) | abgelöst | seit 30.10. externe Onlinebuchung für Stammkundinnen (Link offen); „Termin anfragen“ führt zum Abschnitt Termine mit beiden Wegen |
-| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; ohne Personenfoto, Portraits folgen von Inna; Nursahs Nachname offen |
+| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; Portraits seit 31.10. nebeneinander mit Namen; Nursahs Nachname offen |
 | Philosophie | umgesetzt | seit 30.10. Innas Text statt der vier Werte |
 | Arbeiten / Referenzen (B1) | entfallen | gestrichen (Inna, 13.10.2026); Vorher & Nachher seit 30.10. zurück, siehe oben |
 | Über uns (vorher Über mich) | umgesetzt | Innas Text vom 30.10.; neues Foto aus ihren Arbeiten statt der Strähne – von Inna absegnen lassen |
@@ -52,7 +54,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | beide druckfertig | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Schild seit 19.10. nach Innas Wunsch nur Wortmarke auf Cognac → `druck/ausgabe/final/schild.pdf`, Preflight ok, Beschnitt 3 mm angenommen. Karte seit 21.10. im Design des Schilds mit Telefon und Adresse → `druck/ausgabe/final/visitenkarte.pdf`, Preflight ok; E-Mail, Website und QR-Code kommen dazu, sobald sie feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
 | Einwilligungen (Kundinnenfotos, KI-Video) | **offen** | schriftliche Zustimmung der Kundinnen auf den Vorher/Nachher-Paaren, Kacheln und „Über uns“ fehlt; die Originale liegen nicht im (öffentlichen) Repo |
-| Portraits Inna und Nursah | offen | Vorlage zeigt Menschen – Fotografin |
+| Portraits Inna und Nursah | umgesetzt | seit 31.10.; Dateien nur rund 800 px breit, höher aufgelöste Originale wären besser |
 | Credit-Rahmen 100 | umgesetzt | 63 verbraucht (9 × Upscaling, 6 × Video) |
 | Git: Ds9001-1983, deutsch, kein Hinweis auf Claude | umgesetzt | |
 
@@ -91,6 +93,12 @@ in `qa-tests/qa.spec.ts-snapshots/` (nur Chromium auf dem Mac), nach gewollten �
 `qa:messungen` meldet als „doppeltes Motiv“ nur das aktive Vorher/Nachher-Paar (Regler und Vorschaubild), gewollt · Druckdaten: `npm --prefix druck run pruefen` 3/3 ok.
 Gefunden und behoben: Die sr-only-Texte der Vorschaubilder verbreiterten die Seite bei 360 px um 245 px.
 
+Nachmessung 31.10.2026 (Portraits): Lint/Build grün · `qa:playwright`: 21 bestanden, 8 übersprungen, vier volle Läufe und ein Lauf der
+Screenshots mit einem Worker · Die alten Referenzbilder schlugen nach dem Einbau an, also erkennen die Tests Änderungen · Behoben: Der Test
+wartete 1,2 s, `BildReveal` zoomt 1,5 s, das Foto lag noch Bruchteile eines Pixels daneben (jetzt 2 s) · `qa:messungen`: Überbreite 360 und
+640 px: 0, Bilder 18/18, Video läuft, Tastatur 34 Elemente, alle mit sichtbarem Fokus · `qa:kontrast`: Titel 6,75:1, Signaturzeile 4,41:1,
+Lead 8,60:1 · Druckdaten bestanden · Sichtprüfung 1440 und 390 px: Über uns, Team oben und beim Mitlaufen.
+
 Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `npm run qa:messungen` (Überbreite, Bilder, Video, Platzhalter, doppelte Motive, Tastatur, Aufnahmen). Zahlen vom 21.09.2026.
 
 ## Offene Punkte für Dennis
@@ -99,10 +107,10 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 - Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten
 - Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
-- Inna absegnen lassen: neues Foto „Über uns“ und die Kategorien der sechs Vorher/Nachher-Paare
+- Inna absegnen lassen: die Kategorien der sechs Vorher/Nachher-Paare
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
-- Portraits von Inna und Nursah (Inna schickt sie), Teamfoto, Salonfotos
-- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Paaren, Kacheln und „Über uns“ sowie KI-Video aus dem Kundenfoto
+- Höher aufgelöste Originale der Portraits, Nursahs schriftliche Zustimmung, Salonfotos
+- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Paaren und Kacheln sowie KI-Video aus dem Kundenfoto
 - Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100

@@ -20,11 +20,11 @@ Domain:           inna-zeitlosschoen.de (Dennis 21.10.2026, registriert bei Alfa
 
 ## Personen
 Name | Rolle | Foto vorhanden (ja/nein)
-Inna | Inhaberin, Friseurmeisterin – Farbe, Transformation, Beratung | nein (der Seitenentwurf zeigt ein Model)
+Inna | Inhaberin, Friseurmeisterin – Farbe, Transformation, Beratung | ja, 2 Portraits (31.10.2026, Dateinamen = Rufname)
 
-Foto „Über uns“: seit 30.10.2026 eine Arbeit aus Innas neuen Fotos (44bbd013) statt der Strähne.
-Portraits von Inna und Nursah: folgen von Inna (30.10.2026).
-Nursah (Nachname offen) | Friseurmeisterin – klassische Schnitte, Farbe | nein
+Nursah (Nachname offen) | Friseurmeisterin – klassische Schnitte, Farbe | ja, 1 Portrait (31.10.2026)
+
+Fotos: „Über uns“ zeigt seit 31.10.2026 Inna (seitlich), das Team Inna (frontal) und Nursah nebeneinander.
 
 ## Leistungen und Preise
 Leistung | Beschreibung | Preis | Dauer
@@ -52,7 +52,7 @@ Telefon 0170 66 19 452 und E-Mail info@inna-zeitlosschoen.de stehen in Fußzeile
 ## Rechtliches
 USt-IdNr. oder Kleinunternehmer:   
 Kammer / Berufsbezeichnung:        Friseurmeisterin
-Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   offen – die Kundinnen auf den sechs Vorher/Nachher-Paaren, den Leistungs-Kacheln, „Über uns“ und das KI-Video aus einem Kundenfoto brauchen eine schriftliche Zustimmung (Fotos von Inna selbst übergeben, 30.10.2026)
+Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   offen – die Kundinnen auf den sechs Vorher/Nachher-Paaren, den Leistungs-Kacheln und das KI-Video aus einem Kundenfoto brauchen eine schriftliche Zustimmung (Fotos von Inna selbst übergeben, 30.10.2026). Nursahs Zustimmung zu ihrem Portrait ist nicht schriftlich belegt (31.10.2026)
 
 ## Technik (falls Funktionen gewählt)
 Keine Funktionen gewählt.
@@ -85,3 +85,4 @@ Unterschrift, Foto wird ersetzt. Kontakt: Neukunden-Termin mit Gespräch, ca. 30
 verteilt, Wir-Form. Layout, Farben und Gestaltung bleiben. Vorher/Nachher zum Wischen zurück (Fotos vom
 13.10.). Neukundinnen per WhatsApp zur Beratung, Onlinebuchung nur für Stammkundinnen. Die Seite soll
 trotz längerer Texte ruhig bleiben. Portraits von Inna und Nursah folgen.
+31.10.2026 (Dennis): Portraits übergeben – zwei von Inna, eines von Nursah. Beide Fotos von Inna auf die Seite.

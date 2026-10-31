@@ -6,6 +6,8 @@
  * 7:10 zugeschnitten, je Bild mit eigenem Ausschnitt: Kopf und Schulterlinie sollen in beiden Bildern an
  * derselben Stelle sitzen, sonst springt das Bild beim Ziehen des Reglers (design-plan.md, 21.09.2026).
  *
+ * Die Portraits von Inna und Nursah (original-portraits-2026-10-31/) landen in public/team/.
+ *
  *   node scripts/fotos-aufbereiten.mjs [--pruefbilder <ordner>]
  *
  * --pruefbilder legt je Paar ein Vergleichsbild an: vorher | nachher | beide zu 50 % überblendet.
@@ -44,7 +46,17 @@ const einzeln = [
   { id: '4f8b559d', datei: 'leistungen/farbkorrekturen.jpg' },
   { id: '7f180534', datei: 'leistungen/tressen.jpg' },
   { id: 'c17e5ddb', datei: 'leistungen/schnitt-styling.jpg' },
-  { id: '44bbd013', datei: 'ueber-uns.jpg' },
+]
+
+/**
+ * Die Portraits kamen stark komprimiert (rund 800 px breit): nicht vergrößern, höhere Qualität, 7:10.
+ * inna-frontal und nursah stehen im Team nebeneinander, die Augen liegen auf gleicher Höhe.
+ */
+const portraitQuelle = 'projekt/fotos/original-portraits-2026-10-31'
+const portraits = [
+  { datei: 'Inna-01.jpeg', ziel: 'inna-seitlich.jpg', ausschnitt: { x: 0, y: 0, b: 1 } },
+  { datei: 'Inna-02.jpeg', ziel: 'inna-frontal.jpg', ausschnitt: { x: 0, y: 0.02, b: 1 } },
+  { datei: 'Nursahs.jpeg', ziel: 'nursah.jpg', ausschnitt: { x: 0.14, y: 0.225, b: 0.86 } },
 ]
 
 const dateien = readdirSync(quelle).filter((f) => !f.startsWith('._'))
@@ -108,6 +120,19 @@ for (const { id, datei } of einzeln) {
     .rotate()
     .resize({ width: 1800, withoutEnlargement: true })
     .jpeg({ quality: 82, mozjpeg: true })
+    .toFile(ausgabe)
+  console.log('✓', ausgabe)
+}
+
+mkdirSync('public/team', { recursive: true })
+for (const { datei, ziel: name, ausschnitt: { x, y, b } } of portraits) {
+  const eingabe = join(portraitQuelle, datei)
+  const { width, height } = await sharp(eingabe).metadata()
+  const w = Math.round(width * b)
+  const ausgabe = join('public/team', name)
+  await sharp(eingabe)
+    .extract({ left: Math.round(width * x), top: Math.round(height * y), width: w, height: Math.round((w * 10) / 7) })
+    .jpeg({ quality: 90, mozjpeg: true })
     .toFile(ausgabe)
   console.log('✓', ausgabe)
 }

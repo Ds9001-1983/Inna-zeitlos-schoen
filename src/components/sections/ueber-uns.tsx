@@ -3,24 +3,28 @@ import { BildReveal, ZeilenReveal } from '@/components/reveal'
 
 /**
  * Texte wörtlich aus Innas finaler Fassung vom 30.10.2026 (Wir-Form, Inna und Nursah).
- * Das Foto ersetzt die Strähne, auf der das Haar aus Innas Sicht kaputt aussah (13.10.2026).
+ * Das Portrait steht wie in Innas Seitenentwurf links neben dem Text (seit 31.10.2026).
  */
 export function UeberUns() {
   return (
     <section id="ueber-uns" className="scroll-mt-24 bg-sand py-[var(--spacing-sektion)]">
       <div className="inhalt raster items-start gap-y-12">
-        <BildReveal className="col-span-6 lg:sticky lg:top-28 lg:col-span-5">
-          <div className="relative aspect-7/10 w-full">
-            <Image
-              src="/arbeiten/ueber-uns.jpg"
-              alt="Gestuftes, glänzendes Blond mit hellen Partien, seitlich fotografiert im Salon."
-              fill
-              sizes="(max-width: 1024px) 100vw, 34rem"
-              className="object-cover object-[50%_40%]"
-              data-bild
-            />
-          </div>
-        </BildReveal>
+        <figure className="col-span-6 lg:sticky lg:top-28 lg:col-span-5">
+          <BildReveal>
+            <div className="relative aspect-7/10 w-full">
+              <Image
+                src="/team/inna-seitlich.jpg"
+                alt="Inna im Profil mit langen, kupferroten Wellen, sie blickt über die Schulter."
+                fill
+                sizes="(max-width: 1024px) 100vw, 34rem"
+                quality={90}
+                className="object-cover"
+                data-bild
+              />
+            </div>
+          </BildReveal>
+          <figcaption className="t-label mt-3">Inna</figcaption>
+        </figure>
 
         <div className="col-span-6 lg:col-start-7 lg:col-end-13">
           <p className="t-label">Über uns</p>

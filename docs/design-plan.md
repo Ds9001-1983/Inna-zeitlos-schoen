@@ -383,3 +383,9 @@ Geruest. Der Phasen-Stopp bei Phase 3 ist deshalb aus dem Skill entfernt worden.
   genau diese Arbeit; daneben steht sie im Kontext statt als Deko.
 - *Abschnitt „Termin" ergänzt.* Der Button brauchte ein Ziel. Dass es keinen Online-Kalender gibt,
   wird dort zum Argument statt zur Lücke.
+
+**31.10.2026 – Portraits (Dennis):**
+- „Über uns“ zeigt Inna statt einer Arbeit, das Team Inna und Nursah nebeneinander statt Salonlicht: Bild links, Text
+  rechts wie in Innas Seitenentwurf. Das ersetzt die Stellvertreter aus den Tabellen oben.
+- Team am Rechner: Bilder über sechs Spalten, Text über fünf, Inna und Nursah im Text untereinander.
+- Name als `t-label` unter jedem Portrait. Keine neue Farbe, Schrift oder Bewegung.
