@@ -12,6 +12,8 @@ als Regler zurück (sechs Paare aus Innas Fotos vom 13.10.), Leistungen mit Aufk
 „Neu bei uns“ und „Termine“ (WhatsApp für Neukundinnen, Onlinebuchung für Stammkundinnen, Link offen).
 Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messungen siehe C, Nachmessung 30.10.
 
+**Aktualisiert 31.10.2026, Nachtrag:** Innas Korrektur per WhatsApp: Bildreihe über den Leistungen gestrichen, Vorher/Nachher beim Aufklappen der Leistung (Paare von Inna ausgewählt), eigener Abschnitt und Menüpunkt entfallen. Instagram-Link erscheint, sobald er vorliegt.
+
 **Aktualisiert 31.10.2026:** Portraits eingebaut: Inna auf „Über uns“, Inna und Nursah im Team (Dateinamen = Rufnamen). Messungen siehe C, Nachmessung 31.10.
 
 **Aktualisiert 21.10.2026:** Telefon, E-Mail und Domain eingetragen (Website, Impressum, Schema, Visitenkarte), Visitenkarte im Design des Schilds druckfertig.
@@ -33,8 +35,8 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Brand-Board: Farben und Schriften | umgesetzt | Sand/Leinen/Kupfer/Tinte, Cormorant + Grotesk + Signatur; Kupfer für Text als dunklere Schwester (AA) |
 | Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
-| Leistungen | umgesetzt | seit 30.10.: fünf Kacheln aus Innas Fotos (Blond, Farbe, Farbkorrekturen, Tressen, Schnitt & Styling), darunter Innas Texte als Aufklappliste; Überschrift „Haar, das zu dir passt.“ |
-| Vorher & Nachher zum Wischen (Inna, 30.10.) | umgesetzt | sechs Paare, Regler mit Maus, Finger und Tastatur; Kategorien von Inna bestätigen lassen |
+| Leistungen | umgesetzt | Innas Texte als Aufklappliste (Blond, Farbe, Farbkorrekturen, Tressen, Schnitt & Styling), aufgeklappt je ein Vorher/Nachher, Bildreihe am 31.10. auf Innas Wunsch gestrichen; Überschrift „Haar, das zu dir passt.“ |
+| Vorher & Nachher zum Wischen (Inna, 30.10.) | umgesetzt | seit 31.10. in den Leistungen, Paare von Inna ausgewählt (vier Paare, bei Blond und Schnitt & Styling dasselbe), Regler mit Maus, Finger und Tastatur |
 | Preise | entfallen | Abschnitt gestrichen (Inna, 13.10.2026) |
 | Telefon | umgesetzt | 0170 66 19 452: Fußzeile (tel:+491706619452), Impressum, LocalBusiness-Schema, Visitenkarte; der Knopf im Kontakt entfällt seit 30.10. (Beratung bewusst nicht per Telefon) |
 | E-Mail info@inna-zeitlosschoen.de | umgesetzt | Fußzeile, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte; Knopf im Kontakt entfällt seit 30.10. |
@@ -53,7 +55,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
 | Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | beide druckfertig | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Schild seit 19.10. nach Innas Wunsch nur Wortmarke auf Cognac → `druck/ausgabe/final/schild.pdf`, Preflight ok, Beschnitt 3 mm angenommen. Karte seit 21.10. im Design des Schilds mit Telefon und Adresse → `druck/ausgabe/final/visitenkarte.pdf`, Preflight ok; E-Mail, Website und QR-Code kommen dazu, sobald sie feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
-| Einwilligungen (Kundinnenfotos, KI-Video) | **offen** | schriftliche Zustimmung der Kundinnen auf den Vorher/Nachher-Paaren, Kacheln und „Über uns“ fehlt; die Originale liegen nicht im (öffentlichen) Repo |
+| Einwilligungen (Kundinnenfotos, KI-Video) | **offen** | schriftliche Zustimmung der Kundinnen auf den Vorher/Nachher-Paaren fehlt; die Originale liegen nicht im (öffentlichen) Repo |
 | Portraits Inna und Nursah | umgesetzt | seit 31.10.; Dateien nur rund 800 px breit, höher aufgelöste Originale wären besser |
 | Credit-Rahmen 100 | umgesetzt | 63 verbraucht (9 × Upscaling, 6 × Video) |
 | Git: Ds9001-1983, deutsch, kein Hinweis auf Claude | umgesetzt | |
@@ -99,6 +101,12 @@ wartete 1,2 s, `BildReveal` zoomt 1,5 s, das Foto lag noch Bruchteile eines Pixe
 640 px: 0, Bilder 18/18, Video läuft, Tastatur 34 Elemente, alle mit sichtbarem Fokus · `qa:kontrast`: Titel 6,75:1, Signaturzeile 4,41:1,
 Lead 8,60:1 · Druckdaten bestanden · Sichtprüfung 1440 und 390 px: Über uns, Team oben und beim Mitlaufen.
 
+Nachmessung 31.10.2026, Nachtrag (Vorher/Nachher in den Leistungen): Lint/Build grün · `qa:playwright`: 21 bestanden, 8 übersprungen, zwei Läufe ·
+`qa:messungen`: Überbreite 0, Bilder 5/5 (Bilder in zugeklappten Leistungen laden erst beim Öffnen und zählen dort nicht), Video läuft,
+Tastatur 25 Elemente, alle mit sichtbarem Fokus · `qa:kontrast`: Titel 6,75:1, Signaturzeile 4,41:1, Lead 8,60:1 · Druckdaten bestanden ·
+Bedienung aufgeklappt bei 1440, 390 und 360 px (eigenes Skript, 35 Punkte): fünf Regler, Pfeiltasten, Klick, Bilder laden erst beim Aufklappen,
+keine Überbreite, Seitenende erreichbar, axe aufgeklappt 0 Verstöße · Köpfe je Paar auf gleiche Höhe zugeschnitten, per Vergleichsbild geprüft.
+
 Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `npm run qa:messungen` (Überbreite, Bilder, Video, Platzhalter, doppelte Motive, Tastatur, Aufnahmen). Zahlen vom 21.09.2026.
 
 ## Offene Punkte für Dennis
@@ -107,10 +115,11 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 - Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten
 - Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
-- Inna absegnen lassen: die Kategorien der sechs Vorher/Nachher-Paare
+- Inna: Soll bei Blond und bei Schnitt & Styling wirklich dasselbe Vorher/Nachher stehen?
+- Instagram-Link (dann in `salon.instagram` und `instagramName`)
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
 - Höher aufgelöste Originale der Portraits, Nursahs schriftliche Zustimmung, Salonfotos
-- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Paaren und Kacheln sowie KI-Video aus dem Kundenfoto
+- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Paaren sowie KI-Video aus dem Kundenfoto
 - Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100

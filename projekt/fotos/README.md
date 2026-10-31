@@ -12,20 +12,21 @@ kürzer, außer bei Tressen). Die Kategorien sollte Inna noch bestätigen.
 
 **Auf der Seite – Vorher & Nachher (Regler):**
 
-| Paar | Kategorie | vorher | nachher |
+| Leistung (Innas Auswahl, 31.10.2026) | vorher | nachher | Datei |
 |---|---|---|---|
-| 1 | Blond | ed0b2190 | 60544736 (65fb1479 = zweite Aufnahme) |
-| 2 | Blond | 072768a3 | 462fe25a (44bbd013 = seitlich) |
-| 3 | Farbe | 4a560a01 | 24b1b8cf |
-| 4 | Farbe | 0c1ec213 | 60cda4cb |
-| 5 | Farbkorrektur | 26dd10f6 | 4f8b559d |
-| 6 | Tressen | 59ec2eca | 608feafd (7f180534 = zweite Aufnahme) |
+| Blond und Schnitt & Styling | 072768a3 | 462fe25a (44bbd013 = seitlich) | `1-blond` |
+| Farbe | 4a560a01 | 24b1b8cf | `2-farbe` |
+| Farbkorrekturen | 8ae59f8e | fa6e4356 | `3-farbkorrektur` |
+| Tressen | ed0b2190 | 60544736 (65fb1479 = zweite Aufnahme) | `4-tressen` |
 
-**Auf der Seite – sonst:** Leistungs-Kacheln Blond fa6e4356 · Farbe 24b1b8cf · Farbkorrekturen 4f8b559d ·
-Tressen 7f180534 · Schnitt & Styling c17e5ddb. 44bbd013 (bis 31.10. auf „Über uns“) ist jetzt Reserve.
+**Seit 31.10. Reserve, zugeschnitten** (x/y/b für das Skript):
+Farbe 0c1ec213 (0.1/0.074/0.864) → 60cda4cb (0.011/0/0.9333) · Farbkorrektur 26dd10f6 (0.0333/0/0.9333) → 4f8b559d (0.065/0.053/0.848) ·
+Tressen 59ec2eca (0.0333/0/0.9333) → 608feafd (0.0333/0/0.9333).
+
+**Einzelfotos, nicht auf der Seite:** 7f180534 · c17e5ddb · 44bbd013.
 
 **Reserve** (vorher und nachher verschieden gerahmt, für den Regler nicht ohne Weiteres geeignet):
-8ae59f8e → 6a1bd11a (Farbkorrektur zurück zum Naturton) · b336041e → c7195341 / 17f2dc67 (Blond) ·
+6a1bd11a (Naturton, Nachher zu 8ae59f8e) · b336041e → c7195341 / 17f2dc67 (Blond) ·
 c0e6ce5f → 20a694e6 (Blond) · dc2c226b → b8e79bd1 (kühles Blond).
 
 Einwilligungen der Kundinnen: offen (siehe `projekt/auftrag.md`).

@@ -50,10 +50,12 @@ export const whatsappLink = salon.whatsapp
 export const navigation = [
   { name: 'Über uns', ziel: '#ueber-uns' },
   { name: 'Leistungen', ziel: '#leistungen' },
-  { name: 'Vorher & Nachher', ziel: '#vorher-nachher' },
   { name: 'Philosophie', ziel: '#philosophie' },
   { name: 'Neu bei uns', ziel: '#neu-bei-uns' },
 ] as const
+
+type Seite = { bild: string; alt: string }
+export type VorherNachher = { vorher: Seite; nachher: Seite }
 
 export type Leistung = {
   titel: string
@@ -62,13 +64,25 @@ export type Leistung = {
   absaetze: string[]
   /** Schlusssatz, groß gesetzt */
   merksatz?: string[]
-  bild: string
-  alt: string
   /**
-   * Fokuspunkt des Textur-Ausschnitts (object-position). Die Kacheln zeigen wie in Innas
-   * Entwurf Haar-Nahaufnahmen – enge Ausschnitte aus Innas Arbeiten.
+   * Innas Arbeit zur Leistung, Foto vom 13.10.2026 (Zuordnung: projekt/fotos/README.md).
+   * Zugeschnitten mit scripts/fotos-aufbereiten.mjs, damit Scheitel und Haarbreite
+   * in beiden Bildern übereinanderliegen.
+   * OFFEN: schriftliche Einwilligung der Kundinnen (projekt/auftrag.md).
    */
-  ausschnitt: string
+  vorherNachher: VorherNachher
+}
+
+/** Inna zeigt dieses Paar bei Blond und bei Schnitt & Styling (WhatsApp, 31.10.2026). */
+const paarGestuft: VorherNachher = {
+  vorher: {
+    bild: '/arbeiten/vorher-nachher/1-blond-vorher.jpg',
+    alt: 'Vorher: lange, glatte Längen in gelblichem Orangeblond.',
+  },
+  nachher: {
+    bild: '/arbeiten/vorher-nachher/1-blond-nachher.jpg',
+    alt: 'Nachher: gestuftes Blond mit hellen Partien und Tiefe am Ansatz.',
+  },
 }
 
 /**
@@ -84,9 +98,7 @@ export const leistungen: Leistung[] = [
       'Airtouch, Faceframe, Babylights oder eine Kombination verschiedener Techniken – wir entscheiden nicht vorher nach Schema F, sondern danach, was dein Haar und dein gewünschtes Ergebnis brauchen.',
       'Mit weichen Übergängen, Tiefe und Dimension und immer mit Blick auf die Qualität deines Haares.',
     ],
-    bild: '/arbeiten/leistungen/blond.jpg',
-    ausschnitt: '55% 70%',
-    alt: 'Lange Wellen in kühlem Aschblond, die vom dunkleren Ansatz weich in helle Spitzen auslaufen.',
+    vorherNachher: paarGestuft,
   },
   {
     titel: 'Farbe',
@@ -96,9 +108,16 @@ export const leistungen: Leistung[] = [
       'Denn die schönste Haarfarbe ist für uns die, bei der am Ende nicht die Farbe zuerst auffällt.',
     ],
     merksatz: ['Sondern du.'],
-    bild: '/arbeiten/leistungen/farbe.jpg',
-    ausschnitt: '50% 55%',
-    alt: 'Gestufte Längen in sattem, glänzendem Rot.',
+    vorherNachher: {
+      vorher: {
+        bild: '/arbeiten/vorher-nachher/2-farbe-vorher.jpg',
+        alt: 'Vorher: ausgewaschenes Orange-Kupfer mit stumpfen Längen.',
+      },
+      nachher: {
+        bild: '/arbeiten/vorher-nachher/2-farbe-nachher.jpg',
+        alt: 'Nachher: sattes, glänzendes Rot in gestuften Längen.',
+      },
+    },
   },
   {
     titel: 'Farb­korrekturen',
@@ -109,9 +128,16 @@ export const leistungen: Leistung[] = [
       'Manchmal erreichen wir dein Ziel in einem Termin. Manchmal braucht gutes Haar einen Plan und etwas Geduld.',
     ],
     merksatz: ['Beides sagen wir dir ehrlich.'],
-    bild: '/arbeiten/leistungen/farbkorrekturen.jpg',
-    ausschnitt: '55% 55%',
-    alt: 'Kupferbraune Längen mit weichen Wellen nach einer Farbkorrektur.',
+    vorherNachher: {
+      vorher: {
+        bild: '/arbeiten/vorher-nachher/3-farbkorrektur-vorher.jpg',
+        alt: 'Vorher: lange, glatte Längen in Gelbblond mit dünnen Spitzen.',
+      },
+      nachher: {
+        bild: '/arbeiten/vorher-nachher/3-farbkorrektur-nachher.jpg',
+        alt: 'Nachher: kühles Aschblond mit weichem Übergang vom Ansatz, in Wellen gelegt.',
+      },
+    },
   },
   {
     titel: 'Tressen',
@@ -122,9 +148,16 @@ export const leistungen: Leistung[] = [
       'Dabei gilt auch hier:',
     ],
     merksatz: ['Nicht so viel wie möglich.', 'Sondern genau so viel wie nötig.'],
-    bild: '/arbeiten/leistungen/tressen.jpg',
-    ausschnitt: '50% 60%',
-    alt: 'Lange, goldblonde Wellen bis über die Schulterblätter.',
+    vorherNachher: {
+      vorher: {
+        bild: '/arbeiten/vorher-nachher/4-tressen-vorher.jpg',
+        alt: 'Vorher: glattes Haar mit dunklem Ansatz und gelblichen Längen.',
+      },
+      nachher: {
+        bild: '/arbeiten/vorher-nachher/4-tressen-nachher.jpg',
+        alt: 'Nachher: helles, kühles Blond in langen Wellen.',
+      },
+    },
   },
   {
     titel: 'Schnitt & Styling',
@@ -134,86 +167,7 @@ export const leistungen: Leistung[] = [
       'Er muss zu deiner Haarstruktur, deinem Typ und deinem Alltag passen.',
       'Schnitt und Styling gehören deshalb selbstverständlich zu unserem Handwerk und zu unseren bestehenden Kundinnen.',
     ],
-    bild: '/arbeiten/leistungen/schnitt-styling.jpg',
-    ausschnitt: '40% 45%',
-    alt: 'Gestufter Schnitt in Braun mit hellen Strähnen, die das Gesicht einrahmen.',
+    vorherNachher: paarGestuft,
   },
 ]
 
-type Seite = { bild: string; alt: string }
-export type VorherNachher = { kategorie: string; vorher: Seite; nachher: Seite }
-
-/**
- * Innas Arbeiten, Fotos vom 13.10.2026 (Zuordnung: projekt/fotos/README.md).
- * Zugeschnitten mit scripts/fotos-aufbereiten.mjs, damit Scheitel und Haarbreite
- * in beiden Bildern übereinanderliegen.
- * OFFEN: schriftliche Einwilligung der Kundinnen (projekt/auftrag.md).
- */
-export const vorherNachher: VorherNachher[] = [
-  {
-    kategorie: 'Blond',
-    vorher: {
-      bild: '/arbeiten/vorher-nachher/1-blond-vorher.jpg',
-      alt: 'Vorher: glattes Haar mit dunklem Ansatz und gelblichen Längen.',
-    },
-    nachher: {
-      bild: '/arbeiten/vorher-nachher/1-blond-nachher.jpg',
-      alt: 'Nachher: helles, kühles Blond mit weichem Übergang vom Ansatz, in Wellen gelegt.',
-    },
-  },
-  {
-    kategorie: 'Blond',
-    vorher: {
-      bild: '/arbeiten/vorher-nachher/2-blond-vorher.jpg',
-      alt: 'Vorher: lange, glatte Längen in gelblichem Orangeblond.',
-    },
-    nachher: {
-      bild: '/arbeiten/vorher-nachher/2-blond-nachher.jpg',
-      alt: 'Nachher: gestuftes Blond mit hellen Partien und Tiefe am Ansatz.',
-    },
-  },
-  {
-    kategorie: 'Farbe',
-    vorher: {
-      bild: '/arbeiten/vorher-nachher/3-farbe-vorher.jpg',
-      alt: 'Vorher: ausgewaschenes Orange-Kupfer mit stumpfen Längen.',
-    },
-    nachher: {
-      bild: '/arbeiten/vorher-nachher/3-farbe-nachher.jpg',
-      alt: 'Nachher: sattes, glänzendes Rot mit gestuften Längen.',
-    },
-  },
-  {
-    kategorie: 'Farbe',
-    vorher: {
-      bild: '/arbeiten/vorher-nachher/4-farbe-vorher.jpg',
-      alt: 'Vorher: dunkler Ansatz mit hartem Übergang in messingfarbene Längen.',
-    },
-    nachher: {
-      bild: '/arbeiten/vorher-nachher/4-farbe-nachher.jpg',
-      alt: 'Nachher: warmes Braun mit hellen, weich verlaufenden Partien in den Wellen.',
-    },
-  },
-  {
-    kategorie: 'Farbkorrektur',
-    vorher: {
-      bild: '/arbeiten/vorher-nachher/5-farbkorrektur-vorher.jpg',
-      alt: 'Vorher: krauses Haar in fleckigem Orange-Braun.',
-    },
-    nachher: {
-      bild: '/arbeiten/vorher-nachher/5-farbkorrektur-nachher.jpg',
-      alt: 'Nachher: gleichmäßiges Kupferbraun, glatt und glänzend, mit weichen Wellen in den Spitzen.',
-    },
-  },
-  {
-    kategorie: 'Tressen',
-    vorher: {
-      bild: '/arbeiten/vorher-nachher/6-tressen-vorher.jpg',
-      alt: 'Vorher: schulterlanges, glattes Gelbblond.',
-    },
-    nachher: {
-      bild: '/arbeiten/vorher-nachher/6-tressen-nachher.jpg',
-      alt: 'Nachher: mit Tressen verlängert bis über die Schulterblätter, goldblond in Wellen.',
-    },
-  },
-]

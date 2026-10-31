@@ -389,3 +389,12 @@ Geruest. Der Phasen-Stopp bei Phase 3 ist deshalb aus dem Skill entfernt worden.
   rechts wie in Innas Seitenentwurf. Das ersetzt die Stellvertreter aus den Tabellen oben.
 - Team am Rechner: Bilder über sechs Spalten, Text über fünf, Inna und Nursah im Text untereinander.
 - Name als `t-label` unter jedem Portrait. Keine neue Farbe, Schrift oder Bewegung.
+
+**31.10.2026 – Bildreihe der Leistungen gestrichen (Inna per WhatsApp, über Dennis):** Überschrift und Aufklappliste bleiben,
+die fünf Kacheln und ihre Bilddateien entfallen.
+
+**31.10.2026 – Vorher/Nachher in den Leistungen (Inna per WhatsApp, über Dennis):** „01 Blond, Beschreibung, Vorher/Nachher“,
+„etwas komprimierter und nicht zu viele Bilder von Haaren“. Der eigene Abschnitt mit Vorschaubildern und sein Menüpunkt
+entfallen. Der Regler steht aufgeklappt neben dem Text (am Rechner drei Spalten, am Handy darunter), ein Paar je Leistung.
+Griff und Beschriftung etwas kleiner als zuvor, sonst keine neue
+Farbe, Schrift oder Bewegung. Die Paare hat Inna ausgewählt, bei Blond und Schnitt & Styling dasselbe (`projekt/fotos/README.md`).

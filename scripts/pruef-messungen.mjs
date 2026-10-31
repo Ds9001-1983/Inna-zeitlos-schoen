@@ -41,7 +41,8 @@ async function durchscrollen(p) {
   }
   await p.waitForTimeout(1200)
   await p
-    .waitForFunction(() => Array.from(document.images).every((i) => i.complete), null, { timeout: 15000 })
+    // Bilder in zugeklappten <details> laden erst beim Öffnen und zählen hier nicht
+    .waitForFunction(() => Array.from(document.images).every((i) => i.complete || i.closest('details:not([open])')), null, { timeout: 15000 })
     .catch(() => log('  nicht alle Bilder complete nach 15 s'))
 }
 const nachOben = async (p) => {
@@ -71,8 +72,8 @@ for (const w of [360, 640]) {
   await laden(p2)
   await durchscrollen(p2)
   ergebnis.bilder_zweiter_aufruf = await p2.evaluate(() => ({
-    gesamt: document.images.length,
-    leer: Array.from(document.images).filter((i) => i.naturalWidth === 0).length,
+    gesamt: Array.from(document.images).filter((i) => !i.closest('details:not([open])')).length,
+    leer: Array.from(document.images).filter((i) => i.naturalWidth === 0 && !i.closest('details:not([open])')).length,
   }))
   ergebnis.video = await p2.evaluate(() => {
     const v = document.querySelector('video')

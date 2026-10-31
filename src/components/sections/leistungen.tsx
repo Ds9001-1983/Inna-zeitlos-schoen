@@ -1,13 +1,15 @@
-import Image from 'next/image'
 import { Plus } from 'lucide-react'
-import { leistungen } from '@/inhalte/salon'
-import { BildReveal, ZeilenReveal } from '@/components/reveal'
+import { leistungen, salon } from '@/inhalte/salon'
+import { ZeilenReveal } from '@/components/reveal'
+import { VorherNachherRegler } from '@/components/vorher-nachher-regler'
 
 /**
- * Oben die Bildreihe wie in Innas Entwurf, darunter ihre Texte (30.10.2026) als
- * Aufklappliste: Titel und erster Satz stehen offen, der Rest auf Wunsch. So bleibt der
- * Abschnitt ruhig, obwohl die Texte länger geworden sind. Natives <details> – ohne
- * JavaScript bedienbar, und Suchmaschinen lesen den zugeklappten Text mit.
+ * Innas Texte (30.10.2026) als Aufklappliste: Titel und erster Satz stehen offen, der Rest
+ * auf Wunsch. So bleibt der Abschnitt ruhig, obwohl die Texte länger geworden sind. Natives
+ * <details> – ohne JavaScript bedienbar, und Suchmaschinen lesen den zugeklappten Text mit.
+ * Aufgeklappt folgt die Vorher/Nachher-Arbeit zur Leistung. Die Bildreihe darüber hat Inna am
+ * 31.10.2026 gestrichen (kompakter, nicht zu viele Haarbilder – wer mehr sehen will, geht auf
+ * Instagram, der Link erscheint, sobald er in salon.instagram steht).
  */
 export function Leistungen() {
   return (
@@ -18,38 +20,7 @@ export function Leistungen() {
           Haar, das zu dir passt.
         </ZeilenReveal>
 
-        <ul className="mt-14 grid grid-cols-2 gap-4 lg:grid-cols-5 lg:gap-6">
-          {leistungen.map((leistung, i) => {
-            // Am Handy läuft die fünfte Kachel über beide Spalten, statt allein zu stehen
-            const quer = i === leistungen.length - 1 && leistungen.length % 2 === 1
-            return (
-              <li key={leistung.titel} className={quer ? 'col-span-2 lg:col-span-1' : undefined}>
-                <BildReveal>
-                  <div
-                    className={`relative w-full overflow-hidden bg-sand ${
-                      quer ? 'aspect-7/5 lg:aspect-7/10' : 'aspect-7/10'
-                    }`}
-                  >
-                    {/* Enger Textur-Ausschnitt wie in Innas Entwurf */}
-                    <Image
-                      src={leistung.bild}
-                      alt={leistung.alt}
-                      fill
-                      sizes={
-                        quer ? '(max-width: 1024px) 100vw, 20vw' : '(max-width: 1024px) 50vw, 20vw'
-                      }
-                      className="scale-[1.5] object-cover"
-                      style={{ objectPosition: leistung.ausschnitt }}
-                      data-bild
-                    />
-                  </div>
-                </BildReveal>
-              </li>
-            )
-          })}
-        </ul>
-
-        <ol className="mt-16 border-t border-greige/60">
+        <ol className="mt-14 border-t border-greige/60">
           {leistungen.map((leistung, i) => (
             <li key={leistung.titel} className="border-b border-greige/60">
               <details className="group">
@@ -74,8 +45,8 @@ export function Leistungen() {
                   </span>
                 </summary>
 
-                <div className="raster pb-10">
-                  <div className="col-span-5 col-start-2 max-w-[62ch] space-y-4 leading-relaxed text-tinte/80 lg:col-span-7 lg:col-start-5">
+                <div className="raster items-start gap-y-8 pb-10">
+                  <div className="col-span-5 col-start-2 max-w-[62ch] space-y-4 leading-relaxed text-tinte/80 lg:col-span-4 lg:col-start-5">
                     {leistung.absaetze.map((absatz) => (
                       <p key={absatz}>{absatz}</p>
                     ))}
@@ -89,11 +60,28 @@ export function Leistungen() {
                       </p>
                     ) : null}
                   </div>
+                  <div className="col-span-5 col-start-2 lg:col-span-3 lg:col-start-9">
+                    <VorherNachherRegler paar={leistung.vorherNachher} titel={leistung.titel} />
+                  </div>
                 </div>
               </details>
             </li>
           ))}
         </ol>
+
+        {salon.instagram && salon.instagramName ? (
+          <p className="mt-8 leading-relaxed text-tinte/80">
+            Mehr Arbeiten auf Instagram:{' '}
+            <a
+              href={salon.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="text-kupfer-tief underline underline-offset-4"
+            >
+              {salon.instagramName}
+            </a>
+          </p>
+        ) : null}
       </div>
     </section>
   )

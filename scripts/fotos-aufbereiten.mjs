@@ -29,23 +29,11 @@ const pruefbilder = arg('pruefbilder')
 const mittig = { x: 0.0333, y: 0, b: 0.9333 }
 
 const paare = [
-  // Nachher stand weiter weg: näher heran, bis Haarbreite und Scheitel zum Vorher passen
-  { name: '1-blond', vorher: ['ed0b2190', mittig], nachher: ['60544736', { x: 0.105, y: 0, b: 0.79 }] },
-  // Nachher sitzt tiefer im Bild: Ausschnitt nach unten, damit der Scheitel auf gleicher Höhe liegt
-  { name: '2-blond', vorher: ['072768a3', mittig], nachher: ['462fe25a', { x: 0.068, y: 0.074, b: 0.864 }] },
-  { name: '3-farbe', vorher: ['4a560a01', mittig], nachher: ['24b1b8cf', mittig] },
-  { name: '4-farbe', vorher: ['0c1ec213', { x: 0.1, y: 0.074, b: 0.864 }], nachher: ['60cda4cb', { x: 0.011, y: 0, b: 0.9333 }] },
-  { name: '5-farbkorrektur', vorher: ['26dd10f6', mittig], nachher: ['4f8b559d', { x: 0.065, y: 0.053, b: 0.848 }] },
-  { name: '6-tressen', vorher: ['59ec2eca', mittig], nachher: ['608feafd', mittig] },
-]
-
-/** Ganze Bilder, nur verkleinert – die Seite wählt den Ausschnitt per object-position. */
-const einzeln = [
-  { id: 'fa6e4356', datei: 'leistungen/blond.jpg' },
-  { id: '24b1b8cf', datei: 'leistungen/farbe.jpg' },
-  { id: '4f8b559d', datei: 'leistungen/farbkorrekturen.jpg' },
-  { id: '7f180534', datei: 'leistungen/tressen.jpg' },
-  { id: 'c17e5ddb', datei: 'leistungen/schnitt-styling.jpg' },
+  // Paarauswahl von Inna, 31.10.2026. Scheitel, Kopfbreite und Mitte je Paar angeglichen, damit der Kopf beim Ziehen nicht springt
+  { name: '1-blond', vorher: ['072768a3', { x: 0.088, y: 0, b: 0.74 }], nachher: ['462fe25a', { x: 0.078, y: 0.099, b: 0.84 }] },
+  { name: '2-farbe', vorher: ['4a560a01', { x: 0.069, y: 0.02, b: 0.9 }], nachher: ['24b1b8cf', { x: 0.1, y: 0, b: 0.785 }] },
+  { name: '3-farbkorrektur', vorher: ['8ae59f8e', { x: 0.112, y: 0, b: 0.76 }], nachher: ['fa6e4356', { x: 0.035, y: 0.0175, b: 0.91 }] },
+  { name: '4-tressen', vorher: ['ed0b2190', { x: 0.043, y: 0.0336, b: 0.88 }], nachher: ['60544736', { x: 0.1255, y: 0, b: 0.76 }] },
 ]
 
 /**
@@ -111,17 +99,6 @@ for (const paar of paare) {
       .jpeg({ quality: 80 })
       .toFile(join(pruefbilder, `${paar.name}.jpg`))
   }
-}
-
-for (const { id, datei } of einzeln) {
-  const ausgabe = join(ziel, datei)
-  mkdirSync(dirname(ausgabe), { recursive: true })
-  await sharp(pfad(id))
-    .rotate()
-    .resize({ width: 1800, withoutEnlargement: true })
-    .jpeg({ quality: 82, mozjpeg: true })
-    .toFile(ausgabe)
-  console.log('✓', ausgabe)
 }
 
 mkdirSync('public/team', { recursive: true })
