@@ -14,7 +14,7 @@ PLZ Ort:          51674 Wiehl
 Telefon:          0170 66 19 452 (mobil, Dennis 21.10.2026)
 E-Mail:           info@inna-zeitlosschoen.de (Dennis 21.10.2026)
 Öffnungszeiten:   
-Instagram:        (nicht übergeben – „Wiehler Schönheitsfleck" gehört nicht zu diesem Projekt)
+Instagram:        @innazeitlosschoen, https://www.instagram.com/innazeitlosschoen/ (Dennis 31.10.2026, Profil geprüft: „Inna - Zeitlos Schön“, Schulstraße 1, Wiehl)
 Google-Profil:    
 Domain:           inna-zeitlosschoen.de (Dennis 21.10.2026, registriert bei Alfahosting)
 
@@ -88,6 +88,6 @@ trotz längerer Texte ruhig bleiben. Portraits von Inna und Nursah folgen.
 31.10.2026 (Dennis): Portraits übergeben – zwei von Inna, eines von Nursah. Beide Fotos von Inna auf die Seite.
 31.10.2026 (Inna per WhatsApp, über Dennis): Die Bildreihe über den Leistungen kann raus. Überschrift und Aufklappliste bleiben.
 Vorher/Nachher unter die einzelnen Leistungen („01 Blond, Beschreibung, Vorher/Nachher“), beim Aufklappen. „Etwas
-komprimierter und nicht zu viele Bilder von Haaren … die Neugierigen können zu Insta.“ Instagram-Link fehlt noch.
+komprimierter und nicht zu viele Bilder von Haaren … die Neugierigen können zu Insta.“ Instagram-Link steht seit 31.10. unter den Leistungen, in der Fußzeile und im Impressum.
 Team: Fotos samt Namen getauscht, Nursah links, Inna rechts, wegen der Bildausschnitte.
 Paare von Inna ausgewählt: Blond dc2c226b → b8e79bd1, Schnitt/Styling 072768a3 → 462fe25a, Farbe 4a560a01 → 24b1b8cf, Korrekturen 8ae59f8e → fa6e4356, Tressen ed0b2190 → 60544736.

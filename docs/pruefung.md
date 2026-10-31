@@ -12,7 +12,7 @@ als Regler zurück (sechs Paare aus Innas Fotos vom 13.10.), Leistungen mit Aufk
 „Neu bei uns“ und „Termine“ (WhatsApp für Neukundinnen, Onlinebuchung für Stammkundinnen, Link offen).
 Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messungen siehe C, Nachmessung 30.10.
 
-**Aktualisiert 31.10.2026, Nachtrag:** Innas Korrektur per WhatsApp: Bildreihe über den Leistungen gestrichen, Vorher/Nachher beim Aufklappen der Leistung (Paare von Inna ausgewählt), eigener Abschnitt und Menüpunkt entfallen. Instagram-Link erscheint, sobald er vorliegt.
+**Aktualisiert 31.10.2026, Nachtrag:** Innas Korrektur per WhatsApp: Bildreihe über den Leistungen gestrichen, Vorher/Nachher beim Aufklappen der Leistung (Paare von Inna ausgewählt), eigener Abschnitt und Menüpunkt entfallen. Instagram-Link eingetragen (@innazeitlosschoen).
 
 **Aktualisiert 31.10.2026:** Portraits eingebaut: Inna auf „Über uns“, Inna und Nursah im Team (Dateinamen = Rufnamen). Messungen siehe C, Nachmessung 31.10.
 
@@ -44,7 +44,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Onlinebuchung für Stammkundinnen (30.10.) | **offen** | Innas Satz steht im Abschnitt Termine; Knopf „Online Termin buchen“ und Datenschutz-Abschnitt erscheinen, sobald `salon.buchung` gesetzt ist; Anbieter dann im Datenschutz ergänzen |
 | Domain inna-zeitlosschoen.de | **teilweise** | steht auf der Visitenkarte samt QR-Code. Liegt bei Alfahosting, A-Record zeigt noch nicht auf Vercel – vor dem Druck der Karten in Vercel hinzufügen und DNS umstellen |
 | Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
-| Instagram | bewusst anders | fremdes Profil „wiehlerschoenheitsfleck" entfernt (Dennis, 21.09.2026); Innas Profil erscheint, sobald es in `auftrag.md` steht |
+| Instagram | umgesetzt | @innazeitlosschoen seit 31.10. unter den Leistungen, in der Fußzeile, im Impressum und im Schema |
 | Kein Buchungssystem (F4) | abgelöst | seit 30.10. externe Onlinebuchung für Stammkundinnen (Link offen); „Termin anfragen“ führt zum Abschnitt Termine mit beiden Wegen |
 | Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; Portraits seit 31.10. nebeneinander mit Namen, Nursah links, Inna rechts (Innas Wunsch); Nursahs Nachname offen |
 | Philosophie | umgesetzt | seit 30.10. Innas Text statt der vier Werte |
@@ -112,10 +112,8 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 ## Offene Punkte für Dennis
 
 - Domain inna-zeitlosschoen.de in Vercel hinzufügen und bei Alfahosting auf Vercel zeigen lassen (A/CNAME), MX für info@ unverändert lassen
-- Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten
 - Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
-- Instagram-Link (dann in `salon.instagram` und `instagramName`)
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
 - Höher aufgelöste Originale der Portraits, Nursahs schriftliche Zustimmung, Salonfotos

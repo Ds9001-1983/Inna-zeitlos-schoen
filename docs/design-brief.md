@@ -62,9 +62,8 @@ Vertrauen in das Handwerk, nicht über den günstigsten Preis.
 ### Instagram als Quelle
 
 Die Vorher/Nachher-Bilder stammen aus Instagram-Screenshots, die Dennis am 21.09.2026 übergeben
-hat (`projekt/fotos/`). Innas eigenes Profil ist noch nicht übergeben. Das Profil „Wiehler
-Schönheitsfleck" gehört nicht zu diesem Projekt (Dennis, 21.09.2026) und wurde am selben Tag von
-der Seite entfernt. Selbstbeschreibung aus den Beiträgen: Blondexpertin, Haargesundheit,
+hat (`projekt/fotos/`). Innas Profil heißt seit der Umbenennung @innazeitlosschoen (Dennis, 31.10.2026).
+Selbstbeschreibung aus den Beiträgen: Blondexpertin, Haargesundheit,
 Haartransformation, Airtouch, Farbkorrektur, Blondkorrektur, Balayage.
 
 Von dort kommen die Arbeiten und die Texte, die jetzt auf der Seite stehen:

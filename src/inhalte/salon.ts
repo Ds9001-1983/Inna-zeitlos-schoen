@@ -5,7 +5,7 @@
  * die Seite zeigt sie dann automatisch an und blendet bis dahin einen sinnvollen
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
- * OFFEN: oeffnungszeiten, Link der Onlinebuchung, Innas Instagram-Profil, Betriebsname
+ * OFFEN: oeffnungszeiten, Link der Onlinebuchung, Betriebsname
  * fürs Impressum, Nursahs Nachname, Portraits von Inna und Nursah.
  */
 
@@ -32,9 +32,9 @@ export const salon = {
    * Solange er fehlt, steht im Abschnitt Termine der Satz ohne Knopf.
    */
   buchung: null as string | null,
-  /** OFFEN – Innas eigenes Profil. Erscheint erst, wenn beides gefüllt ist. */
-  instagram: null as string | null,
-  instagramName: null as string | null,
+  /** Erscheint nur, wenn beides gefüllt ist. */
+  instagram: 'https://www.instagram.com/innazeitlosschoen/' as string | null,
+  instagramName: '@innazeitlosschoen' as string | null,
   maps: 'https://www.google.com/maps/search/?api=1&query=Schulstra%C3%9Fe+1%2C+51674+Wiehl',
   /** OFFEN – z. B. [{ tag: 'Dienstag bis Freitag', zeit: '9 – 18 Uhr' }] */
   oeffnungszeiten: null as { tag: string; zeit: string }[] | null,
