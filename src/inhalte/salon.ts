@@ -73,18 +73,6 @@ export type Leistung = {
   vorherNachher: VorherNachher
 }
 
-/** Inna zeigt dieses Paar bei Blond und bei Schnitt & Styling (WhatsApp, 31.10.2026). */
-const paarGestuft: VorherNachher = {
-  vorher: {
-    bild: '/arbeiten/vorher-nachher/1-blond-vorher.jpg',
-    alt: 'Vorher: lange, glatte Längen in gelblichem Orangeblond.',
-  },
-  nachher: {
-    bild: '/arbeiten/vorher-nachher/1-blond-nachher.jpg',
-    alt: 'Nachher: gestuftes Blond mit hellen Partien und Tiefe am Ansatz.',
-  },
-}
-
 /**
  * Texte wörtlich aus Innas finaler Fassung vom 30.10.2026. Der Titel steht auch im
  * Druck (druck/inhalte.mjs), die weiche Trennung nimmt der Druck wieder heraus.
@@ -98,7 +86,16 @@ export const leistungen: Leistung[] = [
       'Airtouch, Faceframe, Babylights oder eine Kombination verschiedener Techniken – wir entscheiden nicht vorher nach Schema F, sondern danach, was dein Haar und dein gewünschtes Ergebnis brauchen.',
       'Mit weichen Übergängen, Tiefe und Dimension und immer mit Blick auf die Qualität deines Haares.',
     ],
-    vorherNachher: paarGestuft,
+    vorherNachher: {
+      vorher: {
+        bild: '/arbeiten/vorher-nachher/1-blond-vorher.jpg',
+        alt: 'Vorher: lange, glatte Längen in warmem Gelbblond, von hinten.',
+      },
+      nachher: {
+        bild: '/arbeiten/vorher-nachher/1-blond-nachher.jpg',
+        alt: 'Nachher: kühles Aschblond mit weichem Übergang, von der Seite.',
+      },
+    },
   },
   {
     titel: 'Farbe',
@@ -167,7 +164,16 @@ export const leistungen: Leistung[] = [
       'Er muss zu deiner Haarstruktur, deinem Typ und deinem Alltag passen.',
       'Schnitt und Styling gehören deshalb selbstverständlich zu unserem Handwerk und zu unseren bestehenden Kundinnen.',
     ],
-    vorherNachher: paarGestuft,
+    vorherNachher: {
+      vorher: {
+        bild: '/arbeiten/vorher-nachher/5-schnitt-styling-vorher.jpg',
+        alt: 'Vorher: lange, glatte Längen in gelblichem Orangeblond.',
+      },
+      nachher: {
+        bild: '/arbeiten/vorher-nachher/5-schnitt-styling-nachher.jpg',
+        alt: 'Nachher: gestuftes Blond mit hellen Partien und Tiefe am Ansatz.',
+      },
+    },
   },
 ]
 

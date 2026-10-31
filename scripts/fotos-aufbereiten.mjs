@@ -30,10 +30,11 @@ const mittig = { x: 0.0333, y: 0, b: 0.9333 }
 
 const paare = [
   // Paarauswahl von Inna, 31.10.2026. Scheitel, Kopfbreite und Mitte je Paar angeglichen, damit der Kopf beim Ziehen nicht springt
-  { name: '1-blond', vorher: ['072768a3', { x: 0.088, y: 0, b: 0.74 }], nachher: ['462fe25a', { x: 0.078, y: 0.099, b: 0.84 }] },
+  { name: '1-blond', vorher: ['dc2c226b', { x: 0.159, y: 0, b: 0.72 }], nachher: ['b8e79bd1', { x: 0, y: 0.0265, b: 0.84 }] },
   { name: '2-farbe', vorher: ['4a560a01', { x: 0.069, y: 0.02, b: 0.9 }], nachher: ['24b1b8cf', { x: 0.1, y: 0, b: 0.785 }] },
   { name: '3-farbkorrektur', vorher: ['8ae59f8e', { x: 0.112, y: 0, b: 0.76 }], nachher: ['fa6e4356', { x: 0.035, y: 0.0175, b: 0.91 }] },
   { name: '4-tressen', vorher: ['ed0b2190', { x: 0.043, y: 0.0336, b: 0.88 }], nachher: ['60544736', { x: 0.1255, y: 0, b: 0.76 }] },
+  { name: '5-schnitt-styling', vorher: ['072768a3', { x: 0.088, y: 0, b: 0.74 }], nachher: ['462fe25a', { x: 0.078, y: 0.099, b: 0.84 }] },
 ]
 
 /**

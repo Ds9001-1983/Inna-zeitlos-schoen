@@ -36,7 +36,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
 | Leistungen | umgesetzt | Innas Texte als Aufklappliste (Blond, Farbe, Farbkorrekturen, Tressen, Schnitt & Styling), aufgeklappt je ein Vorher/Nachher, Bildreihe am 31.10. auf Innas Wunsch gestrichen; Überschrift „Haar, das zu dir passt.“ |
-| Vorher & Nachher zum Wischen (Inna, 30.10.) | umgesetzt | seit 31.10. in den Leistungen, Paare von Inna ausgewählt (vier Paare, bei Blond und Schnitt & Styling dasselbe), Regler mit Maus, Finger und Tastatur |
+| Vorher & Nachher zum Wischen (Inna, 30.10.) | umgesetzt | seit 31.10. in den Leistungen, Paare von Inna ausgewählt (fünf Paare, je Leistung eines), Regler mit Maus, Finger und Tastatur |
 | Preise | entfallen | Abschnitt gestrichen (Inna, 13.10.2026) |
 | Telefon | umgesetzt | 0170 66 19 452: Fußzeile (tel:+491706619452), Impressum, LocalBusiness-Schema, Visitenkarte; der Knopf im Kontakt entfällt seit 30.10. (Beratung bewusst nicht per Telefon) |
 | E-Mail info@inna-zeitlosschoen.de | umgesetzt | Fußzeile, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte; Knopf im Kontakt entfällt seit 30.10. |
@@ -115,7 +115,6 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 - Innas eigenes Instagram-Profil, falls gewünscht
 - Öffnungszeiten
 - Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
-- Inna: Soll bei Blond und bei Schnitt & Styling wirklich dasselbe Vorher/Nachher stehen?
 - Instagram-Link (dann in `salon.instagram` und `instagramName`)
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname

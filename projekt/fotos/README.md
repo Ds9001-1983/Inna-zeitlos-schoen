@@ -14,10 +14,11 @@ kürzer, außer bei Tressen). Die Kategorien sollte Inna noch bestätigen.
 
 | Leistung (Innas Auswahl, 31.10.2026) | vorher | nachher | Datei |
 |---|---|---|---|
-| Blond und Schnitt & Styling | 072768a3 | 462fe25a (44bbd013 = seitlich) | `1-blond` |
+| Blond | dc2c226b | b8e79bd1 | `1-blond` |
 | Farbe | 4a560a01 | 24b1b8cf | `2-farbe` |
 | Farbkorrekturen | 8ae59f8e | fa6e4356 | `3-farbkorrektur` |
 | Tressen | ed0b2190 | 60544736 (65fb1479 = zweite Aufnahme) | `4-tressen` |
+| Schnitt & Styling | 072768a3 | 462fe25a (44bbd013 = seitlich) | `5-schnitt-styling` |
 
 **Seit 31.10. Reserve, zugeschnitten** (x/y/b für das Skript):
 Farbe 0c1ec213 (0.1/0.074/0.864) → 60cda4cb (0.011/0/0.9333) · Farbkorrektur 26dd10f6 (0.0333/0/0.9333) → 4f8b559d (0.065/0.053/0.848) ·
@@ -27,7 +28,7 @@ Tressen 59ec2eca (0.0333/0/0.9333) → 608feafd (0.0333/0/0.9333).
 
 **Reserve** (vorher und nachher verschieden gerahmt, für den Regler nicht ohne Weiteres geeignet):
 6a1bd11a (Naturton, Nachher zu 8ae59f8e) · b336041e → c7195341 / 17f2dc67 (Blond) ·
-c0e6ce5f → 20a694e6 (Blond) · dc2c226b → b8e79bd1 (kühles Blond).
+c0e6ce5f → 20a694e6 (Blond).
 
 Einwilligungen der Kundinnen: offen (siehe `projekt/auftrag.md`).
 

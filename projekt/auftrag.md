@@ -52,7 +52,7 @@ Telefon 0170 66 19 452 und E-Mail info@inna-zeitlosschoen.de stehen in Fußzeile
 ## Rechtliches
 USt-IdNr. oder Kleinunternehmer:   
 Kammer / Berufsbezeichnung:        Friseurmeisterin
-Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   offen – die Kundinnen auf den vier Vorher/Nachher-Paaren und das KI-Video aus einem Kundenfoto brauchen eine schriftliche Zustimmung (Fotos von Inna selbst übergeben, 30.10.2026). Nursahs Zustimmung zu ihrem Portrait ist nicht schriftlich belegt (31.10.2026)
+Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   offen – die Kundinnen auf den fünf Vorher/Nachher-Paaren und das KI-Video aus einem Kundenfoto brauchen eine schriftliche Zustimmung (Fotos von Inna selbst übergeben, 30.10.2026). Nursahs Zustimmung zu ihrem Portrait ist nicht schriftlich belegt (31.10.2026)
 
 ## Technik (falls Funktionen gewählt)
 Keine Funktionen gewählt.
@@ -90,4 +90,4 @@ trotz längerer Texte ruhig bleiben. Portraits von Inna und Nursah folgen.
 Vorher/Nachher unter die einzelnen Leistungen („01 Blond, Beschreibung, Vorher/Nachher“), beim Aufklappen. „Etwas
 komprimierter und nicht zu viele Bilder von Haaren … die Neugierigen können zu Insta.“ Instagram-Link fehlt noch.
 Team: Fotos samt Namen getauscht, Nursah links, Inna rechts, wegen der Bildausschnitte.
-Paare von Inna ausgewählt: Blond und Schnitt/Styling 072768a3 → 462fe25a, Farbe 4a560a01 → 24b1b8cf, Korrekturen 8ae59f8e → fa6e4356, Tressen ed0b2190 → 60544736.
+Paare von Inna ausgewählt: Blond dc2c226b → b8e79bd1, Schnitt/Styling 072768a3 → 462fe25a, Farbe 4a560a01 → 24b1b8cf, Korrekturen 8ae59f8e → fa6e4356, Tressen ed0b2190 → 60544736.
