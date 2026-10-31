@@ -70,11 +70,7 @@ export default function Impressum() {
 
       <div>
         <h2>Bildnachweis</h2>
-        <p>
-          Alle Aufnahmen von Haararbeiten stammen aus dem Salon.
-          <br />
-          <Offen was="Bildnachweis, sobald die Einwilligungen der abgebildeten Kundinnen vorliegen" />
-        </p>
+        <p>Alle Aufnahmen von Haararbeiten stammen aus dem Salon.</p>
       </div>
     </Rechtstext>
   )
