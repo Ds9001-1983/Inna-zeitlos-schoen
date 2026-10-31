@@ -6,7 +6,7 @@
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
  * OFFEN: oeffnungszeiten, Link der Onlinebuchung, Betriebsname
- * fürs Impressum, Nursahs Nachname, Portraits von Inna und Nursah.
+ * fürs Impressum, Nursahs Nachname.
  */
 
 export const salon = {
@@ -68,7 +68,7 @@ export type Leistung = {
    * Innas Arbeit zur Leistung, Foto vom 13.10.2026 (Zuordnung: projekt/fotos/README.md).
    * Zugeschnitten mit scripts/fotos-aufbereiten.mjs, damit Scheitel und Haarbreite
    * in beiden Bildern übereinanderliegen.
-   * OFFEN: schriftliche Einwilligung der Kundinnen (projekt/auftrag.md).
+   * Einwilligungen der Kundinnen liegen bei Inna (projekt/auftrag.md).
    */
   vorherNachher: VorherNachher
 }

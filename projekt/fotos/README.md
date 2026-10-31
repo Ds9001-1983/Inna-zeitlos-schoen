@@ -30,7 +30,7 @@ Tressen 59ec2eca (0.0333/0/0.9333) → 608feafd (0.0333/0/0.9333).
 6a1bd11a (Naturton, Nachher zu 8ae59f8e) · b336041e → c7195341 / 17f2dc67 (Blond) ·
 c0e6ce5f → 20a694e6 (Blond).
 
-Einwilligungen der Kundinnen: offen (siehe `projekt/auftrag.md`).
+Einwilligungen der Kundinnen liegen laut Dennis bei Inna (31.10.2026, siehe `projekt/auftrag.md`).
 
 ## Instagram-Ausschnitte (Stand 21.09.2026)
 

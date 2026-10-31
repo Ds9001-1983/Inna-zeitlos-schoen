@@ -52,7 +52,7 @@ Telefon 0170 66 19 452 und E-Mail info@inna-zeitlosschoen.de stehen in Fußzeile
 ## Rechtliches
 USt-IdNr. oder Kleinunternehmer:   
 Kammer / Berufsbezeichnung:        Friseurmeisterin
-Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   offen – die Kundinnen auf den fünf Vorher/Nachher-Paaren und das KI-Video aus einem Kundenfoto brauchen eine schriftliche Zustimmung (Fotos von Inna selbst übergeben, 30.10.2026). Nursahs Zustimmung zu ihrem Portrait ist nicht schriftlich belegt (31.10.2026)
+Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   ja – laut Dennis (31.10.2026) liegen die Einwilligungen der Kundinnen bei Inna, Nursah hat ihrem Portrait zugestimmt
 
 ## Technik (falls Funktionen gewählt)
 Keine Funktionen gewählt.

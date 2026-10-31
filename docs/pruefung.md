@@ -55,7 +55,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
 | Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | beide druckfertig | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Schild seit 19.10. nach Innas Wunsch nur Wortmarke auf Cognac → `druck/ausgabe/final/schild.pdf`, Preflight ok, Beschnitt 3 mm angenommen. Karte seit 21.10. im Design des Schilds mit Telefon und Adresse → `druck/ausgabe/final/visitenkarte.pdf`, Preflight ok; E-Mail, Website und QR-Code kommen dazu, sobald sie feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
-| Einwilligungen (Kundinnenfotos, KI-Video) | **offen** | schriftliche Zustimmung der Kundinnen auf den Vorher/Nachher-Paaren fehlt; die Originale liegen nicht im (öffentlichen) Repo |
+| Einwilligungen (Kundinnenfotos, KI-Video) | erledigt | laut Dennis (31.10.2026) liegen sie bei Inna, Nursah hat zugestimmt; die Originale liegen nicht im (öffentlichen) Repo |
 | Portraits Inna und Nursah | umgesetzt | seit 31.10.; Dateien nur rund 800 px breit, höher aufgelöste Originale wären besser |
 | Credit-Rahmen 100 | umgesetzt | 63 verbraucht (9 × Upscaling, 6 × Video) |
 | Git: Ds9001-1983, deutsch, kein Hinweis auf Claude | umgesetzt | |
@@ -116,7 +116,6 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 - Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
-- Höher aufgelöste Originale der Portraits, Nursahs schriftliche Zustimmung, Salonfotos
-- Schriftliche Einwilligung: Kundinnen auf den Vorher/Nachher-Paaren sowie KI-Video aus dem Kundenfoto
+- Höher aufgelöste Originale der Portraits, Salonfotos
 - Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100
