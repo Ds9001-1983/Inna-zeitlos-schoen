@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/SplitText'
 import { useLenis } from 'lenis/react'
 import { HeroMedien } from '@/components/hero-medien'
+import { salon } from '@/inhalte/salon'
 
 gsap.registerPlugin(useGSAP, SplitText)
 
@@ -85,16 +86,19 @@ export function Hero() {
             </p>
 
             <div data-hero-zeile className="mt-9 flex flex-wrap items-center gap-8">
-              <a
-                href="#kontakt"
-                onClick={(e) => {
-                  e.preventDefault()
-                  springeZu('#kontakt')
-                }}
-                className="inline-block bg-leinen px-9 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-tinte uppercase transition-colors hover:bg-kupfer-tief hover:text-leinen"
-              >
-                Termin anfragen
-              </a>
+              {/* Termin-Knopf erst, wenn der Link der Onlinebuchung da ist (Dennis, 02.11.2026) */}
+              {salon.buchung ? (
+                <a
+                  href="#kontakt"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    springeZu('#kontakt')
+                  }}
+                  className="inline-block bg-leinen px-9 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-tinte uppercase transition-colors hover:bg-kupfer-tief hover:text-leinen"
+                >
+                  Termin anfragen
+                </a>
+              ) : null}
               <a
                 href="#leistungen"
                 onClick={(e) => {

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { useLenis } from 'lenis/react'
 import { Menu, X } from 'lucide-react'
 import { Wortmarke } from '@/components/wortmarke'
-import { navigation } from '@/inhalte/salon'
+import { navigation, salon } from '@/inhalte/salon'
 
 export function SiteHeader() {
   const [offen, setOffen] = useState(false)
@@ -34,9 +34,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-greige/40 bg-leinen/92 backdrop-blur-sm">
       <div className="inhalt flex items-center justify-between py-5">
-        <Link href="/" aria-label="INNA – Zeitlos schön, zur Startseite">
-          <Wortmarke />
-        </Link>
+        {/* Logo und rechte Seite gleich breit: Das Menü bleibt mittig, auch ohne Termin-Knopf */}
+        <div className="flex-1">
+          <Link
+            href="/"
+            aria-label="INNA – Zeitlos schön, zur Startseite"
+            className="inline-block"
+          >
+            <Wortmarke />
+          </Link>
+        </div>
 
         <nav aria-label="Hauptnavigation" className="hidden lg:block">
           <ul className="flex items-center gap-9">
@@ -57,17 +64,21 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-3">
-          <a
-            href="#kontakt"
-            onClick={(e) => {
-              e.preventDefault()
-              springeZu('#kontakt')
-            }}
-            className="hidden bg-kupfer-tief px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte sm:inline-block"
-          >
-            Termin anfragen
-          </a>
+        {/* Mindesthöhe des Knopfs, damit die Kopfzeile ohne ihn nicht schrumpft (Hero rechnet mit ihr) */}
+        <div className="flex flex-1 items-center justify-end gap-3 sm:min-h-[2.625rem]">
+          {/* Termin-Knöpfe erst, wenn der Link der Onlinebuchung da ist (Dennis, 02.11.2026) */}
+          {salon.buchung ? (
+            <a
+              href="#kontakt"
+              onClick={(e) => {
+                e.preventDefault()
+                springeZu('#kontakt')
+              }}
+              className="hidden bg-kupfer-tief px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte sm:inline-block"
+            >
+              Termin anfragen
+            </a>
+          ) : null}
 
           <button
             type="button"
@@ -104,16 +115,18 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <a
-            href="#kontakt"
-            onClick={(e) => {
-              e.preventDefault()
-              springeZu('#kontakt')
-            }}
-            className="mt-6 block bg-kupfer-tief px-6 py-4 text-center text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase"
-          >
-            Termin anfragen
-          </a>
+          {salon.buchung ? (
+            <a
+              href="#kontakt"
+              onClick={(e) => {
+                e.preventDefault()
+                springeZu('#kontakt')
+              }}
+              className="mt-6 block bg-kupfer-tief px-6 py-4 text-center text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase"
+            >
+              Termin anfragen
+            </a>
+          ) : null}
         </nav>
       </div>
     </header>

@@ -150,6 +150,14 @@ Video ab.
 
 ## Revidiert
 
+**02.11.2026 – „Termin anfragen“ ruht bis zum Link der Onlinebuchung (Dennis).**
+Die Knöpfe in Kopfzeile, Handy-Menü und Hero sowie die Termin-Leiste am Handy erscheinen erst, wenn
+`salon.buchung` gesetzt ist. Bis dahin führen „Neu bei uns“ (Menü) und der Abschnitt Termine per WhatsApp
+zum Beratungstermin. Im Hero bleibt „Leistungen ansehen“. Der Textblock rückt dadurch tiefer ins
+Bild; Kontrast bei 375 bis 1440 px nachgemessen, alles bestanden (knappster Wert Lead 4,51:1 bei 1024 px).
+Die Kopfzeile behält ihre Höhe (Mindesthöhe des Knopfs, der Hero rechnet mit `5.25rem`), und das Menü
+steht jetzt genau mittig – Logo und rechte Seite teilen sich den Rest gleich breit.
+
 **02.11.2026 – Verläufe auf Bild in Cognac statt Tinte (Dennis).**
 Hero-Video und Bildkapitel tragen ihre Verläufe jetzt in den Kupfer-Tönen statt in Tinte: Kupfer dunkel
 dort, wo Schrift steht, oben Kupfer mit 25 % als warmer Ton über dem ganzen Bild. Keine neue Farbe.

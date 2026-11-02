@@ -8,7 +8,8 @@ import { WhatsappKnopf } from '@/components/whatsapp-knopf'
  * per WhatsApp einen Beratungstermin an, Stammkundinnen buchen online. Die Beratung
  * läuft bewusst nicht per Telefon oder E-Mail – deshalb stehen hier keine Knöpfe dafür,
  * Nummer und Adresse stehen in der Fußzeile.
- * Der Buchungsknopf erscheint, sobald `salon.buchung` in src/inhalte/salon.ts steht.
+ * Der Buchungsknopf erscheint, sobald `salon.buchung` in src/inhalte/salon.ts steht – ebenso
+ * alle „Termin anfragen“-Knöpfe in Kopfzeile, Hero und Handy-Leiste (Dennis, 02.11.2026).
  *
  * Das Salonfoto steht wie der Abschluss in Innas Seitenentwurf links neben dem Text (seit 02.11.2026).
  * Am Handy kommt es nach dem Text, damit die Termin-Knöpfe beim Sprung hierher oben stehen.

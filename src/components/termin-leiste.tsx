@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useLenis } from 'lenis/react'
+import { salon } from '@/inhalte/salon'
 
 /**
  * Auf dem Handy liegt der Termin-Knopf im Hero unter der Bildschirmkante.
@@ -9,6 +10,7 @@ import { useLenis } from 'lenis/react'
  * verschwindet wieder, wenn der Kontakt-Abschnitt sichtbar wird.
  * Auf dem Rechner steht der Knopf durchgehend in der Kopfzeile – dort
  * wird die Leiste nicht gebraucht.
+ * Bis der Link der Onlinebuchung da ist, bleibt sie ganz weg (Dennis, 02.11.2026).
  */
 export function TerminLeiste() {
   const [sichtbar, setSichtbar] = useState(false)
@@ -31,6 +33,8 @@ export function TerminLeiste() {
       window.removeEventListener('resize', pruefen)
     }
   }, [])
+
+  if (!salon.buchung) return null
 
   return (
     <div
