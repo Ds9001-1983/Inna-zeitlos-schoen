@@ -14,6 +14,8 @@ Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messung
 
 **Aktualisiert 31.10.2026, Nachtrag:** Innas Korrektur per WhatsApp: Bildreihe über den Leistungen gestrichen, Vorher/Nachher beim Aufklappen der Leistung (Paare von Inna ausgewählt), eigener Abschnitt und Menüpunkt entfallen. Instagram-Link eingetragen (@innazeitlosschoen).
 
+**Aktualisiert 02.11.2026:** Salonfoto im Abschnitt Termine (Bild links, Text rechts wie im Seitenentwurf, am Handy nach dem Text). Lint/Build grün, Termine bei 1440, 800 und 390 px im Browser geprüft, kein waagerechter Überlauf. Playwright 21 bestanden, 8 übersprungen; die Referenzbilder der Scroll-Positionen sind neu, weil die Seite länger geworden ist (Inhalt sonst unverändert, verglichen).
+
 **Aktualisiert 31.10.2026:** Portraits eingebaut: Inna auf „Über uns“, Inna und Nursah im Team (Dateinamen = Rufnamen). Messungen siehe C, Nachmessung 31.10.
 
 **Aktualisiert 21.10.2026:** Telefon, E-Mail und Domain eingetragen (Website, Impressum, Schema, Visitenkarte), Visitenkarte im Design des Schilds druckfertig.
@@ -57,6 +59,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
 | Einwilligungen (Kundinnenfotos, KI-Video) | erledigt | laut Dennis (31.10.2026) liegen sie bei Inna, Nursah hat zugestimmt; die Originale liegen nicht im (öffentlichen) Repo |
 | Portraits Inna und Nursah | umgesetzt | seit 31.10.; Dateien nur rund 800 px breit, höher aufgelöste Originale wären besser |
+| Salonfoto | umgesetzt | seit 02.11. im Abschnitt Termine, wie der Abschluss im Seitenentwurf; nur 1024 px breit (aus dem Chat), ein höher aufgelöstes Original wäre besser |
 | Credit-Rahmen 100 | umgesetzt | 63 verbraucht (9 × Upscaling, 6 × Video) |
 | Git: Ds9001-1983, deutsch, kein Hinweis auf Claude | umgesetzt | |
 
@@ -116,6 +119,6 @@ Werkzeuge: `npm run qa:a11y`, `npm run qa:lighthouse`, `npm run qa:kontrast`, `n
 - Link der Onlinebuchung für Stammkundinnen (dann in `salon.buchung`, Anbieter im Datenschutz ergänzen)
 - Rechtsname, USt-IdNr. oder Kleinunternehmer, Kammer → Impressum (12 Lücken), Datenschutz (2)
 - Nursahs Nachname
-- Höher aufgelöste Originale der Portraits, Salonfotos
+- Höher aufgelöste Originale der Portraits und des Salonfotos (eins seit 02.11. auf der Seite)
 - Domain (Vercel ist verbunden, Production läuft auf inna-zeitlos.vercel.app)
 - Credits verbraucht: 63 von 100

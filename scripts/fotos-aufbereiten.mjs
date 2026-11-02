@@ -6,7 +6,8 @@
  * 7:10 zugeschnitten, je Bild mit eigenem Ausschnitt: Kopf und Schulterlinie sollen in beiden Bildern an
  * derselben Stelle sitzen, sonst springt das Bild beim Ziehen des Reglers (design-plan.md, 21.09.2026).
  *
- * Die Portraits von Inna und Nursah (original-portraits-2026-10-31/) landen in public/team/.
+ * Die Portraits von Inna und Nursah (original-portraits-2026-10-31/) landen in public/team/,
+ * das Salonfoto (original-salon-2026-11-02/) in public/salon/.
  *
  *   node scripts/fotos-aufbereiten.mjs [--pruefbilder <ordner>]
  *
@@ -113,4 +114,21 @@ for (const { datei, ziel: name, ausschnitt: { x, y, b } } of portraits) {
     .jpeg({ quality: 90, mozjpeg: true })
     .toFile(ausgabe)
   console.log('✓', ausgabe)
+}
+
+/**
+ * Salon von innen (Dennis, 02.11.2026), kam mit 1024 × 1536 px im Chat. Auf 7:10 wie die Portraits,
+ * abgeschnitten wird vor allem Decke.
+ */
+mkdirSync('public/salon', { recursive: true })
+{
+  const eingabe = 'projekt/fotos/original-salon-2026-11-02/salon.jpg'
+  const { width, height } = await sharp(eingabe).metadata()
+  const h = Math.round((width * 10) / 7)
+  await sharp(eingabe)
+    .rotate()
+    .extract({ left: 0, top: Math.round((height - h) * 0.7), width, height: h })
+    .jpeg({ quality: 90, mozjpeg: true })
+    .toFile('public/salon/salon.jpg')
+  console.log('✓ public/salon/salon.jpg')
 }

@@ -401,3 +401,9 @@ Farbe, Schrift oder Bewegung. Die Paare hat Inna ausgewählt (`projekt/fotos/REA
 
 **31.10.2026 – Team (Inna per WhatsApp, über Dennis):** Portraits samt Namen getauscht, Nursah links, Inna rechts, wegen der
 Bildausschnitte. Die Überschrift und die Texte bleiben in der Reihenfolge Inna, Nursah.
+
+**02.11.2026 – Salonfoto (Dennis):** „Termine“ zeigt links ein Foto aus dem Salon (Blumen auf dem Tresen, Sessel, warmes
+Licht), Text rechts – wie der Abschluss in Innas Seitenentwurf und wie „Über uns“. Am Rechner stehen „Neu bei uns?“ und
+„Schon bei uns?“ in der Textspalte untereinander, der WhatsApp-Knopf passt nicht in eine halbe Spalte. Am Handy steht das
+Bild nach dem Text, damit „Termin anfragen“ auf die Knöpfe springt und nicht auf ein Foto. 7:10, `BildReveal`, keine neue
+Farbe, Schrift oder Bewegung.

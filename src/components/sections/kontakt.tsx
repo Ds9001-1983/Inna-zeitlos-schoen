@@ -1,5 +1,6 @@
+import Image from 'next/image'
 import { salon } from '@/inhalte/salon'
-import { ZeilenReveal } from '@/components/reveal'
+import { BildReveal, ZeilenReveal } from '@/components/reveal'
 import { WhatsappKnopf } from '@/components/whatsapp-knopf'
 
 /**
@@ -8,17 +9,36 @@ import { WhatsappKnopf } from '@/components/whatsapp-knopf'
  * läuft bewusst nicht per Telefon oder E-Mail – deshalb stehen hier keine Knöpfe dafür,
  * Nummer und Adresse stehen in der Fußzeile.
  * Der Buchungsknopf erscheint, sobald `salon.buchung` in src/inhalte/salon.ts steht.
+ *
+ * Das Salonfoto steht wie der Abschluss in Innas Seitenentwurf links neben dem Text (seit 02.11.2026).
+ * Am Handy kommt es nach dem Text, damit die Termin-Knöpfe beim Sprung hierher oben stehen.
  */
 export function Kontakt() {
   return (
     <section id="kontakt" className="scroll-mt-24 bg-sand py-[var(--spacing-sektion)]">
-      <div className="inhalt">
-        <ZeilenReveal as="h2" className="t-titel">
-          Termine
-        </ZeilenReveal>
+      <div className="inhalt raster items-start gap-y-12">
+        <figure className="order-last col-span-6 lg:order-none lg:col-span-5">
+          <BildReveal>
+            <div className="relative aspect-7/10 w-full">
+              <Image
+                src="/salon/salon.jpg"
+                alt="Blick in den Salon: Blumen auf dem Steintresen, dahinter cognacfarbene Sessel, der Waschplatz und warmes Licht."
+                fill
+                sizes="(max-width: 1024px) 100vw, 34rem"
+                quality={90}
+                className="object-cover"
+                data-bild
+              />
+            </div>
+          </BildReveal>
+        </figure>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)] lg:gap-20">
-          <div className="grid gap-12 sm:grid-cols-2 sm:gap-10">
+        <div className="col-span-6 lg:col-start-7 lg:col-end-13">
+          <ZeilenReveal as="h2" className="t-titel">
+            Termine
+          </ZeilenReveal>
+
+          <div className="mt-12 grid gap-12 sm:grid-cols-2 sm:gap-10 lg:grid-cols-1">
             <div>
               <h3 className="font-display text-3xl leading-tight font-light text-tinte">
                 Neu bei uns?
@@ -51,25 +71,27 @@ export function Kontakt() {
             </div>
           </div>
 
-          <div>
-            <p className="t-label">Salon</p>
-            <address className="mt-4 text-base leading-relaxed not-italic">
-              <span className="font-display text-2xl leading-tight">
-                {salon.strasse}
-                <br />
-                {salon.plz} {salon.ort}
-              </span>
-            </address>
-            <a
-              href={salon.maps}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 inline-block text-kupfer-dunkel underline underline-offset-4"
-            >
-              Auf Google Maps ansehen
-            </a>
+          <div className="mt-12 grid gap-10 border-t border-greige/60 pt-10 sm:grid-cols-2">
+            <div>
+              <p className="t-label">Salon</p>
+              <address className="mt-4 text-base leading-relaxed not-italic">
+                <span className="font-display text-2xl leading-tight">
+                  {salon.strasse}
+                  <br />
+                  {salon.plz} {salon.ort}
+                </span>
+              </address>
+              <a
+                href={salon.maps}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-block text-kupfer-dunkel underline underline-offset-4"
+              >
+                Auf Google Maps ansehen
+              </a>
+            </div>
 
-            <div className="mt-8 border-t border-greige/60 pt-6">
+            <div>
               <p className="t-label">Öffnungszeiten</p>
               {salon.oeffnungszeiten ? (
                 <dl className="mt-4 space-y-2 text-sm">
@@ -81,7 +103,7 @@ export function Kontakt() {
                   ))}
                 </dl>
               ) : (
-                <p className="mt-3 text-sm leading-relaxed text-tinte/80">
+                <p className="mt-4 text-sm leading-relaxed text-tinte/80">
                   Termine nach Vereinbarung.
                 </p>
               )}

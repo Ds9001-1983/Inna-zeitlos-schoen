@@ -43,3 +43,9 @@ Seite sind davon nur noch Hero und Farbtransformation (Bildkapitel).
 
 `original-portraits-2026-10-31/` (nicht im Repo), Dateiname = Rufname: `Inna-01.jpeg` → `public/team/inna-seitlich.jpg`
 (Über uns), `Inna-02.jpeg` → `inna-frontal.jpg` und `Nursahs.jpeg` → `nursah.jpg` (Team). Stark komprimiert, rund 800 px breit.
+
+## Salon (02.11.2026)
+
+`original-salon-2026-11-02/salon.jpg` (nicht im Repo), von Dennis im Chat geschickt, 1024 × 1536 px, ohne Metadaten.
+→ `public/salon/salon.jpg` (7:10, oben vor allem Decke abgeschnitten), steht im Abschnitt Termine.
+Ein höher aufgelöstes Original wäre besser: am Rechner reicht die Breite knapp, am Tablet wird das Bild vergrößert.
