@@ -17,11 +17,11 @@ export function Bildkapitel() {
         className="object-cover object-[50%_38%]"
       />
       {/* Verläufe mit Aufgabe wie im Hero: von unten für den Titel, von links für die Textseite */}
-      <div className="absolute inset-0 bg-gradient-to-t from-kupfer-dunkel/90 via-kupfer-dunkel/55 to-kupfer/25" />
-      <div className="absolute inset-0 bg-gradient-to-r from-kupfer-dunkel/70 via-kupfer-dunkel/25 via-45% to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-kupfer-dunkel/45 via-kupfer-dunkel/28 to-kupfer/13 max-md:via-kupfer-dunkel/55 max-md:to-kupfer-dunkel/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-kupfer-dunkel/35 via-kupfer-dunkel/13 via-45% to-transparent" />
 
       <div className="inhalt relative pb-14">
-        <p data-auf-bild className="t-lead text-leinen/90">
+        <p data-auf-bild className="t-lead text-leinen">
           Mit Erfahrung, ehrlicher Beratung und ganz viel Liebe zu unserem Handwerk schaffen wir
           Ergebnisse, die nicht nur heute schön sind.
         </p>

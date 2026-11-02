@@ -162,6 +162,16 @@ dort, wo Schrift steht, oben Kupfer mit 25 % als warmer Ton über dem ganzen Bil
 Gemessen (`npm run qa:kontrast`, 1440 und 390 px): Titel 4,95:1, Signatur 3,66:1 (nötig 3:1), Lead
 4,99:1. Bildkapitel per Pixelmessung (hellstes 2-%-Perzentil): Lead 5,9:1, Titel 6,2:1.
 
+*Nachtrag 02.11.2026 – Filter halb so stark (Dennis).* Glatt halbiert fielen Signatur (2,6:1) und Lead
+am Handy (2,9:1) durch. Deshalb halb so stark über dem Bild, dichter nur hinter der Schrift:
+- *Hero:* von unten Kupfer dunkel 85 % (bis 5 %) → 45 % (45 %) → offen ab 80 %, von links 55 → 10 %.
+  Am Handy steht der Text höher im Bild: dort 75 % bei 60 % und oben noch 40 %.
+- *Bildkapitel:* von unten 45 → 28 → Kupfer 13 %, von links 35 → 13 %; am Handy Mitte 55 %, oben 25 %.
+  Lead in vollem Leinen statt Leinen/90.
+Gemessen: Hero bei 375, 390, 768, 1024 und 1440 px alle Zeilen bestanden, knappste Werte Titel 3,18:1
+und Signatur 3,07:1 (nötig 3:1), Lead 4,56:1 bei 1024 px (nötig 4,5:1). Bildkapitel per Pixelmessung bei
+375, 390 und 1440 px: Lead ab 5,09:1, Titel ab 3,90:1.
+
 **30.10.2026 – Innas finale Texte, Vorher/Nachher zurück, zwei Wege zum Termin (Inna, über Dennis).**
 Layout, Farben und Gestaltung bleiben; Innas Texte ersetzen die bisherigen und sind auf die Abschnitte
 verteilt. Neue Folge: Hero → Über uns (Sand) → Leistungen (Leinen) → Vorher & Nachher (Sand) →

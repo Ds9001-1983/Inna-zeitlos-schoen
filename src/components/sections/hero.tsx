@@ -59,8 +59,8 @@ export function Hero() {
           Zwei Verläufe mit Aufgabe, nicht als Schmuck: von unten für den Textblock,
           von links für die Schriftseite. Rechts bleibt das Haar hell und offen.
         */}
-        <div className="absolute inset-0 bg-gradient-to-t from-kupfer-dunkel/92 from-10% via-kupfer-dunkel/65 via-50% to-kupfer/25" />
-        <div className="absolute inset-0 bg-gradient-to-r from-kupfer-dunkel/75 via-kupfer-dunkel/25 via-45% to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-kupfer-dunkel/85 from-5% via-kupfer-dunkel/45 via-45% to-kupfer/0 to-80% max-md:via-kupfer-dunkel/75 max-md:via-60% max-md:to-kupfer-dunkel/40 max-md:to-100%" />
+        <div className="absolute inset-0 bg-gradient-to-r from-kupfer-dunkel/55 via-kupfer-dunkel/10 via-45% to-transparent" />
 
         <div className="absolute inset-x-0 bottom-0">
           <div className="inhalt pb-[clamp(3rem,7vh,5.5rem)]">
