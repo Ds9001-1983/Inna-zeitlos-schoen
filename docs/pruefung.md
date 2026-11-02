@@ -14,6 +14,8 @@ Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messung
 
 **Aktualisiert 31.10.2026, Nachtrag:** Innas Korrektur per WhatsApp: Bildreihe über den Leistungen gestrichen, Vorher/Nachher beim Aufklappen der Leistung (Paare von Inna ausgewählt), eigener Abschnitt und Menüpunkt entfallen. Instagram-Link eingetragen (@innazeitlosschoen).
 
+**Aktualisiert 02.11.2026, Nachtrag:** Verläufe auf Hero-Video und Bildkapitel in Cognac (Kupfer dunkel) statt Tinte, Wunsch von Dennis; Bildkapitel zusätzlich mit Verlauf von links. Signaturzeile in Sand statt Kupfer hell, Hero-Lead in vollem Leinen (Begründung im Design-Plan, „Revidiert 02.11.2026“). Kontrast nachgemessen: Hero bei 1440 und 390 px alle Zeilen bestanden (schwächster Wert Signatur 3,66:1, nötig 3:1), Bildkapitel per Pixelmessung Lead 5,9:1, Titel 6,2:1. Lint/Build grün, Playwright 21 bestanden, 8 übersprungen; Referenzbilder der Scroll-Positionen 0 und (Handy) 25 neu wegen des Farbtons.
+
 **Aktualisiert 02.11.2026:** Salonfoto im Abschnitt Termine (Bild links, Text rechts wie im Seitenentwurf, am Handy nach dem Text). Lint/Build grün, Termine bei 1440, 800 und 390 px im Browser geprüft, kein waagerechter Überlauf. Playwright 21 bestanden, 8 übersprungen; die Referenzbilder der Scroll-Positionen sind neu, weil die Seite länger geworden ist (Inhalt sonst unverändert, verglichen).
 
 **Aktualisiert 31.10.2026:** Portraits eingebaut: Inna auf „Über uns“, Inna und Nursah im Team (Dateinamen = Rufnamen). Messungen siehe C, Nachmessung 31.10.

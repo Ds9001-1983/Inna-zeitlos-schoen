@@ -32,7 +32,7 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 ## Status
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
 Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Buchungslink,
-Rechtsname). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite, Salonfoto seit 02.11. in Termine.
+Rechtsname). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite, Salonfoto seit 02.11. in Termine, Verläufe auf Bild seit 02.11. in Cognac.
 Seit 31.10. Vorher/Nachher aufgeklappt in den Leistungen, Bildreihe und eigener Abschnitt entfallen.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
 docs/design-plan.md „Revidiert“. Seit 30.10.2026 Innas finale Texte (Wir-Form), Vorher & Nachher als Regler

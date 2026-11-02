@@ -59,8 +59,8 @@ export function Hero() {
           Zwei Verläufe mit Aufgabe, nicht als Schmuck: von unten für den Textblock,
           von links für die Schriftseite. Rechts bleibt das Haar hell und offen.
         */}
-        <div className="absolute inset-0 bg-gradient-to-t from-tinte/92 from-10% via-tinte/55 via-50% to-tinte/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-tinte/75 via-tinte/25 via-45% to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-kupfer-dunkel/92 from-10% via-kupfer-dunkel/65 via-50% to-kupfer/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-kupfer-dunkel/75 via-kupfer-dunkel/25 via-45% to-transparent" />
 
         <div className="absolute inset-x-0 bottom-0">
           <div className="inhalt pb-[clamp(3rem,7vh,5.5rem)]">
@@ -73,12 +73,12 @@ export function Hero() {
             <p
               data-hero-zeile
               data-auf-bild
-              className="t-signatur mt-3 text-[clamp(1.875rem,4vw,3rem)] text-kupfer-hell"
+              className="t-signatur mt-3 text-[clamp(1.875rem,4vw,3rem)] text-sand"
             >
               So individuell wie du.
             </p>
 
-            <p data-hero-zeile data-auf-bild className="t-lead mt-6 text-leinen/90">
+            <p data-hero-zeile data-auf-bild className="t-lead mt-6 text-leinen">
               Haare sind persönlich. Deshalb geht es bei uns nicht darum, jedem Trend zu folgen.
               Sondern darum, herauszufinden, was wirklich zu dir, deinem Haar und deinem Alltag
               passt.

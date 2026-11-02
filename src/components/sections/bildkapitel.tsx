@@ -16,8 +16,9 @@ export function Bildkapitel() {
         sizes="100vw"
         className="object-cover object-[50%_38%]"
       />
-      {/* Verlauf mit Aufgabe: ohne ihn ist die Schrift auf hellem Haar nicht lesbar */}
-      <div className="absolute inset-0 bg-gradient-to-t from-tinte/85 via-tinte/35 to-tinte/5" />
+      {/* Verläufe mit Aufgabe wie im Hero: von unten für den Titel, von links für die Textseite */}
+      <div className="absolute inset-0 bg-gradient-to-t from-kupfer-dunkel/90 via-kupfer-dunkel/55 to-kupfer/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-kupfer-dunkel/70 via-kupfer-dunkel/25 via-45% to-transparent" />
 
       <div className="inhalt relative pb-14">
         <p data-auf-bild className="t-lead text-leinen/90">

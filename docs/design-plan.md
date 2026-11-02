@@ -50,7 +50,7 @@ Quelle: Brand-Board. Die dunkleren Schwestern sind Kontrastvarianten, keine neue
 | Kupfer | `#A56A43` | Marke: Flächen, Symbole, Linien | 3,98:1 auf Leinen – nicht für Fließtext |
 | Kupfer tief | `#8F5A38` | Text, Links, Knöpfe auf Leinen | 5,2:1 |
 | Kupfer dunkel | `#6E4429` | Labels (11 px) auf Sand | AA – Kupfer tief kam auf Sand nur auf 3,5:1 |
-| Kupfer hell | `#C98A5E` | Kupfer auf Tinte und auf dem Video (Signaturzeile) | 4,34:1 auf dem Video, gemessen |
+| Kupfer hell | `#C98A5E` | Kupfer auf Tinte (seit 02.11.2026 nicht mehr auf der Seite, siehe „Revidiert“) | – |
 | Tinte | `#2F2F2F` | Fließtext, Überschriften, Fußzeile | 12,6:1 auf Leinen |
 
 Textabstufungen: Tinte/80 für Nebentext, Leinen/70 in der Fußzeile – nichts darunter.
@@ -149,6 +149,18 @@ Video ab.
 ---
 
 ## Revidiert
+
+**02.11.2026 – Verläufe auf Bild in Cognac statt Tinte (Dennis).**
+Hero-Video und Bildkapitel tragen ihre Verläufe jetzt in den Kupfer-Tönen statt in Tinte: Kupfer dunkel
+dort, wo Schrift steht, oben Kupfer mit 25 % als warmer Ton über dem ganzen Bild. Keine neue Farbe.
+- *Hero:* von unten Kupfer dunkel 92 → 65 % → Kupfer 25 %, von links Kupfer dunkel 75 → 25 % → offen.
+- *Bildkapitel:* bekommt wie der Hero zusätzlich den Verlauf von links, sonst steht die Lead-Zeile auf
+  hellem Haar. Von unten Kupfer dunkel 90 → 55 % → Kupfer 25 %.
+- *Signaturzeile in Sand statt Kupfer hell:* Kupfer hell auf Kupfer kam nur auf 2,97:1. Sand 4,16:1.
+  Kupfer hell bleibt als Token, ist auf der Seite aber nicht mehr im Einsatz.
+- *Hero-Lead in Leinen statt Leinen/90:* am Handy sonst 4,12:1.
+Gemessen (`npm run qa:kontrast`, 1440 und 390 px): Titel 4,95:1, Signatur 3,66:1 (nötig 3:1), Lead
+4,99:1. Bildkapitel per Pixelmessung (hellstes 2-%-Perzentil): Lead 5,9:1, Titel 6,2:1.
 
 **30.10.2026 – Innas finale Texte, Vorher/Nachher zurück, zwei Wege zum Termin (Inna, über Dennis).**
 Layout, Farben und Gestaltung bleiben; Innas Texte ersetzen die bisherigen und sind auf die Abschnitte
