@@ -1,4 +1,7 @@
 import type { NextConfig } from 'next'
+import { hauptdomain, indexierungErlaubt } from './src/inhalte/suchmaschinen'
+
+const noindex = [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }]
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -30,6 +33,10 @@ const nextConfig: NextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
         ],
       },
+      // Suchmaschinen: nur die Hauptdomain in Production darf in den Index (src/inhalte/suchmaschinen.ts).
+      indexierungErlaubt()
+        ? { source: '/(.*)', missing: [{ type: 'host' as const, value: hauptdomain }], headers: noindex }
+        : { source: '/(.*)', headers: noindex },
     ]
   },
 }

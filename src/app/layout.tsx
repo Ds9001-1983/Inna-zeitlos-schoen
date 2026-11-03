@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { SeoSchema } from '@/components/seo-schema'
 import { TerminLeiste } from '@/components/termin-leiste'
 import { seitenUrl } from '@/inhalte/seite'
+import { indexierungErlaubt } from '@/inhalte/suchmaschinen'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
   description:
     'Blond, Farbe, Farbkorrekturen, Tressen sowie Schnitt und Styling in Wiehl. Zwei Frauen. Viel Erfahrung. Ehrliches Handwerk.',
   alternates: { canonical: '/' },
+  robots: indexierungErlaubt() ? { index: true, follow: true } : { index: false, follow: false },
   openGraph: {
     title: 'INNA – Zeitlos schön',
     description: 'Zwei Frauen. Viel Erfahrung. Ehrliches Handwerk. Und Haare, die zu dir passen.',

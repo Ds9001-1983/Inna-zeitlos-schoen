@@ -50,7 +50,8 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | E-Mail info@inna-zeitlosschoen.de | umgesetzt | Fußzeile, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte; Knopf im Kontakt entfällt seit 30.10. |
 | WhatsApp für Neukundinnen (30.10.) | umgesetzt | Knopf „Beratung per WhatsApp anfragen“ in „Neu bei uns“ und „Termine“ (wa.me/491706619452), Datenschutz-Abschnitt WhatsApp |
 | Onlinebuchung für Stammkundinnen (30.10.) | **offen** | Innas Satz steht im Abschnitt Termine; Knopf „Online Termin buchen“ und Datenschutz-Abschnitt erscheinen, sobald `salon.buchung` gesetzt ist; Anbieter dann im Datenschutz ergänzen |
-| Domain inna-zeitlosschoen.de | **teilweise** | steht auf der Visitenkarte samt QR-Code. Liegt bei Alfahosting, A-Record zeigt noch nicht auf Vercel – vor dem Druck der Karten in Vercel hinzufügen und DNS umstellen |
+| Domain inna-zeitlosschoen.de | **teilweise** | 03.11.2026: in Vercel hinzugefügt (mit www → Weiterleitung), `NEXT_PUBLIC_ALLOW_INDEXING=true` nur in Production. DNS bei Alfahosting stellt Dennis um (A/CNAME laut Vercel, MX für info@ unverändert) |
+| Suchmaschinen (Regel 02.11.2026) | umgesetzt | 03.11.2026: `X-Robots-Tag: noindex, nofollow` auf jedem Host außer inna-zeitlosschoen.de und überall ohne Flag, dazu robots-Meta und robots.txt (`src/inhalte/suchmaschinen.ts`). Lokal je Host geprüft |
 | Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
 | Instagram | umgesetzt | @innazeitlosschoen seit 31.10. unter den Leistungen, in der Fußzeile, im Impressum und im Schema |
 | Kein Buchungssystem (F4) | abgelöst | seit 30.10. externe Onlinebuchung für Stammkundinnen (Link offen); „Termin anfragen“ führt zum Abschnitt Termine mit beiden Wegen |
@@ -60,7 +61,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Über uns (vorher Über mich) | umgesetzt | Innas Text vom 30.10.; neues Foto aus ihren Arbeiten statt der Strähne – von Inna absegnen lassen |
 | Neukundinnen: Beratungstermin im Salon | umgesetzt | Abschnitt „Neu bei uns“ mit Innas Text und „Deine persönliche Beratung“ (01–03) |
 | Du-Form (F7), Wir-Perspektive | umgesetzt | keine Ich-Form mehr im Seitentext (geprüft per grep) |
-| Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain offen |
+| Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain siehe oben |
 | Drucksachen: Schild 600 × 500 mm, Visitenkarte (Flyeralarm) | beide druckfertig | Auftrag von Dennis vom 23.09., nicht in `auftrag.md`. Varianten entschieden (Design-Plan „Revidiert"), Doku in `docs/druck.md`. Schild seit 19.10. nach Innas Wunsch nur Wortmarke auf Cognac → `druck/ausgabe/final/schild.pdf`, Preflight ok, Beschnitt 3 mm angenommen. Karte seit 21.10. im Design des Schilds mit Telefon und Adresse → `druck/ausgabe/final/visitenkarte.pdf`, Preflight ok; E-Mail, Website und QR-Code kommen dazu, sobald sie feststehen |
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | offen | Impressum zeigt 12 markierte Lücken, Datenschutz 2 – so geht die Rechtsseite nicht live |
 | Einwilligungen (Kundinnenfotos, KI-Video) | erledigt | laut Dennis (31.10.2026) liegen sie bei Inna, Nursah hat zugestimmt; die Originale liegen nicht im (öffentlichen) Repo |
