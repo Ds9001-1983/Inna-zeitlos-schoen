@@ -43,5 +43,5 @@ Drucksachen (Schild 600 × 500 mm Cognac, Kontakt-Visitenkarte, Flyeralarm): dru
 Schild seit 19.10.2026 druckfertig (nur Wortmarke in Tiefschwarz auf Cognac, wie die Karte;
 npm --prefix druck run final -- --nur schild). Visitenkarte seit 21.10.2026 im selben Design
 druckfertig (Telefon, E-Mail, Website, Adresse, QR-Code). Domain inna-zeitlosschoen.de liegt bei
-Alfahosting, seit 03.11.2026 live über Vercel (www → 308 auf die Hauptdomain), Search Console eingerichtet.
+Alfahosting, seit 03.11.2026 live über Vercel (www → 308 auf die Hauptdomain), Search Console eingerichtet. Google-Unternehmensprofil seit 03.11. angelegt, Bestätigung per Video offen.
 noindex auf allen Hosts außer der Hauptdomain: src/inhalte/suchmaschinen.ts. MX und der Platzhalter *.inna-zeitlosschoen.de (trägt mail.) bei Alfahosting nie ändern.

@@ -15,7 +15,7 @@ Telefon:          0170 66 19 452 (mobil, Dennis 21.10.2026)
 E-Mail:           info@inna-zeitlosschoen.de (Dennis 21.10.2026)
 Öffnungszeiten:   
 Instagram:        @innazeitlosschoen, https://www.instagram.com/innazeitlosschoen/ (Dennis 31.10.2026, Profil geprüft: „Inna - Zeitlos Schön“, Schulstraße 1, Wiehl)
-Google-Profil:    
+Google-Profil:    angelegt 03.11.2026 unter Dennis' Google-Konto (Inna wird nach der Bestätigung Hauptinhaberin), Kategorie Friseursalon, Adresse sichtbar, Telefon, Website, WhatsApp, 10 Leistungen, Beschreibung, Salonfoto. Bestätigung per Video im Salon offen, bis dahin nicht öffentlich. Öffnungszeiten fehlen dort wie hier.
 Domain:           inna-zeitlosschoen.de (Dennis 21.10.2026, registriert bei Alfahosting)
 
 ## Personen
@@ -75,7 +75,7 @@ F10 Dringlichkeit: standard
 B1  Abschnitte: Über uns, Leistungen (mit Vorher/Nachher), Team, Philosophie, Neu bei uns, Termine
     (Verwandlung, Arbeiten und Preise am 13.10.2026 gestrichen; Vorher & Nachher am 30.10.2026 auf Innas Wunsch zurück, seit 31.10. in den Leistungen)
 B2  Einzugsgebiet: Wiehl, Oberbergischer Kreis
-B3  Google-Unternehmensprofil: weiß nicht
+B3  Google-Unternehmensprofil: weiß nicht → am 03.11.2026 neu angelegt (vorher keins vorhanden)
 
 ## Korrekturen
 13.10.2026 (Inna, Anmerkungen auf der Preview, über Dennis): Verwandlung, Arbeiten und Preise raus.
