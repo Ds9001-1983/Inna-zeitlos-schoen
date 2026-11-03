@@ -31,8 +31,8 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 
 ## Status
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
-Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Buchungslink,
-Rechtsname). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite, Salonfoto seit 02.11. in Termine, Verläufe auf Bild seit 02.11. in Cognac. „Termin anfragen“-Knöpfe ruhen bis `salon.buchung` gesetzt ist.
+Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Buchungslink).
+Impressum seit 03.11.2026 vollständig (Inna Nillmeier, HWK Köln, noch keine USt-IdNr.). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite, Salonfoto seit 02.11. in Termine, Verläufe auf Bild seit 02.11. in Cognac. „Termin anfragen“-Knöpfe ruhen bis `salon.buchung` gesetzt ist.
 Seit 31.10. Vorher/Nachher aufgeklappt in den Leistungen, Bildreihe und eigener Abschnitt entfallen.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
 docs/design-plan.md „Revidiert“. Seit 30.10.2026 Innas finale Texte (Wir-Form), Vorher & Nachher als Regler
@@ -43,4 +43,5 @@ Drucksachen (Schild 600 × 500 mm Cognac, Kontakt-Visitenkarte, Flyeralarm): dru
 Schild seit 19.10.2026 druckfertig (nur Wortmarke in Tiefschwarz auf Cognac, wie die Karte;
 npm --prefix druck run final -- --nur schild). Visitenkarte seit 21.10.2026 im selben Design
 druckfertig (Telefon, E-Mail, Website, Adresse, QR-Code). Domain inna-zeitlosschoen.de liegt bei
-Alfahosting und zeigt noch nicht auf Vercel.
+Alfahosting, seit 03.11.2026 am Vercel-Projekt (www → 308 auf die Hauptdomain), DNS-Umstellung durch Dennis.
+noindex auf allen Hosts außer der Hauptdomain: src/inhalte/suchmaschinen.ts. MX/mail.* bei Alfahosting nie ändern.

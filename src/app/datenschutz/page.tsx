@@ -22,7 +22,7 @@ export default function Datenschutz() {
       <div>
         <h2>Verantwortlich</h2>
         <p>
-          <Offen was="Inhaberin, vollständiger Name" />
+          {salon.inhaberin}
           <br />
           {salon.betrieb}, {salon.strasse}, {salon.plz} {salon.ort}
         </p>

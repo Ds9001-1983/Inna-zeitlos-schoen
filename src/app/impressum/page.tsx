@@ -13,7 +13,7 @@ export default function Impressum() {
       <div>
         <h2>Angaben gemäß § 5 DDG</h2>
         <p>
-          <Offen was="Inhaberin, vollständiger Name" />
+          {salon.inhaberin}
           <br />
           {salon.betrieb}
           <br />
@@ -41,20 +41,19 @@ export default function Impressum() {
         </p>
       </div>
 
-      <div>
-        <h2>Umsatzsteuer</h2>
-        <p>
-          Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG:{' '}
-          <Offen was="USt-IdNr. oder Hinweis auf Kleinunternehmerregelung" />
-        </p>
-      </div>
+      {salon.ustId ? (
+        <div>
+          <h2>Umsatzsteuer</h2>
+          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: {salon.ustId}</p>
+        </div>
+      ) : null}
 
       <div>
         <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
         <p>
           Berufsbezeichnung: Friseurmeisterin (verliehen in der Bundesrepublik Deutschland)
           <br />
-          Zuständige Kammer: <Offen was="Handwerkskammer" />
+          Zuständige Kammer: {salon.kammer}
           <br />
           Es gelten die Handwerksordnung (HwO) und die Regelungen der zuständigen Handwerkskammer.
         </p>

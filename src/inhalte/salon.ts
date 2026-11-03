@@ -5,13 +5,21 @@
  * die Seite zeigt sie dann automatisch an und blendet bis dahin einen sinnvollen
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
- * OFFEN: oeffnungszeiten, Link der Onlinebuchung, Betriebsname
- * fürs Impressum, Nursahs Nachname.
+ * OFFEN: oeffnungszeiten, Link der Onlinebuchung, Nursahs Nachname.
  */
 
 export const salon = {
   marke: 'INNA – Zeitlos schön',
   betrieb: 'INNA – Zeitlos schön',
+  /** Inhaberin fürs Impressum (Dennis, 03.11.2026) */
+  inhaberin: 'Inna Nillmeier',
+  /** Dennis, 03.11.2026 */
+  kammer: 'Handwerkskammer zu Köln',
+  /**
+   * Noch keine USt-IdNr. (Dennis, 03.11.2026) – bis dahin entfällt der Abschnitt im Impressum.
+   * Die Steuernummer gehört nicht ins Impressum und steht deshalb nicht hier.
+   */
+  ustId: null as string | null,
   strasse: 'Schulstraße 1',
   plz: '51674',
   ort: 'Wiehl',
