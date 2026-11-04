@@ -13,7 +13,7 @@ export function WhatsappKnopf({ className = '' }: { className?: string }) {
       rel="noreferrer"
       className={`inline-block bg-kupfer-tief px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte ${className}`}
     >
-      Beratung per WhatsApp anfragen
+      Beratungstermin per WhatsApp anfragen
     </a>
   )
 }

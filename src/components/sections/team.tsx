@@ -11,8 +11,8 @@ const portraits = [
   },
   {
     name: 'Inna',
-    src: '/team/inna-frontal.jpg',
-    alt: 'Inna mit langen, rotbraunen Wellen und weißem Rollkragen, sie lächelt leicht.',
+    src: '/team/inna-seitlich.jpg',
+    alt: 'Inna im Profil mit langen, kupferroten Wellen, sie blickt über die Schulter.',
   },
 ]
 

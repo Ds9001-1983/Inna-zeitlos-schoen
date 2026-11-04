@@ -40,7 +40,8 @@ const paare = [
 
 /**
  * Die Portraits kamen stark komprimiert (rund 800 px breit): nicht vergrößern, höhere Qualität, 7:10.
- * inna-frontal und nursah stehen im Team nebeneinander, die Augen liegen auf gleicher Höhe.
+ * Im Team stehen seit 04.11.2026 inna-seitlich und nursah nebeneinander (vorher inna-frontal, Augen auf
+ * gleicher Höhe). inna-frontal ist zurzeit nicht auf der Seite.
  */
 const portraitQuelle = 'projekt/fotos/original-portraits-2026-10-31'
 const portraits = [

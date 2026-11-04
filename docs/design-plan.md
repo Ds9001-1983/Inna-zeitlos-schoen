@@ -437,3 +437,17 @@ Licht), Text rechts – wie der Abschluss in Innas Seitenentwurf und wie „Übe
 „Schon bei uns?“ in der Textspalte untereinander, der WhatsApp-Knopf passt nicht in eine halbe Spalte. Am Handy steht das
 Bild nach dem Text, damit „Termin anfragen“ auf die Knöpfe springt und nicht auf ein Foto. 7:10, `BildReveal`, keine neue
 Farbe, Schrift oder Bewegung.
+
+**04.11.2026 – Salonfoto nach „Über uns“, Termine ohne Bild (Inna, über Dennis):**
+- *Über uns* zeigt das Salonfoto statt Innas Portrait, ohne Bildunterschrift.
+- *Team:* Innas Portrait ist jetzt das aus „Über uns“ (im Profil, Blick über die Schulter) statt des frontalen.
+  Nursah bleibt links. Die Augen liegen nicht mehr ganz auf gleicher Höhe; das Bild lässt sich ohne
+  Vergrößern nicht tiefer schneiden.
+- *Philosophie:* Der Schlusssatz endet mit Punkt statt „😉“.
+- *Termine* ohne Bild, über die volle Breite: „Neu bei uns?“ und „Schon bei uns?“ am Rechner nebeneinander,
+  Adresse und Öffnungszeiten darunter in denselben Spalten. Unter „Neu bei uns?“ steht nur noch der Knopf,
+  der Satz dazu entfällt, weil der Abschnitt „Neu bei uns“ davor den Weg erklärt. „Schon bei uns?“ endet
+  mit Innas neuem Satz „Bei Fragen scheu dich nicht, uns zu fragen.“
+- *WhatsApp-Knopf* heißt überall „Beratungstermin per WhatsApp anfragen“. Am Handy (390 px) bricht er in
+  zwei Zeilen um.
+- Keine neue Farbe, Schrift oder Bewegung.

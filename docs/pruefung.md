@@ -14,6 +14,8 @@ Vorher per Merge das Sicherheitsupdate Next.js 16.4.3 von GitHub geholt. Messung
 
 **Aktualisiert 31.10.2026, Nachtrag:** Innas Korrektur per WhatsApp: Bildreihe über den Leistungen gestrichen, Vorher/Nachher beim Aufklappen der Leistung (Paare von Inna ausgewählt), eigener Abschnitt und Menüpunkt entfallen. Instagram-Link eingetragen (@innazeitlosschoen).
 
+**Aktualisiert 04.11.2026:** Korrektur von Inna über Dennis: Salonfoto in „Über uns“ statt Innas Portrait, im Team Innas Portrait aus „Über uns“, Philosophie ohne „😉“, Termine ohne Bild und ohne den Satz unter „Neu bei uns?“, „Schon bei uns?“ um Innas Satz zu Fragen ergänzt, Knopf heißt „Beratungstermin per WhatsApp anfragen“. Lint (0 Fehler) und Build grün, die vier Abschnitte bei 1440, 768 und 390 px im Browser geprüft, kein waagerechter Überlauf. Playwright 21 bestanden, 8 übersprungen; Referenzbilder der Scroll-Positionen neu, weil die Seite kürzer ist (verglichen: nur verschoben).
+
 **Aktualisiert 02.11.2026, dritter Nachtrag:** „Termin anfragen“ (Kopfzeile, Handy-Menü, Hero, Handy-Leiste) ausgeblendet, bis der Link der Onlinebuchung in `salon.buchung` steht; dann kommen die Knöpfe von selbst zurück. Neukundinnen erreichen WhatsApp über „Neu bei uns“ und Termine. Kontrast im Hero bei fünf Breiten bestanden.
 
 **Aktualisiert 02.11.2026, zweiter Nachtrag:** Cognac-Filter auf Wunsch von Dennis halb so stark, hinter der Schrift dichter, damit der Kontrast hält (Werte im Design-Plan, „Revidiert 02.11.2026“, Nachtrag). Hero bei fünf Breiten von 375 bis 1440 px bestanden, Bildkapitel bei 375, 390 und 1440 px per Pixelmessung bestanden.
@@ -39,7 +41,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Marke „INNA – Zeitlos schön", Schulstraße 1, 51674 Wiehl | umgesetzt | Header, Kontakt, Footer, Impressum, LocalBusiness-Schema |
 | Seitenentwurf 1:1 (F2): Hero, Über mich, Leistungen, Team, Philosophie, Abschluss | umgesetzt | Layout, Palette und Schriften wie die Vorlage; seit 30.10. Innas finale Texte auf die Abschnitte verteilt, Abschluss in der Fußzeile; Arbeiten und Preise am 13.10.2026 gestrichen |
 | Innas finale Textfassung (30.10.2026) | umgesetzt | wörtlich, Wir-Form; Marke einheitlich „INNA – Zeitlos schön“ (Inna schreibt „Schön“); funktionale Überschriften nur dort, wo Inna keine geliefert hat („Vorher & Nachher“, „Termine“) |
-| Hero mit Portrait von Inna (Vorlage) | bewusst anders | Bewegtbild aus der Rückansicht einer Kundin (Kling) bleibt; Portraits seit 31.10. auf „Über uns“ und im Team |
+| Hero mit Portrait von Inna (Vorlage) | bewusst anders | Bewegtbild aus der Rückansicht einer Kundin (Kling) bleibt; Portraits seit 31.10. im Team (bis 04.11. auch auf „Über uns“) |
 | Brand-Board: Farben und Schriften | umgesetzt | Sand/Leinen/Kupfer/Tinte, Cormorant + Grotesk + Signatur; Kupfer für Text als dunklere Schwester (AA) |
 | Design-Plan in der v4-Form (Maßstab aus Referenzen, Bildhaushalt, Signature Moves) | umgesetzt | 21.09.2026 nachgezogen: Muster 1, 2, 3, 5, 6, 8; Moves 16, 01, 17 |
 | Business-Seite, eine Seite mit Sprungmarken plus Impressum/Datenschutz (F1, F6) | umgesetzt | |
@@ -48,17 +50,17 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Preise | entfallen | Abschnitt gestrichen (Inna, 13.10.2026) |
 | Telefon | umgesetzt | 0170 66 19 452: Fußzeile (tel:+491706619452), Impressum, LocalBusiness-Schema, Visitenkarte; der Knopf im Kontakt entfällt seit 30.10. (Beratung bewusst nicht per Telefon) |
 | E-Mail info@inna-zeitlosschoen.de | umgesetzt | Fußzeile, Impressum, Datenschutz (Kontaktaufnahme), Visitenkarte; Knopf im Kontakt entfällt seit 30.10. |
-| WhatsApp für Neukundinnen (30.10.) | umgesetzt | Knopf „Beratung per WhatsApp anfragen“ in „Neu bei uns“ und „Termine“ (wa.me/491706619452), Datenschutz-Abschnitt WhatsApp |
-| Onlinebuchung für Stammkundinnen (30.10.) | **offen** | Innas Satz steht im Abschnitt Termine; Knopf „Online Termin buchen“ und Datenschutz-Abschnitt erscheinen, sobald `salon.buchung` gesetzt ist; Anbieter dann im Datenschutz ergänzen |
+| WhatsApp für Neukundinnen (30.10.) | umgesetzt | Knopf „Beratungstermin per WhatsApp anfragen“ (seit 04.11.) in „Neu bei uns“ und „Termine“ (wa.me/491706619452), Datenschutz-Abschnitt WhatsApp |
+| Onlinebuchung für Stammkundinnen (30.10.) | **offen** | Innas Satz steht im Abschnitt Termine, seit 04.11. mit „Bei Fragen scheu dich nicht, uns zu fragen.“; Knopf „Online Termin buchen“ und Datenschutz-Abschnitt erscheinen, sobald `salon.buchung` gesetzt ist; Anbieter dann im Datenschutz ergänzen |
 | Domain inna-zeitlosschoen.de | **teilweise** | 03.11.2026: in Vercel hinzugefügt (mit www → Weiterleitung), `NEXT_PUBLIC_ALLOW_INDEXING=true` nur in Production. DNS bei Alfahosting stellt Dennis um (A/CNAME laut Vercel, MX für info@ unverändert) |
 | Suchmaschinen (Regel 02.11.2026) | umgesetzt | 03.11.2026: `X-Robots-Tag: noindex, nofollow` auf jedem Host außer inna-zeitlosschoen.de und überall ohne Flag, dazu robots-Meta und robots.txt (`src/inhalte/suchmaschinen.ts`). Lokal je Host geprüft |
 | Öffnungszeiten | offen | ohne Zeiten steht „Termine nach Vereinbarung“ |
 | Instagram | umgesetzt | @innazeitlosschoen seit 31.10. unter den Leistungen, in der Fußzeile, im Impressum und im Schema |
 | Kein Buchungssystem (F4) | abgelöst | seit 30.10. externe Onlinebuchung für Stammkundinnen (Link offen); „Termin anfragen“ führt zum Abschnitt Termine mit beiden Wegen |
-| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; Portraits seit 31.10. nebeneinander mit Namen, Nursah links, Inna rechts (Innas Wunsch); Nursahs Nachname offen |
-| Philosophie | umgesetzt | seit 30.10. Innas Text statt der vier Werte |
+| Team Inna & Nursah | umgesetzt | Innas Text vom 30.10.; Portraits seit 31.10. nebeneinander mit Namen, Nursah links, Inna rechts (Innas Wunsch), seit 04.11. Innas Portrait im Profil; Nursahs Nachname offen |
+| Philosophie | umgesetzt | seit 30.10. Innas Text statt der vier Werte; seit 04.11. ohne „😉“ |
 | Arbeiten / Referenzen (B1) | entfallen | gestrichen (Inna, 13.10.2026); Vorher & Nachher seit 30.10. zurück, siehe oben |
-| Über uns (vorher Über mich) | umgesetzt | Innas Text vom 30.10.; neues Foto aus ihren Arbeiten statt der Strähne – von Inna absegnen lassen |
+| Über uns (vorher Über mich) | umgesetzt | Innas Text vom 30.10.; seit 04.11. das Salonfoto (vorher Innas Portrait) |
 | Neukundinnen: Beratungstermin im Salon | umgesetzt | Abschnitt „Neu bei uns“ mit Innas Text und „Deine persönliche Beratung“ (01–03) |
 | Du-Form (F7), Wir-Perspektive | umgesetzt | keine Ich-Form mehr im Seitentext (geprüft per grep) |
 | Vercel (F8) | umgesetzt | Mit dem Repo verbunden (korrigiert 25.09.2026): Jeder Push auf `main` deployt nach Production auf inna-zeitlos.vercel.app (Region fra1). Eigene Domain siehe oben |
@@ -66,7 +68,7 @@ Teil B und C stammen vom 21.09. und beziehen sich noch auf die längere Seite.
 | Rechtsname, USt-IdNr./Kleinunternehmer, Kammer | umgesetzt | 03.11.2026: Inna Nillmeier, Handwerkskammer zu Köln. Seit 04.11. USt-IdNr. DE435235175 (laut VIES gültig) im Impressum und als `vatID` im Schema. Impressum und Datenschutz ohne Lücke (Onlinebuchung erscheint erst mit `salon.buchung`) |
 | Einwilligungen (Kundinnenfotos, KI-Video) | erledigt | laut Dennis (31.10.2026) liegen sie bei Inna, Nursah hat zugestimmt; die Originale liegen nicht im (öffentlichen) Repo |
 | Portraits Inna und Nursah | umgesetzt | seit 31.10.; Dateien nur rund 800 px breit, höher aufgelöste Originale wären besser |
-| Salonfoto | umgesetzt | seit 02.11. im Abschnitt Termine, wie der Abschluss im Seitenentwurf; nur 1024 px breit (aus dem Chat), ein höher aufgelöstes Original wäre besser |
+| Salonfoto | umgesetzt | seit 04.11. in „Über uns“ (02.11. bis 04.11. im Abschnitt Termine, der jetzt ohne Bild ist); nur 1024 px breit (aus dem Chat), ein höher aufgelöstes Original wäre besser |
 | Credit-Rahmen 100 | umgesetzt | 63 verbraucht (9 × Upscaling, 6 × Video) |
 | Git: Ds9001-1983, deutsch, kein Hinweis auf Claude | umgesetzt | |
 

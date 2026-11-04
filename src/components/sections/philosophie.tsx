@@ -62,7 +62,7 @@ export function Philosophie() {
           <p className="t-aussage mt-6 max-w-[40ch] text-tinte italic">
             Wir möchten, dass du du bleibst.
             <br />
-            Nur vielleicht ein kleines bisschen zeitlos schöner 😉
+            Nur vielleicht ein kleines bisschen zeitlos schöner.
           </p>
         </div>
       </div>

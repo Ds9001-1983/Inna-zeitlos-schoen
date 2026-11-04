@@ -3,7 +3,8 @@ import { BildReveal, ZeilenReveal } from '@/components/reveal'
 
 /**
  * Texte wörtlich aus Innas finaler Fassung vom 30.10.2026 (Wir-Form, Inna und Nursah).
- * Das Portrait steht wie in Innas Seitenentwurf links neben dem Text (seit 31.10.2026).
+ * Das Bild steht wie in Innas Seitenentwurf links neben dem Text. Seit 04.11.2026 das Salonfoto
+ * statt Innas Portrait, das Portrait steht jetzt im Team (Inna, über Dennis).
  */
 export function UeberUns() {
   return (
@@ -13,8 +14,8 @@ export function UeberUns() {
           <BildReveal>
             <div className="relative aspect-7/10 w-full">
               <Image
-                src="/team/inna-seitlich.jpg"
-                alt="Inna im Profil mit langen, kupferroten Wellen, sie blickt über die Schulter."
+                src="/salon/salon.jpg"
+                alt="Blick in den Salon: Blumen auf dem Steintresen, dahinter cognacfarbene Sessel, der Waschplatz und warmes Licht."
                 fill
                 sizes="(max-width: 1024px) 100vw, 34rem"
                 quality={90}
@@ -23,7 +24,6 @@ export function UeberUns() {
               />
             </div>
           </BildReveal>
-          <figcaption className="t-label mt-3">Inna</figcaption>
         </figure>
 
         <div className="col-span-6 lg:col-start-7 lg:col-end-13">
