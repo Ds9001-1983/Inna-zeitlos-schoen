@@ -50,7 +50,7 @@ Telefon 0170 66 19 452 und E-Mail info@inna-zeitlosschoen.de stehen in Fußzeile
 (Bis 30.10.: kein Buchungssystem, Neukunden-Termin mit Gespräch ca. 30 Minuten – von Innas finaler Fassung abgelöst.)
 
 ## Rechtliches
-USt-IdNr. oder Kleinunternehmer:   noch keine USt-IdNr. (Dennis 03.11.2026), Abschnitt im Impressum entfällt bis dahin. Steuernummer liegt vor, gehört nicht ins Impressum und nicht ins (öffentliche) Repo
+USt-IdNr. oder Kleinunternehmer:   DE435235175 (Dennis 04.11.2026, laut VIES gültig), steht im Impressum. Steuernummer liegt vor, gehört nicht ins Impressum und nicht ins (öffentliche) Repo
 Kammer / Berufsbezeichnung:        Handwerkskammer zu Köln (Dennis 03.11.2026) / Friseurmeisterin
 Einwilligungen für Fotos liegen vor (ja/nein/teilweise):   ja – laut Dennis (31.10.2026) liegen die Einwilligungen der Kundinnen bei Inna, Nursah hat ihrem Portrait zugestimmt
 

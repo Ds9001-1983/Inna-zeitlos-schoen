@@ -45,6 +45,7 @@ export function SeoSchema({ seitenUrl }: { seitenUrl: string }) {
 
   if (salon.telefon) schema.telephone = salon.telefon
   if (salon.email) schema.email = salon.email
+  if (salon.ustId) schema.vatID = salon.ustId
   if (salon.oeffnungszeiten) {
     schema.openingHours = salon.oeffnungszeiten.map((z) => `${z.tag} ${z.zeit}`)
   }

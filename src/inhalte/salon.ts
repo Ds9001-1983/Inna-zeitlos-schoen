@@ -16,10 +16,10 @@ export const salon = {
   /** Dennis, 03.11.2026 */
   kammer: 'Handwerkskammer zu Köln',
   /**
-   * Noch keine USt-IdNr. (Dennis, 03.11.2026) – bis dahin entfällt der Abschnitt im Impressum.
+   * USt-IdNr. (Dennis, 04.11.2026; laut VIES gültig, geprüft am 04.11.2026).
    * Die Steuernummer gehört nicht ins Impressum und steht deshalb nicht hier.
    */
-  ustId: null as string | null,
+  ustId: 'DE435235175' as string | null,
   strasse: 'Schulstraße 1',
   plz: '51674',
   ort: 'Wiehl',
