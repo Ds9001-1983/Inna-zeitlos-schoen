@@ -2,14 +2,13 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { useLenis } from 'lenis/react'
 import { Menu, X } from 'lucide-react'
 import { Wortmarke } from '@/components/wortmarke'
 import { navigation, salon } from '@/inhalte/salon'
+import { useSprung } from '@/lib/sprung'
 
 export function SiteHeader() {
   const [offen, setOffen] = useState(false)
-  const lenis = useLenis()
 
   // Menü schließt mit Escape und sperrt den Seitenscroll, solange es offen ist
   useEffect(() => {
@@ -25,11 +24,7 @@ export function SiteHeader() {
     }
   }, [offen])
 
-  const springeZu = (ziel: string) => {
-    setOffen(false)
-    const el = document.querySelector(ziel)
-    if (el instanceof HTMLElement) lenis?.scrollTo(el, { offset: -88 })
-  }
+  const springe = useSprung(() => setOffen(false))
 
   return (
     <header className="sticky top-0 z-50 border-b border-greige/40 bg-leinen/92 backdrop-blur-sm">
@@ -49,16 +44,13 @@ export function SiteHeader() {
           <ul className="flex items-center gap-9">
             {navigation.map((punkt) => (
               <li key={punkt.ziel}>
-                <a
-                  href={punkt.ziel}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    springeZu(punkt.ziel)
-                  }}
+                <Link
+                  href={`/${punkt.ziel}`}
+                  onClick={(e) => springe(e, punkt.ziel)}
                   className="text-sm text-tinte transition-colors hover:text-kupfer-tief"
                 >
                   {punkt.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -68,16 +60,13 @@ export function SiteHeader() {
         <div className="flex flex-1 items-center justify-end gap-3 sm:min-h-[2.625rem]">
           {/* Termin-Knöpfe erst, wenn der Link der Onlinebuchung da ist (Dennis, 02.11.2026) */}
           {salon.buchung ? (
-            <a
-              href="#kontakt"
-              onClick={(e) => {
-                e.preventDefault()
-                springeZu('#kontakt')
-              }}
+            <Link
+              href="/#kontakt"
+              onClick={(e) => springe(e, '#kontakt')}
               className="hidden bg-kupfer-tief px-6 py-3 text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase transition-colors hover:bg-tinte sm:inline-block"
             >
               Termin anfragen
-            </a>
+            </Link>
           ) : null}
 
           <button
@@ -102,30 +91,24 @@ export function SiteHeader() {
           <ul className="space-y-1">
             {navigation.map((punkt) => (
               <li key={punkt.ziel}>
-                <a
-                  href={punkt.ziel}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    springeZu(punkt.ziel)
-                  }}
+                <Link
+                  href={`/${punkt.ziel}`}
+                  onClick={(e) => springe(e, punkt.ziel)}
                   className="font-display block py-3 text-3xl font-light text-tinte"
                 >
                   {punkt.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
           {salon.buchung ? (
-            <a
-              href="#kontakt"
-              onClick={(e) => {
-                e.preventDefault()
-                springeZu('#kontakt')
-              }}
+            <Link
+              href="/#kontakt"
+              onClick={(e) => springe(e, '#kontakt')}
               className="mt-6 block bg-kupfer-tief px-6 py-4 text-center text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase"
             >
               Termin anfragen
-            </a>
+            </Link>
           ) : null}
         </nav>
       </div>

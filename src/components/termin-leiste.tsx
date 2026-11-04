@@ -1,8 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { useLenis } from 'lenis/react'
 import { salon } from '@/inhalte/salon'
+import { useSprung } from '@/lib/sprung'
 
 /**
  * Auf dem Handy liegt der Termin-Knopf im Hero unter der Bildschirmkante.
@@ -14,7 +15,7 @@ import { salon } from '@/inhalte/salon'
  */
 export function TerminLeiste() {
   const [sichtbar, setSichtbar] = useState(false)
-  const lenis = useLenis()
+  const springe = useSprung()
 
   useEffect(() => {
     const kontakt = document.querySelector('#kontakt')
@@ -43,18 +44,14 @@ export function TerminLeiste() {
       }`}
       aria-hidden={!sichtbar}
     >
-      <a
-        href="#kontakt"
+      <Link
+        href="/#kontakt"
         tabIndex={sichtbar ? undefined : -1}
-        onClick={(e) => {
-          e.preventDefault()
-          const ziel = document.querySelector('#kontakt')
-          if (ziel instanceof HTMLElement) lenis?.scrollTo(ziel, { offset: -88 })
-        }}
+        onClick={(e) => springe(e, '#kontakt')}
         className="block bg-kupfer-tief px-6 py-4 text-center text-[0.7rem] font-medium tracking-[0.18em] text-leinen uppercase"
       >
         Termin anfragen
-      </a>
+      </Link>
     </div>
   )
 }

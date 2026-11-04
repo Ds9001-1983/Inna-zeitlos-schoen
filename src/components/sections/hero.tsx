@@ -1,23 +1,19 @@
 'use client'
 
+import Link from 'next/link'
 import { useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/SplitText'
-import { useLenis } from 'lenis/react'
 import { HeroMedien } from '@/components/hero-medien'
 import { salon } from '@/inhalte/salon'
+import { useSprung } from '@/lib/sprung'
 
 gsap.registerPlugin(useGSAP, SplitText)
 
 export function Hero() {
   const container = useRef<HTMLElement>(null)
-  const lenis = useLenis()
-
-  const springeZu = (ziel: string) => {
-    const el = document.querySelector(ziel)
-    if (el instanceof HTMLElement) lenis?.scrollTo(el, { offset: -88 })
-  }
+  const springe = useSprung()
 
   // Die eine orchestrierte Sequenz der Seite: Bild fährt aus der Maske auf,
   // die Headline steigt zeilenweise ein, der Rest folgt versetzt.
@@ -88,27 +84,21 @@ export function Hero() {
             <div data-hero-zeile className="mt-9 flex flex-wrap items-center gap-8">
               {/* Termin-Knopf erst, wenn der Link der Onlinebuchung da ist (Dennis, 02.11.2026) */}
               {salon.buchung ? (
-                <a
-                  href="#kontakt"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    springeZu('#kontakt')
-                  }}
+                <Link
+                  href="/#kontakt"
+                  onClick={(e) => springe(e, '#kontakt')}
                   className="inline-block bg-leinen px-9 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-tinte uppercase transition-colors hover:bg-kupfer-tief hover:text-leinen"
                 >
                   Termin anfragen
-                </a>
+                </Link>
               ) : null}
-              <a
-                href="#leistungen"
-                onClick={(e) => {
-                  e.preventDefault()
-                  springeZu('#leistungen')
-                }}
+              <Link
+                href="/#leistungen"
+                onClick={(e) => springe(e, '#leistungen')}
                 className="link text-sm text-leinen"
               >
                 Leistungen ansehen
-              </a>
+              </Link>
             </div>
           </div>
         </div>
