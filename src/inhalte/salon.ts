@@ -45,6 +45,11 @@ export const salon = {
   instagram: 'https://www.instagram.com/innazeitlosschoen/' as string | null,
   instagramName: '@innazeitlosschoen' as string | null,
   maps: 'https://www.google.com/maps/search/?api=1&query=Schulstra%C3%9Fe+1%2C+51674+Wiehl',
+  /**
+   * Lage des Gebäudes Schulstraße 1 für das Schema (OpenStreetMap, abgerufen 09.11.2026;
+   * Das Örtliche liegt für dieselbe Adresse rund 15 m daneben).
+   */
+  geo: { breite: 50.94978, laenge: 7.54843 },
   /** OFFEN – z. B. [{ tag: 'Dienstag bis Freitag', zeit: '9 – 18 Uhr' }] */
   oeffnungszeiten: null as { tag: string; zeit: string }[] | null,
 } as const

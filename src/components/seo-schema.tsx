@@ -43,8 +43,32 @@ export function SeoSchema({ seitenUrl }: { seitenUrl: string }) {
     ],
   }
 
-  if (salon.telefon) schema.telephone = salon.telefon
+  schema.geo = {
+    '@type': 'GeoCoordinates',
+    latitude: salon.geo.breite,
+    longitude: salon.geo.laenge,
+  }
+  schema.hasMap = salon.maps
+
+  // International, so wie der tel:-Link in der Fußzeile (0170 … → +49 170 …)
+  if (salon.telefon) schema.telephone = salon.telefon.replace(/^0/, '+49 ')
   if (salon.email) schema.email = salon.email
+  // Onlinebuchung, nur für Stammkundinnen (Neukundinnen per WhatsApp)
+  if (salon.buchung) {
+    schema.potentialAction = {
+      '@type': 'ReserveAction',
+      name: 'Onlinebuchung für Stammkundinnen',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: salon.buchung,
+        inLanguage: 'de',
+        actionPlatform: [
+          'https://schema.org/DesktopWebPlatform',
+          'https://schema.org/MobileWebPlatform',
+        ],
+      },
+    }
+  }
   if (salon.ustId) schema.vatID = salon.ustId
   if (salon.oeffnungszeiten) {
     schema.openingHours = salon.oeffnungszeiten.map((z) => `${z.tag} ${z.zeit}`)
