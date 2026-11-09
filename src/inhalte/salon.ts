@@ -5,7 +5,7 @@
  * die Seite zeigt sie dann automatisch an und blendet bis dahin einen sinnvollen
  * Ersatz ein. Es steht nichts Erfundenes auf der Seite.
  *
- * OFFEN: oeffnungszeiten, Link der Onlinebuchung, Nursahs Nachname.
+ * OFFEN: oeffnungszeiten, Nursahs Nachname.
  */
 
 export const salon = {
@@ -36,10 +36,11 @@ export const salon = {
    */
   whatsapp: '491706619452' as string | null,
   /**
-   * OFFEN – Link der Onlinebuchung, nur für Stammkundinnen (Inna, 30.10.2026).
-   * Solange er fehlt, steht im Abschnitt Termine der Satz ohne Knopf.
+   * Onlinebuchung für Stammkundinnen (Inna, 30.10.2026), Link von Inna am 09.11.2026.
+   * Anbieter: besdi GmbH, Ingolstadt (steht im Datenschutz).
+   * Ist er gesetzt, erscheinen „Online Termin buchen“ und alle „Termin anfragen“-Knöpfe.
    */
-  buchung: null as string | null,
+  buchung: 'https://salon.besdi.de/opru' as string | null,
   /** Erscheint nur, wenn beides gefüllt ist. */
   instagram: 'https://www.instagram.com/innazeitlosschoen/' as string | null,
   instagramName: '@innazeitlosschoen' as string | null,

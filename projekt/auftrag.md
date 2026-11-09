@@ -45,7 +45,8 @@ Innas Originalfotos vom 13.10.2026, seit 31.10.2026 vier davon auf der Seite (Zu
 ## Kontaktwege
 Neukundinnen: persönlicher Beratungstermin im Salon, angefragt per WhatsApp an 0170 66 19 452
 (Inna 30.10.2026, Nummer Dennis 30.10.2026). Die Beratung selbst nicht per WhatsApp, Telefon oder E-Mail.
-Stammkundinnen: Onlinebuchung (Inna 30.10.2026). Link:    ← OFFEN, bis dahin kein Buchungsknopf.
+Stammkundinnen: Onlinebuchung (Inna 30.10.2026). Link: https://salon.besdi.de/opru (Inna 09.11.2026),
+Anbieter besdi GmbH, Brückenkopf 2, 85051 Ingolstadt (laut Impressum besdi.de, abgerufen 09.11.2026).
 Telefon 0170 66 19 452 und E-Mail info@inna-zeitlosschoen.de stehen in Fußzeile und Impressum (21.10.2026).
 (Bis 30.10.: kein Buchungssystem, Neukunden-Termin mit Gespräch ca. 30 Minuten – von Innas finaler Fassung abgelöst.)
 
@@ -65,7 +66,7 @@ F1  Bewirken: Anfragen und Termine → Business-Seite
 F2  Design: fertiger Seitenentwurf + Brand-Board (`vorlagen/`) → 1:1 umgesetzt
 F3  Material: nur Fotos – Instagram-Ausschnitte 760 px, keine Originale, kein Video → Inventar, Hochskalierung, Hero-Video aus einem Foto erzeugt
 F4  Anfrage/Kontakt: keine eigene Funktion (kein Formular, kein Tracking). Seit 30.10.2026 Link auf WhatsApp
-    für Neukundinnen und auf eine externe Onlinebuchung für Stammkundinnen (Link offen)
+    für Neukundinnen und auf eine externe Onlinebuchung für Stammkundinnen (besdi, seit 09.11.2026)
 F5  Daten/Systeme: keins davon
 F6  Aufbau: eine Seite mit Sprungmarken, dazu Impressum und Datenschutz
 F7  Anrede: Du

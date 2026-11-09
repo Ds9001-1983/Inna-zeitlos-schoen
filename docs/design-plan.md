@@ -150,6 +150,17 @@ Video ab.
 
 ## Revidiert
 
+**09.11.2026 – Link der Onlinebuchung da, „Termin anfragen“ zurück.**
+Inna hat den Link geliefert (besdi). Die Knöpfe aus dem Eintrag vom 02.11. erscheinen wieder. Zwei
+Anpassungen, beide aus Kontrastgründen, keine neue Farbe:
+- *„Online Termin buchen“ in Kupfer dunkel:* Rahmen und Schrift des Knopfs auf Sand in Kupfer dunkel
+  statt Kupfer tief (3,48:1 → 5,09:1), wie die Labels auf Sand. Beim Überfahren Fläche Kupfer dunkel,
+  Schrift Leinen (7,5:1).
+- *Hero zwischen 768 und 1535 px etwas dichter:* Mit dem Knopf steht der Textblock höher im Bild. Von
+  unten Mitte 60 % statt 45 % (bei 45 %), von links 65 % statt 55 %. Am Handy und ab 1536 px bleibt
+  der Verlauf vom 02.11. Gemessen bei zwölf Größen von 375 × 780 bis 1920 × 1080, alle bestanden,
+  knappste Werte Titel 3,04:1, Signatur 3,18:1, Lead 4,72:1.
+
 **02.11.2026 – „Termin anfragen“ ruht bis zum Link der Onlinebuchung (Dennis).**
 Die Knöpfe in Kopfzeile, Handy-Menü und Hero sowie die Termin-Leiste am Handy erscheinen erst, wenn
 `salon.buchung` gesetzt ist. Bis dahin führen „Neu bei uns“ (Menü) und der Abschnitt Termine per WhatsApp

@@ -31,12 +31,12 @@ die Spezifikation; Referenzen liegen in projekt/referenzen/.
 
 ## Status
 Aktuelle Phase: 6 (Prüfung) – Bericht in docs/pruefung.md. Preview-Übergabe am 21.09.2026.
-Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Buchungslink).
-Impressum seit 03.11.2026 vollständig (Inna Nillmeier, HWK Köln, seit 04.11. USt-IdNr. DE435235175). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite (seit 04.11. Inna im Profil im Team), Salonfoto seit 04.11. in „Über uns“ (Termine ohne Bild), Verläufe auf Bild seit 02.11. in Cognac. „Termin anfragen“-Knöpfe ruhen bis `salon.buchung` gesetzt ist.
+Offene Kundenangaben: die leeren Felder in projekt/auftrag.md (Zeiten, Nursahs Nachname).
+Impressum seit 03.11.2026 vollständig (Inna Nillmeier, HWK Köln, seit 04.11. USt-IdNr. DE435235175). Kein Freigabe-Stopp. Portraits seit 31.10.2026 auf der Seite (seit 04.11. Inna im Profil im Team), Salonfoto seit 04.11. in „Über uns“ (Termine ohne Bild), Verläufe auf Bild seit 02.11. in Cognac. Onlinebuchung seit 09.11.2026 verlinkt (besdi, `salon.buchung`), damit alle „Termin anfragen“-Knöpfe zurück.
 Seit 31.10. Vorher/Nachher aufgeklappt in den Leistungen, Bildreihe und eigener Abschnitt entfallen.
 Korrekturrunde 13.10.2026 umgesetzt (19.10.): Verwandlung, Arbeiten, Preise gestrichen – siehe
 docs/design-plan.md „Revidiert“. Seit 30.10.2026 Innas finale Texte (Wir-Form), Vorher & Nachher als Regler
-zurück, Neukundinnen per WhatsApp, Onlinebuchung für Stammkundinnen (Link offen: `salon.buchung`).
+zurück, Neukundinnen per WhatsApp, Onlinebuchung für Stammkundinnen (`salon.buchung`).
 Innas Originalfotos liegen in projekt/fotos/original-2026-10-13/ (gitignored, Repo ist öffentlich);
 Web-Fassungen erzeugt `node scripts/fotos-aufbereiten.mjs`.
 Drucksachen (Schild 600 × 500 mm Cognac, Kontakt-Visitenkarte, Flyeralarm): druck/, Doku docs/druck.md –

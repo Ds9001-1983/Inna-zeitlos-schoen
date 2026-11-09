@@ -42,7 +42,7 @@ export function Kontakt() {
                 href={salon.buchung}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 inline-block border border-kupfer-tief px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-kupfer-tief uppercase transition-colors hover:bg-kupfer-tief hover:text-leinen"
+                className="mt-6 inline-block border border-kupfer-dunkel px-8 py-4 text-[0.7rem] font-medium tracking-[0.18em] text-kupfer-dunkel uppercase transition-colors hover:bg-kupfer-dunkel hover:text-leinen"
               >
                 Online Termin buchen
               </a>

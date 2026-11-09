@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Rechtstext, Offen } from '@/components/rechtstext'
+import { Rechtstext } from '@/components/rechtstext'
 import { salon } from '@/inhalte/salon'
 
 export const metadata: Metadata = {
@@ -76,9 +76,9 @@ export default function Datenschutz() {
         <div>
           <h2>Onlinebuchung</h2>
           <p>
-            Stammkundinnen können ihre Termine über eine Onlinebuchung vereinbaren. Sie wird
-            betrieben von <Offen was="Anbieter der Onlinebuchung mit Anschrift" />, diese Seite
-            verlinkt nur dorthin. Bei der Buchung werden die dort eingegebenen Angaben zur
+            Stammkundinnen können ihre Termine über eine Onlinebuchung vereinbaren. Sie wird von
+            der besdi GmbH, Brückenkopf 2, 85051 Ingolstadt, betrieben. Diese Seite verlinkt nur
+            dorthin. Bei der Buchung werden die dort eingegebenen Angaben zur
             Terminvereinbarung verarbeitet (Art. 6 Abs. 1 lit. b DSGVO).
           </p>
         </div>
